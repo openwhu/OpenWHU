@@ -75,7 +75,7 @@ Issue、PR、纠错、资料、选课/考试攻略，完全欢迎！
 
 或者也可以直接附加在 **Issue** 中，由维护者进行添加。
 
-或者也可以发送邮件至 **libpku@protonmail.com** ，由维护者进行添加。
+或者也可以发送邮件至 **OpenWHU@foxmail.com** ，由维护者进行添加。
 
 ## 声明|Disclaimer
 
