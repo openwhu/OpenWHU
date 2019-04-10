@@ -138,8 +138,3 @@ WHU课代表计划Star数：2，Fork数：2
 (未完待续)
 
 </details>
-
-## 致谢|Acknowledgement
-
-**在此感谢所有参与者**
-
