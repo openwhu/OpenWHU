@@ -125,9 +125,12 @@
 - [中国科学技术大学计算机学院课程资源](https://github.com/USTC-Resource/USTC-Course)
 - [上海交通大学课程资料分享](https://github.com/CoolPhilChen/SJTU-Courses/)
 - [北京大学课程资料分享](https://github.com/lib-pku)
+
 (未完待续)
 
 ## 致谢|Acknowledgement
+
 **在此感谢所有参与本项目的同学们：**
+
 OpenWHU-D 2019/04/10
 
