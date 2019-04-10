@@ -3,7 +3,7 @@
 
 ## 使用|Usage
 
-使用方法：访问 https://github.com/openwhu ，点击资料链接即可下载。
+使用方法：访问 https://openwhu.github.io/ ，点击资料链接即可下载。
 
 
 ## 前言|Preface
@@ -43,9 +43,9 @@
 
 3.截止2019/04/09：
 
-WHU课代表计划Star数：1，Fork数：1
+WHU课代表计划Star数：2，Fork数：2
 
-参与院系：1（资源与环境科学学院）
+参与院系：1
 
 ### 愿景：
 
@@ -141,7 +141,5 @@ WHU课代表计划Star数：1，Fork数：1
 
 ## 致谢|Acknowledgement
 
-**在此感谢所有参与本项目的同学们：**
-
-OpenWHU-D 2019/04/10
+**在此感谢所有参与者**
 
