@@ -83,6 +83,9 @@
 
 由于本项目体积很大，故推荐采用在 **GitHub Web 端直接上传** 的方式，具体操作如下：
 
+<details>
+  <summary>查看详情|View Details</summary>
+
 1. 首先 Fork 本项目
 
 2. - 上传文件到已有文件夹：打开对应文件夹，点击绿色 Download 按钮旁的 upload，上传你的文件。
@@ -91,6 +94,7 @@
 
 3. - 提交 Pull Request：Fork 本项目，然后在 GitHub 网页端点击 Upload File 上传文件，发起 PR 即可。留意一下项目的文件组织喔。
 
+</details>
 
 #### 2.通过Issue：
 
