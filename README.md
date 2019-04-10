@@ -1,5 +1,5 @@
 # WHU课代表计划 - 武汉大学课程资料整理
-![OpenWHU-WHU课代表计划](https://github.com/openwhu/OpenWHU.png)
+![OpenWHU-WHU课代表计划](https://github.com/openwhu/OpenWHU/blob/master/OpenWHU.png)
 
 ## 使用|Usage
 
