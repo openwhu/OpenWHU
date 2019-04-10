@@ -1,5 +1,11 @@
 # WHU课代表计划 - 武汉大学课程资料整理
 
+
+## 使用|Usage
+
+使用方法：访问 https://github.com/openwhu ，点击资料链接即可下载。
+
+
 ## 前言|Preface
 
 >（致谢： [QSCTech/zju-icicles](https://github.com/QSCTech/zju-icicles) ）
@@ -15,6 +21,7 @@
 >
 >**我希望只要是前人走过的弯路，后人就不必再走。** 这是我的信念，也是我建立这个项目的原因。
 
+
 ## 关于我们|About Us
 
 我是武汉大学普普通通的本科生中的一员，建立这样一个平台，是我在一两年中一直想做的事情，但一直苦于没有合适的形式。
@@ -23,7 +30,8 @@
 
 现在，它只是一颗萌发的种子，但我们希望有更多的同学能够加入，让它成长为参天大树。
 
-Together We Can Make WHU A Better Place
+**Together We Can Make WHU A Better Place**
+
 
 ## 现状与愿景|Status Quo & Goals
 
@@ -49,18 +57,13 @@ Together We Can Make WHU A Better Place
 
 4.计划存活期间永久保证：**公益、免费、开源**。
 
-## 使用|Usage
-
-使用方法：访问 ，点击资料链接即可下载。
 
 ## 贡献|Contribution
-
-**欢迎贡献**
 
 ### 规则|Rules
 1.**所有资料必须为任课教师向学生公开内容**
 
-2.建议上传的类别：笔记、历年试卷、攻略与评价、课件
+2.建议上传的类别：笔记、历年试卷、攻略与评价、**公开**课件、作业**范例**
 
 **3.建议命名格式:
 
@@ -73,7 +76,7 @@ Together We Can Make WHU A Better Place
 
 ### 上传方法|Upload Method
 
-1.通过Pull Request：
+#### 1.通过Pull Request：
 
 由于本项目体积很大，故推荐采用在 **GitHub Web 端直接上传** 的方式，具体操作如下：
 
@@ -83,16 +86,17 @@ Together We Can Make WHU A Better Place
 
    - 上传文件到新文件夹：打开任意文件夹，点击绿色 Download 按钮旁的 upload，**把浏览器地址栏中文件夹名称改为你想要新建的文件夹名称，然后回车**，上传你的文件。
 
-3. - 提交 PR：Fork 本项目，然后在 GitHub 网页端点击 Upload File 上传文件，发起 PR 即可。留意一下项目的文件组织喔。
+3. - 提交 Pull Request：Fork 本项目，然后在 GitHub 网页端点击 Upload File 上传文件，发起 PR 即可。留意一下项目的文件组织喔。
 
 
-2.通过Issue：
+#### 2.通过Issue：
 
 或者也可以直接附加在 **Issue** 中，由维护者进行添加。
 
-3.通过邮件：
 
-或者也可以发送邮件至 **OpenWHU@foxmail.com** ，由维护者进行添加。
+#### 3.通过邮件：
+
+或者也可以发送邮件至 **OpenWHU@foxmail.com** ，由维护者进行添加，邮件每周六处理一次。
 
 ## 声明|Disclaimer
 
