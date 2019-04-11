@@ -1,9 +1,9 @@
 # WHU课代表计划 - 武汉大学课程资料整理
-![OpenWHU-WHU课代表计划](https://github.com/openwhu/OpenWHU/blob/master/OpenWHU.png)
+<img src="https://github.com/openwhu/OpenWHU/blob/master/OpenWHU.png">
 
 ## 使用|Usage
 
-使用方法：访问 https://github.com/openwhu ，点击资料链接即可下载。
+使用方法：访问 https://openwhu.github.io/ ，点击资料链接即可下载。
 
 
 ## 前言|Preface
@@ -43,9 +43,9 @@
 
 3.截止2019/04/09：
 
-WHU课代表计划Star数：0，Fork数：0
+WHU课代表计划Star数：2，Fork数：2
 
-参与院系：0（）
+参与院系：1
 
 ### 愿景：
 
@@ -70,9 +70,9 @@ WHU课代表计划Star数：0，Fork数：0
 
 **3.建议命名格式:**
 
-**“课程性质”\_“课程名”\_“年份”\_“课程名”\_“授课老师姓名拼音首字母”（可选）\_“贡献者分数”（可选）\_“贡献者”（可选）**
+**“课程名”\_“年份”\_“课程名”\_“授课老师姓名拼音首字母”（可选）\_“贡献者分数”（可选）\_“贡献者”（可选）**
 
-如： “公共必修\_2019\_高等数学\_XYZ\_95\_ABC”
+如： “2019\_高等数学\_XYZ\_95\_ABC”
 
 4.建议文件格式：
 
@@ -88,13 +88,15 @@ WHU课代表计划Star数：0，Fork数：0
 <details>
   <summary>查看详情|View Details</summary>
 
-1. 首先 Fork 本项目
+1. Fork 本项目
 
 2. - 上传文件到已有文件夹
 
    - 新建文件夹后上传文件
 
 3. - 提交 Pull Request
+
+如有疑问可参考：[知乎：如何使用github](https://www.zhihu.com/question/20070065/answer/517839193)
 
 </details>
 
@@ -139,9 +141,4 @@ WHU课代表计划Star数：0，Fork数：0
 
 </details>
 
-## 致谢|Acknowledgement
-
-**在此感谢所有参与本项目的同学们：**
-
-OpenWHU-D 2019/04/10
-
+## 感谢所有参与本计划的同学，欢迎武大在校生加入团队
