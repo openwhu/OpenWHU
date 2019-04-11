@@ -94,7 +94,7 @@ WHU课代表计划Star数：2，Fork数：2
 
    - 新建文件夹后上传文件
 
-3. - 提交 Pull Request
+3. 提交 Pull Request
 
 如有疑问可参考：[知乎：如何使用github](https://www.zhihu.com/question/20070065/answer/517839193)
 
