@@ -94,7 +94,7 @@ WHU课代表计划Star数：0，Fork数：0
 
    - 新建文件夹后上传文件
 
-3. - 提交 Pull Request：Fork 本项目，然后在 GitHub 网页端点击 Upload File 上传文件，发起 PR 即可。留意一下项目的文件组织喔。
+3. - 提交 Pull Request
 
 </details>
 
