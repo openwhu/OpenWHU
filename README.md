@@ -88,13 +88,15 @@ WHU课代表计划Star数：2，Fork数：2
 <details>
   <summary>查看详情|View Details</summary>
 
-1. 首先 Fork 本项目
+1. Fork 本项目
 
-2. - 上传文件到已有文件夹：打开对应文件夹，点击绿色 Download 按钮旁的 upload，上传你的文件。
+2. - 上传文件到已有文件夹：打开对应文件夹，上传你的文件。
 
-   - 上传文件到新文件夹：打开任意文件夹，点击绿色 Download 按钮旁的 upload，**把浏览器地址栏中文件夹名称改为你想要新建的文件夹名称，然后回车**，上传你的文件。
+   - 上传文件到新文件夹：打开任意文件夹，把浏览器地址栏中文件夹名称改为你想要新建的文件夹名称，然后回车，上传你的文件。
 
-3. - 提交 Pull Request：Fork 本项目，然后在 GitHub 网页端点击 Upload File 上传文件，发起 PR 即可。留意一下项目的文件组织喔。
+3. 提交 Pull Request。留意一下项目的文件组织喔。
+
+如有疑问可参考：[知乎：如何使用github](https://www.zhihu.com/question/20070065/answer/517839193)
 
 </details>
 
