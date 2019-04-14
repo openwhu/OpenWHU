@@ -1,8 +1,0 @@
-﻿  stdafx.cpp
-  OpenCVTest.cpp
-OpenCVTest.obj : error LNK2019: 无法解析的外部符号 _cvLoadImage，该符号在函数 "unsigned long __stdcall Fun1(void *)" (?Fun1@@YGKPAX@Z) 中被引用
-OpenCVTest.obj : error LNK2019: 无法解析的外部符号 _cvShowImage，该符号在函数 "unsigned long __stdcall Fun1(void *)" (?Fun1@@YGKPAX@Z) 中被引用
-OpenCVTest.obj : error LNK2019: 无法解析的外部符号 _cvWaitKey，该符号在函数 "unsigned long __stdcall Fun1(void *)" (?Fun1@@YGKPAX@Z) 中被引用
-C:\Program Files\opencv\build\x64\vc14\lib\opencv_world341d.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
-C:\Program Files\opencv\build\x64\vc14\lib\opencv_world341.lib : warning LNK4272: 库计算机类型“x64”与目标计算机类型“X86”冲突
-E:\Learn\多核\code\OpenCVTest\Debug\OpenCVTest.exe : fatal error LNK1120: 3 个无法解析的外部命令

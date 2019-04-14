@@ -1,1 +1,0 @@
-E:\Learn\C#\code\TestSQL\TestSQL\bin\Debug\TestSQL.exe.config

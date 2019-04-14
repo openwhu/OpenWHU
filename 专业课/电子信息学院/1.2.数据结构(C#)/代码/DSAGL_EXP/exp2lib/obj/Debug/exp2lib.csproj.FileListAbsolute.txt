@@ -1,6 +1,0 @@
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\bin\Debug\exp2lib.pdb
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\obj\Debug\exp2lib.pdb
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\obj\Debug\exp2lib.csprojResolveAssemblyReference.cache
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\bin\Debug\exp2lib.dll.config
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\bin\Debug\exp2lib.dll
-E:\Learn\C#\code\DSAGL_EXP\exp2lib\obj\Debug\exp2lib.dll

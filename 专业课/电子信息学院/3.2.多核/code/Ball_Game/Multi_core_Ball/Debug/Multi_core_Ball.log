@@ -1,7 +1,0 @@
-﻿  Multi_core_Ball.cpp
-e:\learn\多核\code\multi_core_ball\multi_core_ball\multi_core_ball.cpp(140): warning C4996: '_swprintf': This function or variable may be unsafe. Consider using _swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstdio.h(1444): note: 参见“_swprintf”的声明
-e:\learn\多核\code\multi_core_ball\multi_core_ball\multi_core_ball.cpp(143): warning C4996: '_swprintf': This function or variable may be unsafe. Consider using _swprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\corecrt_wstdio.h(1444): note: 参见“_swprintf”的声明
-  Multi_core_Ball.vcxproj -> E:\Learn\多核\code\Multi_core_Ball\Debug\Multi_core_Ball.exe
-  Multi_core_Ball.vcxproj -> E:\Learn\多核\code\Multi_core_Ball\Debug\Multi_core_Ball.pdb (Full PDB)

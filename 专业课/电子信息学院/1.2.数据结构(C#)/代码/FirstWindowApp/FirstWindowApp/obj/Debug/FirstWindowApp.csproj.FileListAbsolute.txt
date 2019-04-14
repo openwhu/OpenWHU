@@ -1,9 +1,0 @@
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\bin\Debug\FirstWindowApp.exe.config
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\bin\Debug\FirstWindowApp.exe
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\bin\Debug\FirstWindowApp.pdb
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.csprojResolveAssemblyReference.cache
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.Form1.resources
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.Properties.Resources.resources
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.csproj.GenerateResource.Cache
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.exe
-E:\Learn\C#\code\FirstWindowApp\FirstWindowApp\obj\Debug\FirstWindowApp.pdb
