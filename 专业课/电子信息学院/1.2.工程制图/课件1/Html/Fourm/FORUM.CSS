@@ -1,0 +1,34 @@
+A:visited {	TEXT-DECORATION: none	}
+A:active  {	TEXT-DECORATION: none	}
+A:hover   {	TEXT-DECORATION: underline overline	}
+A:link    {	text-decoration: none;}
+A:visited {	text-decoration: none;}
+A:active  {	TEXT-DECORATION: none;}
+A:hover   {	TEXT-DECORATION: underline overline}
+.t     {	LINE-HEIGHT: 1.4				}
+BODY   {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt;
+SCROLLBAR-HIGHLIGHT-COLOR: buttonface;
+SCROLLBAR-SHADOW-COLOR: buttonface;
+SCROLLBAR-3DLIGHT-COLOR: buttonhighlight;
+SCROLLBAR-TRACK-COLOR: #eeeeee;
+SCROLLBAR-DARKSHADOW-COLOR: buttonshadow	}
+TD{FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+SELECT {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt;	}
+INPUT  {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt; height:22px;TEXTAREA{	FONT-FAMILY: 隶书; FONT-SIZE: 9pt;}
+DIV{FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+FORM{FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+OPTION {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+P	   {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+TD	   {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+BR	   {	FONT-FAMILY: 宋体; FONT-SIZE: 9pt	}
+INPUT.buttonface{BACKGROUND: #99CCFF; border:1 solid #183ead; COLOR: #000000; FONT-SIZE: 9pt; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; HEIGHT: 18px; LINE-HEIGHT: normal}
+input.smallInput{border:1 solid #183ead;FONT-SIZE: 9pt; FONT-STYLE: normal; FONT-VARIANT: normal; FONT-WEIGHT: normal; HEIGHT: 18px; LINE-HEIGHT: normal}
+.skin0 {
+BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; VISIBILITY: hidden; BORDER-LEFT: 1px solid; WIDTH: 80px; CURSOR: default; LINE-HEIGHT: 20px; BORDER-BOTTOM: 1px solid; FONT-FAMILY: Verdana; POSITION: absolute; BACKGROUND-COLOR: #e7e7e7
+}
+.skin1 {
+BORDER-RIGHT: buttonhighlight 2px outset; BORDER-TOP: buttonhighlight 2px outset; VISIBILITY: hidden; BORDER-LEFT: buttonhighlight 2px outset; WIDTH: 90px; CURSOR: default; BORDER-BOTTOM: buttonhighlight 2px outset; POSITION: absolute; BACKGROUND-COLOR: white
+}
+.menuitems {
+PADDING-RIGHT: 10px; PADDING-LEFT: 15px
+}
