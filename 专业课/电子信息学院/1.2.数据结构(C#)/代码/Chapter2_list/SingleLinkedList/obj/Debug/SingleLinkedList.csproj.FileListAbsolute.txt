@@ -1,1 +1,0 @@
-E:\Learn\C#\code\Chapter2_list\SingleLinkedList\bin\Debug\SingleLinkedList.exe.config

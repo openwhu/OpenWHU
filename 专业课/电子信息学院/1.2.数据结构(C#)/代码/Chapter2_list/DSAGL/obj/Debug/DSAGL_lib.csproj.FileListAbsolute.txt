@@ -1,6 +1,0 @@
-E:\Learn\C#\code\Chapter2_list\DSAGL\obj\Debug\DSAGL_lib.csprojResolveAssemblyReference.cache
-E:\Learn\C#\code\Chapter2_list\DSAGL\bin\Debug\DSAGL.dll.config
-E:\Learn\C#\code\Chapter2_list\DSAGL\bin\Debug\DSAGL.dll
-E:\Learn\C#\code\Chapter2_list\DSAGL\bin\Debug\DSAGL.pdb
-E:\Learn\C#\code\Chapter2_list\DSAGL\obj\Debug\DSAGL.dll
-E:\Learn\C#\code\Chapter2_list\DSAGL\obj\Debug\DSAGL.pdb

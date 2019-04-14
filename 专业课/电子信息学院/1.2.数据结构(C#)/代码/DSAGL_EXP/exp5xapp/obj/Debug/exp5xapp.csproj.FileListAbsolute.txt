@@ -1,9 +1,0 @@
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\bin\Debug\exp5xapp.exe.config
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\bin\Debug\exp5xapp.exe
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\bin\Debug\exp5xapp.pdb
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.csprojResolveAssemblyReference.cache
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.Form_exp5.resources
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.Properties.Resources.resources
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.csproj.GenerateResource.Cache
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.exe
-E:\Learn\C#\code\DSAGL_EXP\exp5xapp\obj\Debug\exp5xapp.pdb

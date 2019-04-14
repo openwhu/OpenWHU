@@ -1,1 +1,0 @@
-"./src/menu.obj" "./src/lcd.obj" "./src/key4.obj" "./src/SI4730.obj" "./main.obj" -l"libc.a" "../lnk_msp430g2553.cmd" 

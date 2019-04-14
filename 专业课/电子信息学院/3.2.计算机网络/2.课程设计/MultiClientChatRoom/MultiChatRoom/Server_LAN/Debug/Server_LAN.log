@@ -1,5 +1,0 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Server.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  ServerManager_LAN.cpp
-e:\learn\计算机网络\multiclientchatroom\multichatroom\server_lan\servermanager_lan.cpp(85): warning C4101: “message”: 未引用的局部变量
-  Server_LAN.vcxproj -> E:\Learn\计算机网络\MultiClientChatRoom\MultiChatRoom\Debug\Server_LAN.exe
-  Server_LAN.vcxproj -> E:\Learn\计算机网络\MultiClientChatRoom\MultiChatRoom\Debug\Server_LAN.pdb (Full PDB)
