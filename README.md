@@ -99,6 +99,8 @@ WHU课代表计划Star数：10，Fork数：4
 └ README.md
 ```
 
+5.单次pull request避免上传多门课资料，否则因github只能review前3000文件，不便检查
+
 ### 上传方法
 
 
