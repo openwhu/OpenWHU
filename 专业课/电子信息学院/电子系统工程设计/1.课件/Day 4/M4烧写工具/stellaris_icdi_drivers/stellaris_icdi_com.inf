@@ -1,0 +1,58 @@
+;
+;   Stellaris ICDI USB CDC (virtual COM port) driver installation file.
+;
+;   Copyright (c) 2010 Texas Instruments Incorporated.  All rights reserved.
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%MFGNAME%
+LayoutFile=layout.inf
+CatalogFile.NTx86=stellaris_icdi_com_x86.cat
+CatalogFile.NTamd64=stellaris_icdi_com_amd64.cat
+DriverVer=09/02/2011,2.0.7922
+
+
+[Manufacturer]
+%MFGNAME%=VirComDevice,NT,NTamd64
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[VirComDevice.NT]
+%DESCRIPTION_0%=DriverInstall,USB\Vid_1CBE&Pid_00FD&MI_00
+%DESCRIPTION_0%=DriverInstall,USB\Vid_1CBE&Pid_00FE&MI_00
+%DESCRIPTION_1%=DriverInstall,USB\Vid_1CBE&Pid_00FE&MI_02
+
+[VirComDevice.NTamd64]
+%DESCRIPTION_0%=DriverInstall,USB\Vid_1CBE&Pid_00FD&MI_00
+%DESCRIPTION_0%=DriverInstall,USB\Vid_1CBE&Pid_00FE&MI_00
+%DESCRIPTION_1%=DriverInstall,USB\Vid_1CBE&Pid_00FE&MI_02
+
+[DriverInstall.NT]
+Include=mdmcpq.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=DriverInstall.NT.AddReg
+
+[DriverInstall.NT.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.NT.Services]
+AddService=usbser, 0x00000002, DriverServiceInst
+
+[DriverServiceInst]
+DisplayName=%SERVICE%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+
+[Strings]
+MFGNAME       = "Texas Instruments, Inc."
+DESCRIPTION_0 = "Stellaris Virtual Serial Port"
+DESCRIPTION_1 = "Stellaris ICDI Debug Port"
+SERVICE       = "Stellaris USB CDC serial port"
