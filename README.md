@@ -4,7 +4,7 @@
 ## 使用|Usage
 
 使用方法：访问 https://openwhu.github.io/ ，点击资料链接即可下载。
-
+批量下载可尝试使用[DownGit](https://minhaskamal.github.io/DownGit/#/home)
 
 ## 前言|Preface
 
