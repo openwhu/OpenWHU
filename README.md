@@ -4,7 +4,7 @@
 ## 使用|Usage
 
 使用方法：访问 https://openwhu.github.io/ ，点击资料链接即可下载。
-
+批量下载可尝试使用[DownGit](https://minhaskamal.github.io/DownGit/#/home)
 
 ## 前言|Preface
 
@@ -41,9 +41,9 @@
 
 2.大部分课程考核受信息不对称影响大。
 
-3.截止2019/04/12：
+3.截止2019/04/23：
 
-WHU课代表计划 Star数：13，Fork数：5 Contribution：4
+WHU课代表计划 Star数：17，Fork数：6 Contribution：4
 
 参与院系：3（资源与环境科学学院、计算机学院、电子信息学院）
 
