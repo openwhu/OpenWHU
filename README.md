@@ -32,21 +32,6 @@
 
 **Together We Can Make WHU A Better Place**
 
-
-## 现状与愿景|Status Quo & Goals
-
-### 现状：
-
-1.校内现存渠道（官方组织、盈利公众号、供需群买卖）资料质量参差不齐、普及率不高、覆盖范围窄、更新频率低。
-
-2.大部分课程考核受信息不对称影响大。
-
-3.截止2019/06/29：
-
-WHU课代表计划 Star数：60，Fork数：15 Contribution：6
-
-参与院系：3（资源与环境科学学院、计算机学院、电子信息学院）
-
 ### 愿景：
 
 1.一定程度上消除信息不对称所带来的不公平现象。
@@ -165,13 +150,4 @@ WHU课代表计划 Star数：60，Fork数：15 Contribution：6
 </details>
 
 ## 感谢所有参与本计划的同学，欢迎武大在校生加入团队一起维护
-
-<details>
-  <summary>查看详情|View Details</summary>
- 
-- yeung66 
-- fq40
-- xkw168
-
-</details>
 
