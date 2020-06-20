@@ -1,2 +1,2 @@
 theme: jekyll-theme-cayman
-include: [README.MD, OpenWHU.png]
+include: ["README.md", "OpenWHU.png"]
