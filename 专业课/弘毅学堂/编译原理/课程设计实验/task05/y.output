@@ -1,0 +1,344 @@
+   0  $accept : lines $end
+
+   1  lines : decl
+   2        | lines decl
+
+   3  $$1 :
+
+   4  decl : LET $$1 ID '=' expr ';'
+   5       | expr ';'
+
+   6  expr : INT
+   7       | ID
+   8       | IF expr THEN expr ELSE expr FI
+   9       | '(' expr ')'
+
+  10  $$2 :
+
+  11  expr : '@' ID $$2 '.' expr
+  12       | expr expr
+
+state 0
+	$accept : . lines $end  (0)
+
+	INT  shift 1
+	LET  shift 2
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	lines  goto 7
+	decl  goto 8
+	expr  goto 9
+
+
+state 1
+	expr : INT .  (6)
+
+	.  reduce 6
+
+
+state 2
+	decl : LET . $$1 ID '=' expr ';'  (4)
+	$$1 : .  (3)
+
+	.  reduce 3
+
+	$$1  goto 10
+
+
+state 3
+	expr : ID .  (7)
+
+	.  reduce 7
+
+
+state 4
+	expr : IF . expr THEN expr ELSE expr FI  (8)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 11
+
+
+state 5
+	expr : '(' . expr ')'  (9)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 12
+
+
+state 6
+	expr : '@' . ID $$2 '.' expr  (11)
+
+	ID  shift 13
+	.  error
+
+
+state 7
+	$accept : lines . $end  (0)
+	lines : lines . decl  (2)
+
+	$end  accept
+	INT  shift 1
+	LET  shift 2
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	decl  goto 14
+	expr  goto 9
+
+
+state 8
+	lines : decl .  (1)
+
+	.  reduce 1
+
+
+state 9
+	decl : expr . ';'  (5)
+	expr : expr . expr  (12)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	';'  shift 15
+	.  error
+
+	expr  goto 16
+
+
+state 10
+	decl : LET $$1 . ID '=' expr ';'  (4)
+
+	ID  shift 17
+	.  error
+
+
+state 11
+	expr : IF expr . THEN expr ELSE expr FI  (8)
+	expr : expr . expr  (12)
+
+	THEN  shift 18
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 16
+
+
+state 12
+	expr : '(' expr . ')'  (9)
+	expr : expr . expr  (12)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	')'  shift 19
+	.  error
+
+	expr  goto 16
+
+
+state 13
+	expr : '@' ID . $$2 '.' expr  (11)
+	$$2 : .  (10)
+
+	.  reduce 10
+
+	$$2  goto 20
+
+
+state 14
+	lines : lines decl .  (2)
+
+	.  reduce 2
+
+
+state 15
+	decl : expr ';' .  (5)
+
+	.  reduce 5
+
+
+state 16
+	expr : expr . expr  (12)
+	expr : expr expr .  (12)
+
+	.  reduce 12
+
+	expr  goto 16
+
+
+state 17
+	decl : LET $$1 ID . '=' expr ';'  (4)
+
+	'='  shift 21
+	.  error
+
+
+state 18
+	expr : IF expr THEN . expr ELSE expr FI  (8)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 22
+
+
+state 19
+	expr : '(' expr ')' .  (9)
+
+	.  reduce 9
+
+
+state 20
+	expr : '@' ID $$2 . '.' expr  (11)
+
+	'.'  shift 23
+	.  error
+
+
+state 21
+	decl : LET $$1 ID '=' . expr ';'  (4)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 24
+
+
+state 22
+	expr : IF expr THEN expr . ELSE expr FI  (8)
+	expr : expr . expr  (12)
+
+	ELSE  shift 25
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 16
+
+
+state 23
+	expr : '@' ID $$2 '.' . expr  (11)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 26
+
+
+state 24
+	decl : LET $$1 ID '=' expr . ';'  (4)
+	expr : expr . expr  (12)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	';'  shift 27
+	.  error
+
+	expr  goto 16
+
+
+state 25
+	expr : IF expr THEN expr ELSE . expr FI  (8)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 28
+
+
+state 26
+	expr : '@' ID $$2 '.' expr .  (11)
+	expr : expr . expr  (12)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	'('  shift 5
+	'@'  shift 6
+	THEN  reduce 11
+	ELSE  reduce 11
+	FI  reduce 11
+	';'  reduce 11
+	')'  reduce 11
+
+	expr  goto 16
+
+
+state 27
+	decl : LET $$1 ID '=' expr ';' .  (4)
+
+	.  reduce 4
+
+
+state 28
+	expr : IF expr THEN expr ELSE expr . FI  (8)
+	expr : expr . expr  (12)
+
+	INT  shift 1
+	ID  shift 3
+	IF  shift 4
+	FI  shift 29
+	'('  shift 5
+	'@'  shift 6
+	.  error
+
+	expr  goto 16
+
+
+state 29
+	expr : IF expr THEN expr ELSE expr FI .  (8)
+
+	.  reduce 8
+
+
+16 terminals, 6 nonterminals
+13 grammar rules, 30 states

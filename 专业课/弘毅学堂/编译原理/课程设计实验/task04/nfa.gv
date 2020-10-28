@@ -1,0 +1,28 @@
+digraph
+  G { label="NFA of (a*b*a|b*a*b)*";
+ 
+rankdir=LR
+start[shape =none]
+start ->node_1
+node_1 [label="Q1", shape = doublecircle]
+node_1 -> node_2 [label ="a"]
+node_1 -> node_3 [label ="b"]
+node_1 -> node_1 [label ="a"]
+node_1 -> node_4 [label ="b"]
+node_1 -> node_5 [label ="a"]
+node_1 -> node_1 [label ="b"]
+node_2 [label="Q2", shape = circle]
+node_2 -> node_2 [label ="a"]
+node_2 -> node_3 [label ="b"]
+node_2 -> node_1 [label ="a"]
+node_3 [label="Q3", shape = circle]
+node_3 -> node_3 [label ="b"]
+node_3 -> node_1 [label ="a"]
+node_4 [label="Q4", shape = circle]
+node_4 -> node_4 [label ="b"]
+node_4 -> node_5 [label ="a"]
+node_4 -> node_1 [label ="b"]
+node_5 [label="Q5", shape = circle]
+node_5 -> node_5 [label ="a"]
+node_5 -> node_1 [label ="b"]
+}
