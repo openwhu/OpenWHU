@@ -1,0 +1,10 @@
+digraph
+  G { label="MDFA of (a*b*a|b*a*b)*";
+ 
+rankdir=LR
+start[shape =none]
+start ->node_1
+node_1 [label="M1", shape = doublecircle]
+node_1 -> node_1 [label ="b"]
+node_1 -> node_1 [label ="a"]
+}

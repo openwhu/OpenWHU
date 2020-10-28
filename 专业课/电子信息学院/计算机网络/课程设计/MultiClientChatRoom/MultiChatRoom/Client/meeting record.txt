@@ -1,0 +1,3 @@
+5.25 meeting record
+1、SemanticTemplate各个变量的含义(processor,tag,type)
+2、语言判断流程 nlptask(nlp:natural language processing) -> match trigger(SemanticTemplate) -> 产生shortcut（每一个matched trigger会call它的processor来获取本地信息产生复数量的shortcutdata） -> 每一个short

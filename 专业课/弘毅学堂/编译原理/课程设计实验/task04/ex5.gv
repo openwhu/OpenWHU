@@ -1,0 +1,13 @@
+digraph
+  G { label="MDFA of ((ab|ba)*aa|(ab|ba)*bb)*(ab|ba)*";
+ 
+rankdir=LR
+start[shape =none]
+start ->node_1
+node_1 [label="M1", shape = doublecircle]
+node_1 -> node_2 [label ="b"]
+node_1 -> node_2 [label ="a"]
+node_2 [label="M2", shape = circle]
+node_2 -> node_1 [label ="a"]
+node_2 -> node_1 [label ="b"]
+}

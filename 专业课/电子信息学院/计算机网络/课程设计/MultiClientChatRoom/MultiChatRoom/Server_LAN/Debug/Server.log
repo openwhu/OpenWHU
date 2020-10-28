@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  ServerManager.cpp
+e:\learn\计算机网络\multiclientchatroom\multichatroom\server\servermanager.cpp(85): warning C4101: “message”: 未引用的局部变量
+  ServerDlg.cpp
+  Server.cpp
+  正在生成代码...
+  LINK : 没有找到 E:\Learn\计算机网络\MultiClientChatRoom\MultiChatRoom\Debug\Server.exe 或上一个增量链接没有生成它；正在执行完全链接
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  Server.vcxproj -> E:\Learn\计算机网络\MultiClientChatRoom\MultiChatRoom\Debug\Server.exe
+  Server.vcxproj -> E:\Learn\计算机网络\MultiClientChatRoom\MultiChatRoom\Debug\Server.pdb (Full PDB)

@@ -1,0 +1,123 @@
+.Gen
+{
+    POSITION: relative
+}
+.heading
+{
+    BACKGROUND: #eeeeee;
+    COLOR: #000000
+}
+.Composition
+{
+    BACKGROUND-COLOR: menu;
+    POSITION: relative
+}
+.yToolbar
+{
+    BACKGROUND-COLOR: menu;
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    HEIGHT: 27px;
+    LEFT: 0px;
+    POSITION: relative;
+    TOP: 0px
+}
+.Btn
+{
+    BACKGROUND-COLOR: menu;
+    BORDER-BOTTOM: buttonface 1px solid;
+    BORDER-LEFT: buttonface 1px solid;
+    BORDER-RIGHT: buttonface 1px solid;
+    BORDER-TOP: buttonface 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 23px
+}
+.Ico
+{
+    LEFT: 2px;
+    POSITION: absolute;
+    TOP: 1px
+}
+.TBSep
+{
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    FONT-SIZE: 0px;
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 1px
+}
+.TBGen
+{
+    FONT: 8pt verdana,arial,sans-serif;
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 2px
+}
+.TBHandle
+{
+    BACKGROUND-COLOR: menu;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    FONT-SIZE: 1px;
+    HEIGHT: 22px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 3px
+}
+.BtnMouseOverUp
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonshadow 1px solid;
+    BORDER-LEFT: buttonhighlight 1px solid;
+    BORDER-RIGHT: buttonshadow 1px solid;
+    BORDER-TOP: buttonhighlight 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.BtnMouseOverDown
+{
+    BACKGROUND-COLOR: buttonface;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.BtnDown
+{
+    BACKGROUND-COLOR: gainsboro;
+    BORDER-BOTTOM: buttonhighlight 1px solid;
+    BORDER-LEFT: buttonshadow 1px solid;
+    BORDER-RIGHT: buttonhighlight 1px solid;
+    BORDER-TOP: buttonshadow 1px solid;
+    HEIGHT: 23px;
+    POSITION: absolute;
+    TOP: 1px;
+    WIDTH: 24px
+}
+.IcoDown
+{
+    HEIGHT: 23px;
+    LEFT: 0px;
+    POSITION: absolute;
+    TOP: 0px;
+    WIDTH: 24px
+}
+.IcoDownPressed
+{
+    LEFT: 1px;
+    POSITION: absolute;
+    TOP: 1px
+}

@@ -1,0 +1,1 @@
+(aa|bb)*((ab|ba)(aa|bb)*(ab|ba)(aa|bb)*)*

@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[a4paper, margin=1cm]{geometry}
+\usepackage{color,xcolor}
+\usepackage{pgf,tikz, tikz-qtree}
+\renewcommand{\thefootnote}{~}
+%\tikzstyle{every node}=[ thin]%
+\newcommand{\exptree}[2]{%
+%
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[level distance=.9cm,scale=.9]%
+#2%
+\end{tikzpicture}%
+\end{center}
+\footnote{The normal order evaluation.}
+%\footnote{The expansion without the shared nodes.}
+\caption{\tiny\tt #1}
+\end{figure}
+\pagebreak
+}%
+\begin{document}
+\include{expr}
+\end{document}
