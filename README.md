@@ -1,6 +1,7 @@
 # WHU课代表计划 - 武汉大学课程资料整理
 <img src="https://raw.githubusercontent.com/openwhu/OpenWHU/master/OpenWHU.png">
 
+[![Gitter](https://badges.gitter.im/openwhu/community.svg)](https://gitter.im/openwhu/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ## 使用|Usage
 
 使用方法：访问 https://openwhu.github.io/ ，点击资料链接即可下载。
