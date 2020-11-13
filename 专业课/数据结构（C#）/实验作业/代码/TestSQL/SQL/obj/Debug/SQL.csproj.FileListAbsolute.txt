@@ -1,0 +1,1 @@
+E:\Learn\C#\code\TestSQL\SQL\bin\Debug\SQL.exe.config

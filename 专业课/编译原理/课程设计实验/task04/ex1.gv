@@ -1,0 +1,37 @@
+digraph
+  G { label="MDFA of (a|b)*babab(a|b)*bab(a|b)*|(a|b)*bba(a|b)*bab(a|b)*";
+ 
+rankdir=LR
+start[shape =none]
+start ->node_1
+node_1 [label="M1", shape = circle]
+node_1 -> node_2 [label ="b"]
+node_1 -> node_1 [label ="a"]
+node_2 [label="M2", shape = circle]
+node_2 -> node_3 [label ="b"]
+node_2 -> node_8 [label ="a"]
+node_3 [label="M3", shape = circle]
+node_3 -> node_3 [label ="b"]
+node_3 -> node_4 [label ="a"]
+node_4 [label="M4", shape = circle]
+node_4 -> node_4 [label ="a"]
+node_4 -> node_5 [label ="b"]
+node_5 [label="M5", shape = circle]
+node_5 -> node_5 [label ="b"]
+node_5 -> node_6 [label ="a"]
+node_6 [label="M6", shape = circle]
+node_6 -> node_4 [label ="a"]
+node_6 -> node_7 [label ="b"]
+node_7 [label="M7", shape = doublecircle]
+node_7 -> node_7 [label ="b"]
+node_7 -> node_7 [label ="a"]
+node_8 [label="M8", shape = circle]
+node_8 -> node_1 [label ="a"]
+node_8 -> node_9 [label ="b"]
+node_9 [label="M9", shape = circle]
+node_9 -> node_3 [label ="b"]
+node_9 -> node_10 [label ="a"]
+node_10 [label="M10", shape = circle]
+node_10 -> node_1 [label ="a"]
+node_10 -> node_4 [label ="b"]
+}

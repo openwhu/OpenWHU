@@ -1,0 +1,170 @@
+; -----------------------------------------------------------------------------
+;
+; Stellaris USB DFU Boot Loader device driver installer
+;
+; -----------------------------------------------------------------------------
+
+; NOTE: When you customize this INF for your own device, create a new class
+; name (Class) and a new GUID (ClassGuid). GUIDs may be created using the
+; guidgen tool from Windows Visual Studio or the Windows SDK.
+
+[Version]
+Signature = "$Windows NT$"
+Class = StellarisDFUDeviceClass
+ClassGuid={BDF4A2F9-552C-437b-892D-7CF600016A3F}
+Provider = %ProviderName%
+CatalogFile.NTx86=boot_usb_x86.cat
+CatalogFile.NTamd64=boot_usb_amd64.cat
+DriverVer=09/02/2011,1.2.7922
+
+; ========== Manufacturer/Models sections ===========
+
+[Manufacturer]
+%ProviderName% = StellarisDFUDevice_WinUSB,NTx86,NTamd64
+
+; NOTE: Replace the VID and PID in the following two sections with the
+; correct values for your device.
+
+[StellarisDFUDevice_WinUSB.NTx86]
+%USB\StellarisDFUDevice.DeviceDesc% =USB_Install, USB\VID_1CBE&PID_00FF
+
+[StellarisDFUDevice_WinUSB.NTamd64]
+%USB\StellarisDFUDevice.DeviceDesc% =USB_Install, USB\VID_1CBE&PID_00FF
+
+; =================== Installation ===================
+
+[ClassInstall32]
+AddReg=AddReg_ClassInstall
+
+[AddReg_ClassInstall]
+HKR,,,,"%DeviceClassDisplayName%"
+HKR,,Icon,,-1
+
+[USB_Install.NTx86]
+Include=winusb.inf
+Needs=WINUSB.NT
+CopyFiles=System32_CopyFiles
+
+[USB_Install.NTamd64]
+Include=winusb.inf
+Needs=WINUSB.NT
+CopyFiles=SysWOW64_CopyFiles
+CopyFiles=System64_CopyFiles
+
+[USB_Install.NTx86.Services]
+Include=winusb.inf
+AddService=WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[USB_Install.NTamd64.Services]
+Include=winusb.inf
+AddService=WinUSB,0x00000002,WinUSB_ServiceInstall
+
+[WinUSB_ServiceInstall]
+DisplayName     = %WinUSB_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.NTx86.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[USB_Install.NTamd64.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[WinUSB_Install]
+KmdfLibraryVersion=1.9
+
+[USB_Install.NTx86.HW]
+AddReg=Dev_AddReg
+
+[USB_Install.NTamd64.HW]
+AddReg=Dev_AddReg
+
+;
+; NOTE:
+;
+; The following GUID is used by software that accesses Stellaris DFU devices
+; (dfuprog and LM Flash Programmer).  If you want your device to be accessible
+; by these tools, don't change it.
+;
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{D17C772B-AF45-4041-9979-AAFE96BF6398}"
+
+[USB_Install.NTx86.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[USB_Install.NTamd64.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUSBCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[System32_CopyFiles]
+lmusbdll.dll
+lmusbdll.lib
+lmdfu.dll
+lmdfu.lib
+
+[System64_CopyFiles]
+lmusbdll.dll, lmusbdll64.dll
+lmusbdll.lib, lmusbdll64.lib
+lmdfu.dll, lmdfu64.dll
+lmdfu.lib, lmdfu64.lib
+
+[SysWOW64_CopyFiles]
+lmusbdll.dll
+lmusbdll.lib
+lmdfu.dll
+lmdfu.lib
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+System32_CopyFiles=10,system32
+SysWOW64_CopyFiles=10,syswow64
+System64_CopyFiles=10,system32
+CoInstallers_CopyFiles=11
+
+; ================= Source Media Section =====================
+
+[SourceDisksNames]
+1 = %DISK_NAME%,,,\i386
+2 = %DISK_NAME%,,,\amd64
+
+[SourceDisksFiles.x86]
+WinUSBCoInstaller2.dll=1
+WdfCoInstaller01009.dll=1
+lmusbdll.dll=1
+lmusbdll.lib=1
+lmdfu.dll=1
+lmdfu.lib=1
+
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller2.dll=2
+WdfCoInstaller01009.dll=2
+lmusbdll.dll=1
+lmusbdll.lib=1
+lmdfu.dll=1
+lmdfu.lib=1
+lmusbdll64.dll=2
+lmusbdll64.lib=2
+lmdfu64.dll=2
+lmdfu64.lib=2
+
+; =================== Strings ===================
+
+; Note: Replace these as appropriate to describe your device.
+
+[Strings]
+ProviderName="Texas Instruments Inc."
+USB\StellarisDFUDevice.DeviceDesc="Stellaris Device Firmware Upgrade"
+WinUSB_SvcDesc="WinUSB"
+DISK_NAME="Stellaris Install Disk"
+DeviceClassDisplayName="Stellaris Device Firmware Upgrade"
+

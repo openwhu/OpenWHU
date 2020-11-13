@@ -1,0 +1,19 @@
+digraph
+  G { label="MDFA of ((aa|ab(bb)*ba)*b(a(bb)*a)*b|(aa|ab(bb)*ba)*ab(bb)*a(a(bb)*a)*b|(aa|ab(bb)*ba)*b(a(bb)*a)*a(bb)*ba|(aa|ab(bb)*ba)*ab(bb)*a(a(bb)*a)*a(bb)*ba)*(aa|ab(bb)*ba)*b(a(bb)*a)*|((aa|ab(bb)*ba)*b(a(bb)*a)*b|(aa|ab(bb)*ba)*ab(bb)*a(a(bb)*a)*b|(aa|ab(bb)*ba)*b(a(bb)*a)*a(bb)*ba|(aa|ab(bb)*ba)*ab(bb)*a(a(bb)*a)*a(bb)*ba)*(aa|ab(bb)*ba)*ab(bb)*a(a(bb)*a)*";
+ 
+rankdir=LR
+start[shape =none]
+start ->node_1
+node_1 [label="M1", shape = circle]
+node_1 -> node_2 [label ="b"]
+node_1 -> node_4 [label ="a"]
+node_2 [label="M2", shape = doublecircle]
+node_2 -> node_1 [label ="b"]
+node_2 -> node_3 [label ="a"]
+node_3 [label="M3", shape = circle]
+node_3 -> node_2 [label ="a"]
+node_3 -> node_4 [label ="b"]
+node_4 [label="M4", shape = circle]
+node_4 -> node_3 [label ="b"]
+node_4 -> node_1 [label ="a"]
+}

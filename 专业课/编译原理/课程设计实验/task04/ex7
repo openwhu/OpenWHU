@@ -1,0 +1,1 @@
+((aa|ab(bb)*ba)*(b|ab(bb)*a)(a(bb)*a)*(b|a(bb)*ba))*(aa|ab(bb)*ba)*(b|ab(bb)*a)(a(bb)*a)*
