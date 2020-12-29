@@ -1,0 +1,146 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第四次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	Problem3.7\\
+	Answer:\\
+	For this question, we want to solve the electric field above
+	 the plane(z>0), and the Dirichlet Boundary condition is:\\
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+		&V = 0, where\,z = 0\\
+		&V = 0, where\,\sqrt{x^2+y^2+z^2} \to \infty
+		\end{aligned}
+		\right.\eqno(1.1)
+	\end{equation*}
+	If we remove the grounded conductor, and place a charge -2q 
+	at (0,0,-d), and a charge +q at (0,0,-3d), it's easy to prove 
+	that it has the same Dirichlet boundary condition with the 
+	origin question.
+	So, the force exert on +q is:
+	$$F = \frac{1}{4\pi \epsilon_0}(-\frac{2q^2}{4d^2}-\frac{2q^2}{16d^2}+\frac{q^2}{36d^2})=-\frac{1}{4 \ pi \epsilon_0}\frac{43q^2}{72d^2}\eqno(1.2)$$\\
+	Problem3.15\\
+	Answer:\\
+	(a).\\
+	According to the symmetry of the pipe, it's easy to know that 
+	the potential inside the pipe is only the function of x and y.\\
+	And we can determined the Dirichlet boundary condition:\\
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				&V(x=0,y) = 0\\
+				&V(x=b,y) = V_0(y)\\
+				&V(x,y=0) = 0\\
+				&V(x,y=b) = 0
+			\end{aligned}
+		\right.\eqno(2.1)
+	\end{equation*}
+	Assume that the V(x,y) could be writen in following form:
+	$$V(x,y) = \mathcal{X}(x)\mathcal{Y}(y)\eqno(2.2)$$
+	So, the laplace's equation turn to:
+	$$\mathcal{Y}\frac{\partial^2 \mathcal{X}}{\partial x^2} + 
+	\mathcal{X}\frac{\partial^2 \mathcal{Y}}{\partial y^2} = 0 
+	\eqno(2.3)$$
+	Which equal to:
+	$$\frac{1}{\mathcal{X}}\frac{\partial^2 \mathcal{X}}{\partial x^2} + 
+	\frac{1}{\mathcal{Y}}\frac{\partial^2 \mathcal{Y}}{\partial y^2}
+	==0\eqno(2.4)$$
+	The two terms in the left side of the equation is only the function
+	of x and of y. If we want (2.4) always correct, the following equation
+	must be correct.\\
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+				&\frac{\partial^2 \mathcal{X}}{\partial x^2} = k^2\mathcal{X}\\
+				&\frac{\partial^2 \mathcal{Y}}{\partial y^2} = -k^2\mathcal{Y}
+			\end{aligned}
+		\right.\eqno(2.5)
+	\end{equation*}
+	Solve (2.5) we get:
+	$$V(x,y) = (C_1 e^{kx}+ C_2 e^{-kx})(C_3sin(ky)+C_4Cos(ky))\eqno(2.6)$$
+	By consider the boundary condition, we can determined the coefficient:
+	$$V(x,y) = C_1(e^{\frac{n\pi x}{a}} - e^{-\frac{n\pi x}{a}})(
+		C_4sin(\frac{n\pi y}{a}))$$
+	$$=2C_1C_4sinh(\frac{n\pi x}{a})sin(\frac{n \pi y}{a})\eqno(2.7)$$
+	(2.7) could be writen in a sum form:
+	$$V(x,y) = \sum_{n=1}^{\infty} C_nsinh(\frac{n\pi x}{a})sin(\frac{n \pi y}
+	{a}) \eqno(2.8)$$
+	And solve $C_n$ with $V_0(y)$:
+	$$C_n = \frac{2}{a\,sinh(n\pi b/a)}\int_{0}^a V_0(y)sin(\frac{n \pi y}{a})dy \eqno(2.9)$$
+	(b)\\
+	$$C_n = \frac{2V_0}{a\,sinh(n\pi b/a)}\int_0^asin(\frac{n \pi y}{a})dy \eqno(2.10)$$
+	If n is even:
+	$$C_n = 0\eqno(2.11)$$
+	If n in odd:
+	$$C_n = \frac{4V_0}{n\pi\,sinh(n\pi b/a)} \eqno(2.12)$$
+	The potential is:
+	$$V(x,y) = \frac{4V_0}{\pi}\sum_{n=1,3,5}\frac{sinh(n\pi x/a)sin(n\pi y/a)}{n\, sinh(n\pi b/a)}\eqno(2.13)$$
+ 
+	Problem3.19\\
+	Answer:\\
+	$$V_0(\theta) = k\,cos(3\theta) \eqno(3.1)$$
+	Express (3.1) in the combination of Legendre polynomials:
+	$$V_0(\theta) = k[\alpha P_3(cos\theta) + \beta P_1(cos\theta)]\eqno(3.2)$$
+	Determined the coefficient $\alpha$ and $\beta$:
+	$$cos(3\theta) = 4cos^3\theta - 3 cos\theta = \alpha[\frac{1}{2}(5cos^3
+	\theta-3cos\theta)]+\beta cos\theta\eqno(3.3)$$
+	So:
+	\begin{equation*}
+		\left\{
+			\begin{aligned}
+			&\alpha = \frac{8}{5}\\
+			&\beta = -\frac{3}{5}
+			\end{aligned}
+		\right.\eqno(3.4)	
+	\end{equation*}
+	Therefore:
+	$$V_0(\theta) = \frac{k}{5}[8P_3(cos\theta)-3P_1(cos\theta)] \eqno(3.5)$$
+	For the inside space:
+	$$V(r,\theta) = \sum_{l=0}^{\infty}A_l\tau ^lP_l(cos\theta)\qquad r\leq R\eqno(3.6)$$
+	$A_l$ is determined by:
+	\begin{equation}\nonumber
+	\begin{aligned}
+	A_l = &\frac{(2l+1)}{2R^l}\int_0^\pi V_0(\theta)P_l(cos\theta)sin\theta d\theta\\
+	&= \frac{(2l+1)}{2R^l}\frac{k}{5}\{8\int_0^\pi P_3(cos\theta)P_l(cos\theta)
+	sin\theta d\theta -3\int_0^\pi P_1(cos\theta)P_l(cos\theta)sin\theta d\theta\}\\
+	&= \frac{(2l+1)}{2R^l}\frac{k}{5}\{8\frac{2}{(2l+1)}\delta_{l3}-3\frac{2}{(2l+1)\delta_{l1}}\}\\
+	&= \frac{k}{5R^l}[8\delta_{l3}-3\delta_{l1}]
+	\end{aligned}
+	\eqno(3.7)
+	\end{equation}
+	So:
+	$$V(r,\theta) = \frac{k}{5}[8(\frac{r}{R})^3P_3(cos\theta)*3(\frac{r}{R})P_1(cos\theta)]\qquad \eqno(3.8)$$
+	Then, look outside:
+	$$V(r,\theta) = \sum_{l=0}^{\infty}\frac{B_l}{r^{l+1}}P_l(cos\theta)\qquad r\geq R \eqno(3.9)$$
+	And we can determined $B_l$:
+	$$B_l = \frac{k}{5}\frac{1}{R^{l+1}}[8\delta_{l3}-3\delta_{l1}]\eqno(3.10)$$
+	So:
+	$$V(r,\theta) = \frac{k}{5}[8(\frac{R}{r})^4P_3(cos\theta) - 3(\frac{R}{r})^2P_1(cos\theta)]\eqno(3.11)$$
+	For the charge density:
+	$$\sigma(\theta) = \epsilon_0\sum_{l=0}^{\infty}(2l+1)A_lR^(l-1)P_l(cos\theta)
+	=\frac{\epsilon_0 k}{5 R}[-9P_1(cos\theta)+56P_3(cos\theta)]\eqno(3.12)$$
+	Problem3.45\\
+	Answer:\\
+	(a)\\
+	$$\frac{1}{2}\sum_{i,j=1}^{3}\hat{r_i}\hat{r_j}Q_{ij} = \frac{1}{2}\int{
+		3\sum_{i=1}^3\hat{r_i}r_j'\sum_{j=1}^3\hat{r_j}r_i'-(r')^2\sum_{i,j}
+		\hat{r_i}\hat{r_j}\delta_{ij}
+	}\rho dr'\eqno(4.1)$$
+	So, the potential of the quadrupole is:
+	$$V_{quad} = \frac{1}{4\pi\epsilon_0}\frac{1}{r^3}\int\frac{1}{2}(r'^2cos\theta' - r')
+	\rho d\tau' = \frac{1}{4\pi\epsilon_0}\int r'^2P_2(cos\theta')\rho d\tau'\eqno(4.2)$$
+	(b)\\
+	Since $x^2 = y^2 = (a/2)^2$ for all four charges:
+	$$Q_{xx}=Q_{yy} = 0 \eqno(4.3)$$
+	And z=0:
+	$$Q_{zz} = Q_(xz) = Q_(yz) = Q_(zx) = Q_(zy) = 0\eqno(4.4)$$
+	For $Q_{xy} and Q_{yx}$:
+	$$Q_{xy} = Q_{yx} = 3a^2q \eqno(4.5)$$
+\end{document}

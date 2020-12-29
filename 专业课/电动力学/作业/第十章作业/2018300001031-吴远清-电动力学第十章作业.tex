@@ -1,0 +1,126 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第十章作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	Problem 12.16\\
+	Answer:\\
+	(a)\\
+	Let the time in the frame of the stationary twin on Earth be $\bar{t}$, then:\\
+	$$\begin{aligned}
+		\Delta \bar{t} &=\gamma\left(t_{R}+\frac{x_{R} v}{c^{2}}\right)-\gamma\left(t_{S}+\frac{x_{S} v}{c^{2}}\right) \\
+		&=\gamma \Delta t=\frac{5}{3} \cdot 18=30 \mathrm{y}
+	\end{aligned}$$
+	where $x_{R}=x_{S}=0$ since the two origins coincide at start and return. Subscript "R" stands for "return" and "S" for "start". Her twin is thus 51 years old.\\
+	(b)\\
+	In which system? In the Earth system the star is 15 years of travel away, so it's:
+	$$L=15 \cdot \frac{4}{5} c=[12 \mathrm{y}$$
+	(c)\\
+	since the jump happens at the star $\mathrm{X}$, the coordinates of the jump is the Earth system are obviously $(t, x)=(15 \mathrm{y}, 12 \mathrm{cy})$\\
+	Let the Earth system be $\mathcal{S},$ inbound one $\tilde{\mathcal{S}}$ and outbound one $\overline{\mathcal{S}},$ with $t=\bar{t}=\tilde{t}=0$ at $x=\bar{x}=\tilde{x}=0$\\
+	(d)\\
+	This system travels with her (on the outbound trip), so the jump happens at $(\bar{t}, \bar{x})=(9 \mathrm{y}, 0)$\\
+	(e)\\
+	Let's use the Lorentz transformations, knowing the coordinates of the jump in the Earth system (from c)). $\tilde{\mathcal{S}}$ moves with respect to Earth system with $-v,$ so:\\
+	$$\tilde{x}=\gamma(x+v t)=40 \mathrm{cy} \quad \tilde{t}=\gamma\left(t+x v / c^{2}\right)=41 \mathrm{y}$$
+	(f)\\
+	She will need to set her clock 32 years foward to agree with the time in $\tilde{\mathcal{S}} .$ since she'll travel for another 9 years (according to her), her clock will read 50 years.\\
+	(g)\\
+	To the traveling twin the Earth is moving away, so:\\
+	$$\bar{t}=\gamma\left(t-x v / c^{2}\right) \Longrightarrow t=\frac{\bar{t}}{\gamma}=5.4 \mathrm{y}$$
+	since her brother is at $x=0$ in his origin. Thus, she will observe him being 26.4 years old.\\
+	Using the same technique:\\
+	$$t=\frac{\tilde{t}}{\gamma}=24.6 \mathrm{y}$$
+	so she'll observe him being 45.6 years old.\\
+	(h)\\
+	Now the Earth is moving towards her at velocity $v,$ so she calulates that on Earth it will pass 5.4 years, just what she calculated for the outbound $\operatorname{trip} \operatorname{in} g, i)$\\
+	Adding that to result in $g,$ ii ) she expects that her brother will be 51 years old, just like in a).\\
+	
+	Problem 12.47\\
+	Answer:\\
+	(a)\\
+	If the system $\bar{S}$ is moving along the $x$ -axis with velocity $v$ we have:\\
+	$$\begin{aligned}
+	\vec{E}^{\prime} \cdot \vec{B}^{\prime} &=\bar{E}_{x} \bar{B}_{x}+\bar{E}_{y} \bar{B}_{y}+\bar{E}_{z} \bar{B}_{z} \\
+	&=E_{x} B_{x}+\gamma\left(E_{y}-v B_{z}\right) \gamma\left(B_{y}+\frac{v E_{z}}{c^{2}}\right)+\gamma\left(E_{z}+v B_{y}\right) \gamma\left(B_{z}-\frac{v E_{y}}{c^{2}}\right)
+	\end{aligned}$$
+	The mixed products $\left(E_{y} E_{z} \text { and such }\right)$ will cancel, leaving us with the following:\\
+	$$\begin{aligned}
+		\vec{E}^{\prime} \cdot \vec{B}^{\prime} &=E_{x} B_{x}+E_{y} B_{y} \gamma^{2}\left(1-\beta^{2}\right)+E_{z} B_{z} \gamma^{2}\left(1-\beta^{2}\right) \\
+		&=E_{x} B_{x}+E_{y} B_{y}+E_{y} B_{y}=\vec{E} \cdot \vec{B}
+	\end{aligned}$$
+	since $\gamma^{2}=1 /\left(1-\beta^{2}\right) .$ So it is an invariant under the Lorentzian transformation.\\
+	(b)\\
+	$$\begin{aligned}
+	\bar{E}^{2}-c^{2} \bar{B}^{2}=& \bar{E}_{x}^{2}+\bar{E}_{y}^{2}+\bar{E}_{y}^{2}-c^{2}\left(\bar{B}_{x}^{2}+\bar{B}_{y}^{2}+\bar{B}_{z}^{2}\right) \\
+	=& E_{x}^{2}-c^{2} B_{x}^{2}+\gamma^{2}\left(E_{y}-v B_{z}\right)^{2}+\gamma^{2}\left(E_{z}+v B_{y}\right)^{2} \\
+	&-c^{2} \gamma^{2}\left(B_{y}+\frac{v E_{z}}{c^{2}}\right)^{2}-c^{2} \gamma^{2}\left(B_{z}-\frac{v E_{y}}{c^{2}}\right)^{2} \\
+	=& E_{x}^{2}-c^{2} B_{x}^{2}+\gamma^{2}\left(E_{y}^{2}-2 v E_{y} B_{z}+v^{2} B_{z}^{2}\right)+\gamma^{2}\left(E_{z}^{2}+2 v E_{z} B_{y}+v^{2} B_{y}^{2}\right) \\
+	&-c^{2} \gamma^{2}\left(B_{y}^{2}+2 \frac{v}{c^{2}} B_{y} E_{z}+\frac{v^{2}}{c^{4}} E_{z}^{2}\right)-c^{2} \gamma^{2}\left(B_{z}^{2}-2 \frac{v}{c^{2}} B_{z} E_{y}+\frac{v^{2}}{c^{4}} E_{y}^{2}\right)
+	\end{aligned}$$
+	Again, the mixed products (the middle ones in each of the brackets) will cancel, leaving us with:\\
+	$$\begin{aligned}
+	\bar{E}^{2}-c^{2} \bar{B}^{2}=& E_{x}^{2}-c^{2} B_{x}^{2}+E_{y}^{2} \gamma^{2}\left(1-\beta^{2}\right)+E_{z}^{2} \gamma^{2}\left(1-\beta^{2}\right) \\
+	&-c^{2} B_{y}^{2} \gamma^{2}\left(1-\beta^{2}\right)-c^{2} B_{z}^{2} \gamma^{2}\left(1-\beta^{2}\right) \\
+	=& E_{x}^{2}-c^{2} B_{x}^{2}+E_{y}^{2}+E_{z}^{2}-c^{2} B_{y}^{2}-c^{2} B_{z}^{2}=E^{2}-c^{2} B^{2}
+	\end{aligned}$$
+	So this is an invariant as well.\\
+	(c)\\
+	In the original system $\vec{E} \neq 0,$ so the invariant b) is greater than zero, and this must be so in all other inertial systems. Therefore, there cannot be a system where the electric field is zero, and magnetic one is not since then the invariant would be negative.\\
+	
+	Problem 12.51\\
+	Answer:\\
+	(i)\\
+	The first invariant:\\
+	$$\begin{array}{c}
+	F_{v \mu} F^{\nu \mu} \\
+	=F_{00} F^{00}+F_{01} F^{01}+F_{02} F^{02}+F_{03} F^{03} \\
+	+F_{10} F^{10}+F_{11} F^{11}+F_{12} F^{12}+F_{13} F^{13} \\
+	+F_{20} F^{20}+F_{21} F^{21}+F_{22} F^{22}+F_{23} F^{23} \\
+	+F_{30} F^{30}+F_{31} F^{31}+F_{32} F^{32}+F_{33} F^{33}
+	\end{array}$$
+	The diagonal terms (ones with same indices) dissapear, since they are zero, and:\\
+	$$\begin{aligned}
+	F_{\nu \mu} F^{\nu \mu} &=-\frac{E_{x}^{2}}{c^{2}}-\frac{E_{y}^{2}}{c^{2}}-\frac{E_{z}^{2}}{c^{2}}-\frac{E_{x}^{2}}{c^{2}}+B_{z}^{2}+B_{y}^{2}-\frac{E_{y}^{2}}{c^{2}}+B_{z}^{2}+B_{x}^{2}-\frac{E_{z}^{2}}{c^{2}}+B_{y}^{2}+B_{x_{x}}^{2} \\
+	&=-\frac{2}{c^{2}}\left(E^{2}-c^{2} B^{2}\right)
+	\end{aligned}$$
+	This is the same (apart from a constant factor) invariant from the Prob 12.47)\\
+	(ii)\\
+	The second invariant:\\
+	$$\begin{array}{c}
+	G_{\nu \mu} G^{\nu \mu} \\
+	=G_{00} G^{00}+G_{01} G^{01}+G_{02} G^{02}+G_{03} G^{03} \\
+	+G_{10} G^{10}+G_{11} G^{11}+G_{12} G^{12}+G_{13} G^{13} \\
+	+G_{20} G^{20}+G_{21} G^{21}+G_{22} G^{22}+G_{23} G^{23} \\
+	+G_{30} G^{30}+G_{31} G^{31}+G_{32} G^{32}+G_{33} G^{33}
+	\end{array}$$
+	Agian, the diagonal terms are zero, and we are left with:\\
+	$$\begin{aligned}
+		G_{\nu \mu} G^{\nu \mu} &=-B_{x}^{2}-B_{y}^{2}-B_{z}^{2}-B_{x}^{2}+\frac{E_{z}^{2}}{c^{2}}+\frac{E_{y}^{2}}{c^{2}}-B_{y}^{2}+\frac{E_{z}^{2}}{c^{2}}+\frac{E_{x}^{2}}{c^{2}}-B_{z}^{2}+\frac{E_{y}^{2}}{c^{2}}+\frac{E_{x}^{2}}{c^{2}} \\
+		&=\frac{2}{c^{2}}\left(E^{2}-c^{2} B^{2}\right)
+	\end{aligned}$$
+	The same invariant as in the first part of the problem, with a reversed sign, so:\\
+	$$G_{\nu \mu} G^{\nu \mu}=-F_{\nu \mu} F^{\nu \mu}$$
+	(iii)\\
+	The final invariant:\\
+	$$\begin{array}{c}
+		G_{\nu \mu} F^{\nu \mu} \\
+		=G_{00} F^{00}+G_{01} F^{01}+G_{02} F^{02}+G_{03} F^{03} \\
+		+G_{10} F^{10}+G_{11} F^{11}+G_{12} F^{12}+G_{13} F^{13} \\
+		+G_{20} F^{20}+G_{21} F^{21}+G_{22} F^{22}+G_{23} F^{23} \\
+		+G_{30} F^{30}+G_{31} F^{31}+G_{32} F^{32}+G_{33} F^{33}
+	\end{array}$$
+	Diagonal terms are zero:\\
+	$$\begin{aligned}
+	G_{\nu \mu} F^{\nu \mu}=&-\frac{E_{x}}{c} B_{x}-\frac{E_{y}}{c} B_{y}-\frac{E_{z}}{c} B_{z}-\frac{E_{x}}{c} B_{x}-\frac{E_{z}}{c} B_{z}-\frac{E_{y}}{c} B_{y} \\
+	&-\frac{E_{y}}{c} B_{y}-\frac{E_{z}}{c} B_{z}-\frac{E_{x}}{c} B_{x}-\frac{E_{z}}{c} B_{z}-\frac{E_{y}}{c} B_{y}-\frac{E_{x}}{c} B_{x} \\
+	=&-\frac{4}{c}\left(E_{x} B_{x}+E_{y} B_{y}+E_{z} B_{z}\right)=-\frac{4}{c} \vec{E} \cdot \vec{B}
+	\end{aligned}$$
+	This is also an invariant, just like in Problem 12.47 ), apart from the constant factor.
+	
+\end{document}
