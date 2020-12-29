@@ -1,0 +1,114 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第十一次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	Problem 11.12\\
+	Answer:\\
+	The acceleration of the particle is $a=g$ (downwards), so the power radiated is:
+	$$P=\frac{\mu_{0} q^{2} a^{2}}{6 \pi c}=\frac{\mu_{0} q^{2} g^{2}}{6 \pi c}$$
+	The total energy radiated in the time needed to traverse $1 \mathrm{cm}$ is:
+	$$U=\int_{0}^{t_{f}} P d t=P t_{f}$$
+	$$y=\frac{1}{2} g t_{f}^{2} \Longrightarrow t_{f}=\sqrt{\frac{2 y}{g}}$$
+	$$U=P \sqrt{\frac{2 y}{g}}=\frac{\mu_{0} q^{2} g^{2}}{6 \pi c} \sqrt{\frac{2 y}{g}}$$
+	The ratio of this energy versus the potential energy lost by traversing that distance is:
+	$$\eta=\frac{U}{U_{p o t}}=\frac{\frac{\mu_{0} q^{2} g^{2}}{6 \pi c} \sqrt{\frac{2 y}{g}}}{m g y}=\frac{\mu_{0} q^{2}}{6 \pi \mathrm{cm}} \sqrt{\frac{2 g}{y}}$$
+	Numerically this ratio is equal to, with $m=9.11 \cdot 10^{-31} \mathrm{kg}$ and $q=$ $1.609 \cdot 10^{-19} \mathrm{C}:$
+	$$\eta \approx 2.8 \cdot 10^{-22}$$
+	
+	Problem 11.20\\
+	Answer:\\
+	(c)\\
+	We want to sum all of the interaction terms, and hopefully that will reproduce the $11.100) .$ Now:
+	$$d F^{i n t}=\frac{\mu_{0} \dot{a}}{12 \pi c} d q_{1} d q_{2}$$
+	$$d q_{1}=2 \lambda d y_{1} \quad d q_{2}=2 \lambda d y_{2}$$
+	$$d F^{i n t}=\frac{\mu_{0} \dot{a} \lambda^{2}}{3 \pi c} d y_{1} d y_{2}$$
+	Let $y_{1}>y_{2}$ and let the bar run from $y=0$ to $y=L$. First we integrate from $y_{2}=0$ to $y_{2}=y_{1}$ to find the interaction of everything below $y_{1}$ with the $d q_{1}$ at $y_{1}$
+	$$d F^{i n t}=\frac{\mu_{0} \dot{a} \lambda^{2}}{3 \pi c}\left(\int_{0}^{y_{1}} d y_{2}\right) d y_{1}=\frac{\mu_{0} \dot{a} \lambda^{2}}{3 \pi c} y_{1} d y_{1}$$
+	Then just integrate over all $y_{1}$ over the entire bar:
+	$$F^{i n t}=\frac{\mu_{0} \dot{a} \lambda^{2}}{3 \pi c} \int_{0}^{L} y_{1} d y_{1}=\frac{\mu_{0} \dot{a} \lambda^{2}}{6 \pi c} L^{2}=\frac{\mu_{0} \dot{a} q^{2}}{6 \pi c}$$
+	
+	Problem 11.24\\
+	Answer:\\
+	Refer to the Figure 11.19 ). The potentials of a dipole are:
+	$$V=-\frac{p_{0} \omega}{4 \pi \epsilon_{0} c} \frac{\cos \theta}{r} \sin [\omega(t-r / c)] \quad \vec{A}=-\frac{\mu_{0} p_{0} \omega}{4 \pi r} \sin [\omega(t-r / c)]$$
+	Now, the dipoles are not at the origin, so:
+	$$l_{\pm}=\sqrt{r^{2}+d^{2} / 4 \mp r d \cos \theta} \approx r\left(1 \mp \frac{d}{2 r} \cos \theta\right) \Rightarrow \frac{1}{l_{\pm}} \approx \frac{1}{r}\left(1 \pm \frac{d}{2 r} \cos \theta\right)$$
+	The angles $\theta_{\pm}$ are different, as well:
+	$$\begin{array}{c}
+	r \cos \theta=\frac{d}{2}+l_{+} \cos \theta_{+} \quad l_{-} \cos \theta_{-}=r \cos \theta+\frac{d}{2} \\
+	l_{\pm} \cos \theta_{\pm}=r \cos \theta \mp \frac{d}{2}
+	\end{array}$$
+	$$\begin{array}{l}
+	\Longrightarrow \cos \theta_{\pm}=\frac{1}{l_{\pm}}(r \cos \theta \mp d / 2) \approx \cos \theta \pm \frac{d}{2 r} \cos ^{2} \theta \mp \frac{d}{2 r} \\
+	\quad=\cos \theta \mp \frac{d}{2 r}\left(1-\cos ^{2} \theta\right)=\cos \theta \mp \frac{d}{2 r} \sin ^{2} \theta
+	\end{array}$$
+	With these results the potenials are (via a lenghty process) easy to get. Let us start with the vector potential:
+	$$\begin{array}{c}
+	\vec{A}=-\frac{\mu_{0} p_{0} \omega}{4 \pi}\left[\frac{\sin \left[\omega\left(t-l_{+} / c\right)\right]}{l_{+}}-\frac{\sin \left[\omega\left(t-l_{-} / c\right)\right]}{l_{-}}\right] \hat{z} \\
+	\frac{\sin \left[\omega\left(t-l_{\pm} / c\right)\right]}{l_{\pm}} \approx \frac{1}{r}\left(1 \pm \frac{d}{2 r} \cos \theta\right) \sin \left[t_{0} \pm \frac{d}{2 c} \cos \theta\right]
+	\end{array}$$
+	Taylor-expand the sine term:
+	$$\begin{array}{c}
+		\sin \left[\omega t_{0} \pm \frac{\omega d}{2 c} \cos \theta\right] \approx \sin \left(\omega t_{0}\right) \pm \cos \left(\omega t_{0}\right) \frac{\omega d}{2 c} \cos \theta \\
+		\vec{A}=-\frac{\mu_{0} p_{0} \omega}{4 \pi}\left\{\frac{1}{r}\left(1+\frac{d}{2 r} \cos \theta\right)\left[\sin \left(\omega t_{0}\right)+\cos \left(\omega t_{0}\right) \frac{\omega d}{2 c} \cos \theta\right]\right] \\
+		\left.-\frac{1}{r}\left(1-\frac{d}{2 r} \cos \theta\right)\left[\sin \left(\omega t_{0}\right)-\cos \left(\omega t_{0}\right) \frac{\omega d}{2 c} \cos \theta\right]\right\} \hat{z}
+	\end{array}$$
+	Add up all the terms and neglect all $\mathcal{O}\left(d^{2}\right)$ terms:
+	$$\begin{aligned}
+	\vec{A} &=-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r c}\left[\cos \theta \cos \left(\omega t_{0}\right)+\frac{\omega}{r c} \cos \theta \sin \left(\omega t_{0}\right)\right] \hat{z} \\
+	& \approx-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r c} \cos \theta \cos \left(\omega t_{0}\right) \hat{z} \\
+	&=-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r c} \cos \theta \cos \left(\omega t_{0}\right)(\cos \theta \hat{r}-\sin \theta \hat{\theta})
+	\end{aligned}$$
+	Now, the scalar potential:
+	$$\begin{aligned}
+	V=&-\frac{p_{0} \omega}{4 \pi \epsilon_{0} c}\left\{\frac{\cos _{+}}{l_{+}} \sin \left[\omega\left(t-l_{+} / c\right)\right]-\frac{\cos _{-}}{l_{-}} \sin \left[\omega\left(t-l_{-} / c\right)\right]\right\} \\
+	=&-\frac{p_{0} \omega}{4 \pi \epsilon_{0} c}\left\{\frac{1}{r}\left(1+\frac{d}{2 r} \cos \theta\right)\left[\sin \left(\omega t_{0}\right)+\cos \left(\omega t_{0}\right) \cos \theta \frac{\omega d}{2 c}\right]\left(\cos -\frac{d}{2 r} \sin ^{2} \theta\right)\right.\\
+	&\left.-\frac{1}{r}\left(1-\frac{d}{2 r} \cos \theta\right)\left[\sin \left(\omega t_{0}\right)-\cos \left(\omega t_{0}\right) \cos \theta \frac{\omega d}{2 c}\right]\left(\cos +\frac{d}{2 r} \sin ^{2} \theta\right)\right\}
+	\end{aligned}$$
+	Again, by collecting all the terms and neglecting $\mathcal{O}\left(d^{2}\right)$ terms:
+	$$\begin{aligned}
+	V &=-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r}\left[\cos ^{2} \theta \cos \left(\omega t_{0}\right)+\frac{c}{r \omega}\left(\cos ^{2} \theta-\sin ^{2} \theta\right) \sin \left(\omega t_{0}\right)\right] \\
+	& \approx-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r} \cos ^{2} \theta \cos \left(\omega t_{0}\right)
+	\end{aligned}$$
+	(b)\\
+	We have the potentials. The fields are then:
+	$$\begin{aligned}
+	\vec{B} &=\nabla \times \vec{A}=\frac{1}{r}\left(\frac{\partial}{\partial r}\left(r A_{\theta}\right)-\frac{\partial A_{r}}{\partial \theta}\right) \hat{\phi} \\
+	&=\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi c r} \cos \theta \sin \theta \sin \left(\omega t_{0}\right) \frac{\omega}{c} \hat{\phi}-\frac{\mu_{0} p_{0} \omega^{2} d}{2 \pi c r^{2}} \sin \theta \cos \theta \cos \left(\omega t_{0}\right) \hat{\phi} \\
+	& \approx \frac{\mu_{0} p_{0} \omega^{3} d}{4 \pi c^{2} r} \cos \theta \sin \theta \sin \left(\omega t_{0}\right) \hat{\phi}
+	\end{aligned}$$
+	$$\begin{aligned}
+	\vec{E}=&-\nabla V-\frac{\partial \vec{A}}{\partial t} \\
+	\nabla V=&-\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi} \cos ^{2} \theta\left(-\frac{1}{r^{2}} \cos \left(\omega t_{0}\right)+\frac{\omega}{r c} \sin \left(\omega t_{0}\right)\right) \hat{r} \\
+	&+\frac{\mu_{0} p_{0} \omega^{2} d}{4 \pi r^{2}} 2 \cos \theta \sin \theta \cos \left(\omega t_{0}\right) \hat{\theta}
+	\end{aligned}$$
+	$$\approx-\frac{\mu_{0} p_{0} \omega^{3} d}{4 \pi r c} \cos ^{2} \theta \sin \left(\omega t_{0}\right) \hat{r}$$
+	$$\frac{\partial \vec{A}}{\partial t}=\frac{\mu_{0} p_{0} \omega^{3} d}{4 \pi r c} \cos \theta \sin \left(\omega t_{0}\right)(\cos \theta \hat{r}-\sin \theta \hat{\theta})$$
+	$$\vec{E}=\frac{\mu_{0} p_{0} \omega^{3} d}{4 \pi r c} \cos \theta \sin \theta \sin \left(\omega t_{0}\right) \hat{\theta}$$
+	(c)\\
+	The Poynting vector, the intensity and the total power radiated are:
+	$$\begin{aligned}
+		\vec{S} &=\frac{1}{\mu_{0}} \vec{E} \times \vec{B} \\
+		&=\frac{\mu_{0}}{c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c r}\right)^{2} \sin ^{2} \theta \cos ^{2} \theta \sin ^{2}\left(\omega t_{0}\right) \hat{r}
+	\end{aligned}$$
+	$$\begin{aligned}
+		\vec{I} &=\langle\vec{S}\rangle \\
+		&=\frac{\mu_{0}}{2 c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c r}\right)^{2} \sin ^{2} \theta \cos ^{2} \theta \hat{r}=\sqrt{\frac{\mu_{0}}{8 c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c r}\right)^{2} \sin ^{2}(2 \theta) \hat{r}}
+	\end{aligned}$$
+	$$\begin{array}{c}
+	P=\frac{\mu_{0}}{2 c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c}\right)^{2} \int_{0}^{2 \pi} \int_{0}^{\pi} \sin ^{2} \theta \cos ^{2} \theta \sin \theta d \theta d \phi \\
+	\cos \theta=x \quad d x=-\sin \theta d \theta
+	\end{array}$$
+	$$\begin{aligned}
+	P=& \frac{\mu_{0}}{2 c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c}\right)^{2} \int_{0}^{2 \pi} \int_{0}^{\pi} \sin ^{2} \theta \cos ^{2} \theta \sin \theta d \theta d \phi \\
+	& \cos \theta=x \quad d x=-\sin \theta d \theta \\
+	=& \frac{\mu_{0} \pi}{c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c}\right)^{2} \int_{-1}^{1}\left(1-x^{2}\right) x^{2} d x=\frac{\mu_{0} \pi}{c}\left(\frac{p_{0} \omega^{3} d}{4 \pi c}\right)^{2} \frac{4}{15} \\
+	=& \frac{\mu_{0}}{60 \pi} \frac{p_{0}^{2} \omega^{6} d^{2}}{c^{3}}
+	\end{aligned}$$
+\end{document}
