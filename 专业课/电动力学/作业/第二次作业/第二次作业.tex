@@ -1,0 +1,133 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第二次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	2.4 Find the electric field a distance z above the center of a square loop (side a) carrying uniform line charge $\lambda$ [Hint: Use the result of Ex. 2.2.]\\
+	Answer:\\
+	For each two parallel line, it's obvious that their electric field vector at P cancel out each other and only left a component prependicular to the plane\\
+	\begin{tikzpicture}
+		\draw (-2,-2) circle (0.2);
+		\draw (2,-2) circle (0.2);
+		\draw[dashed] (-2,-2) --  (0,0);
+		\draw[dashed] (2,-2) --  (0,0);
+		\draw[->] (0,0) -- (1,1);
+		\draw[->] (0,0) -- (-1,1);
+		\draw[->,dashed] (1,1) --(0,2);
+		\draw[->,dashed] (-1,1) --(0,2);
+		\draw[->,red] (0,0) -- (0,2);
+	\end{tikzpicture}\\
+	Using the result from Example 2.2, we know the each line produce a electric field with magnitude:
+	$$|E| \,=\, \frac{1}{4 \pi \epsilon_0}\frac{2\lambda L}{z\sqrt{z^2 + L^2}} \eqno(1.1)$$
+	Here, $z = \sqrt{z^2 + (\frac{a}{2})^2}$, and $L=\frac{a}{2}$\\
+	There prependicular component is:
+	$$|Ez| \,=\, |E|\frac{z}{\sqrt{z^2 + (\frac{a}{2})^2}} \eqno(1.3)$$
+	There are two set of parallel lines, So, the total electric filed magnitude as point P is:
+	$$|E| \,=\, 4\frac{z}{\sqrt{z^2 + (\frac{a}{2})^2}}\frac{1}{4 \pi \epsilon_0}\frac{\lambda a}{\sqrt{z^2 + (\frac{a}{2})^2} \sqrt{z^2 + \frac{a^2}{2}}} = \frac{1}{4 \pi \epsilon_0}\frac{4\lambda z a}{(z^2 + (\frac{a}{2})^2)\sqrt{z^2+\frac{a^2}{2}}} \eqno(1.4)$$
+	
+	2.16 A long coaxial cable carries a uniform volume charge density $\rho$ on the inner cylinder(radius a), and a uniform surface charge density on the outer cylindrical shell (radius b). This surface charge is negativa and is of just the right magnitude that the cable as a whole is in elecrically neutral. Find the electric field in each of the three regions:(i) inside the innner cylinder ($s<a$), (ii) between the cylinders($a<s<b$), (iii) outside the cable ($s>b$). Plot |E| as afunction of s\\
+	Answer:\\
+	Since the cable is in electrically neutral, we can get the surface charge density $\rho_o$:
+	$$\rho_o \,=\, \frac{\rho \pi a^2 dl}{2 \pi b dl} = \frac{\rho a^2}{b} \eqno(2.1)$$
+	For (i): $s<a$, we choose a cylinder inside the inner cylinder with with radius r and length l. The cylinder is parallel to the cable. According to the Gauss'law, we have:
+	$$\oint \vec{E}\cdot d\vec{a} = \frac{1}{\epsilon_0}Q_{enc} = \frac{1}{\epsilon_0}\pi s^2 l \rho \eqno(2.2)$$
+	And by the symmetry, we can know that the cylinder's top and buttom surface's electric filed flux is zero, and every point in the side surfcae has the same electric field magnitude, point dierctly outward. So:
+	$$|E| = \frac{1}{2\epsilon_0}s \rho \eqno(2.3)$$
+	For (ii):$a<s<b$, we choose the cylinder with radius s, which satisfied $a<s<b$. From Gauss's law, we get:
+	$$\oint \vec{E}\cdot d\vec{a} = \frac{1}{\epsilon_0}Q_{enc} = \frac{1}{\epsilon_0}\pi a^2 l \rho$$
+	Then, the electric field can be determined similarly through symmetry:
+	$$|E| = \frac{1}{2\epsilon_0}\frac{a^2 l \rho}{s}$$
+	For (iii):$s>b$, we find that:
+	$$Q_{enc} = 0$$
+	And due to the symmetry, this means that the electric field on the surface must be zero:
+	$$|E| = 0$$
+	\begin{tikzpicture}
+		\draw[->] (0,0) -- (5,0) node[below] {$s$};
+		\draw[->] (0,0) -- (0,5) node[above] {$E$};
+		\draw[green,domain=0:2,variable = \s] plot(\s,{\s});
+		\draw[red,domain=2:3,variable = \s] plot(\s,{4/\s});
+		\draw[blue,domain = 3:5, variable = \s] plot(\s,{0});
+	\end{tikzpicture}
+	2.21 Find the potential inside and outside a uniformly charged solid sphere whose radius is R and whose total charge is q. Use infinity as your reference point. Compute the gradient of V in each region, and check  that it yields the correct field. Sketch V(r)\\
+	Answer:\\
+	From Gauss's law, the field outside is:
+	$$E = \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r} \eqno(3.1)$$
+	And the field inside is:
+	$$E = \frac{1}{4 \pi \epsilon_0}\frac{r q}{R^3}\hat{r} \eqno(3.2)$$
+	For the point outside, do the integral to calculate the potential:
+	$$V(r) = \int_{r}^{\infty}\frac{1}{4 \pi \epsilon_0}\frac{q}{r'^2}dr' =  - \frac{1}{4 \pi \epsilon_0}\frac{q}{r'}|_{r}^{\infty} = \frac{1}{4\pi \epsilon_0}\frac{q}{r} \eqno(3.3)$$
+	And for the point inside, break the integral into two pieces:
+	$$V(r) =\int_{R}^{\infty}\frac{1}{4 \pi \epsilon_0}\frac{q}{r'^2}dr' + \int_{r}^{R}\frac{1}{4 \pi \epsilon_0}\frac{r q}{R^3}\hat{r} = \frac{1}{4\pi\epsilon_0}\frac{q}{R} + (\frac{1}{2}\frac{1}{4 \pi \epsilon_0})(\frac{R^2q}{r^3}-\frac{qr^2}{R^3})$$
+	$$=\frac{3}{8 \pi \epsilon_0}\frac{q}{R} - \frac{1}{8 \pi \epsilon_0}\frac{r^2 q}{R^3}\eqno(3.5)$$
+	For outside, calculate the gradient:
+	$$\nabla V = -\frac{1}{4\pi\epsilon_0}\frac{q}{r^2}\hat{r} = -E \eqno(3.6)$$
+	For inside, the gradient of potential is:
+	$$\nabla V = -\frac{1}{4 \pi \epsilon_0}\frac{r q}{R^3}\hat{r} = -E \eqno(3.7)$$
+	\begin{tikzpicture}
+	\draw[->] (0,0) -- (5,0) node[below] {$r$};
+	\draw[->] (0,0) -- (0,5) node[above] {$V$};
+	\draw[green,domain=0:2,variable = \r] plot(\r,{3/2 - \r * \r / 8});
+	\draw[red,domain=2:5,variable = \r] plot(\r,{2/\r});
+	\end{tikzpicture}
+	2.28 Use Eq. 2.29 to calculate the potential inside a uniformly charged solid sphere of radius R and total charge q. Compare your answer to Prob. 2.21.\\
+	Answer:\\
+	The equation 2.29 is:
+	$$V(r) = \frac{1}{4\pi\epsilon_0}\int\frac{\rho(r')}{r'}d\tau\eqno(4.1)$$
+	The charge density is:
+	$$\rho = \frac{q}{\frac{4}{3}\pi R^3}\eqno(4.2)$$
+	Use superposition principle, we can divided the sphere into many shells, with radius r' and thickness of dr'.\\
+	With the result of Exampple. 2.8, we have:
+	$$V(r) = \int_{r}^{R}\frac{r'\sigma}{\epsilon_0} + \int_{0}^{r}\frac{r'^2\sigma}{\epsilon_0 z} = \int_r^R\frac{r'\rho dr'}{\epsilon_0} + \int_0^r\frac{r'^2\rho dr'}{\epsilon_0 r}$$
+	$$=\frac{R^2 \rho}{2\epsilon_0} - \frac{r^2\rho}{6\epsilon_0} = \frac{1}{4 \pi \epsilon_0}(\frac{3q}{2R} - \frac{qr^2}{2R^3}) \eqno(4.3)$$
+	This result is same with 2.21
+	
+	2.46 If the electric field in some region is given (in spherical coordinates) by the expression
+	$$E(r) = \frac{k}{r}[3\hat{r}+2sin\theta cot\theta sin\phi \hat{\theta} + sin\theta cos\phi \hat{\phi}]$$
+	for some constant k, what is the charge density?\\
+	Answer:\\
+	We have:\\
+	$$\nabla \cdot E = \frac{\rho}{\epsilon_0}\eqno(5.1)$$
+	So
+	$$\nabla = \frac{\partial}{\partial r}\hat{r} + \frac{1}{r}\frac{\partial}{\partial \theta}\hat{\theta} + \frac{1}{r sin\theta}\frac{\partial}{\partial\phi}\hat{\phi}\eqno(5.2)$$
+	So, we get:
+	$$\rho = \frac{k\epsilon_0}{r^2}(-3 + sin\phi(1+2cos2\theta))$$\\
+
+	Additional questions:\\
+	2.45 Find  tht electric field at a height z above the center of a square sheet (side a) carrying a uniform surface charge $\sigma$. Check you result for the limiting cases $a \to \infty$ and $z >> a$
+	Answer:\\
+	First, we'll introduce the electric filed for a finite line.\\
+	The line's length is a, with a linear charge density $\lambda$, and we focus on a point with a distance l from its midpoint.\\
+	The electric field at this point that produced by the line is:\\
+	$$\int_{0}^{\frac{a}{2}}2\frac{1}{4\pi\epsilon_0}\frac{\lambda dx}{l^2+x^2}\frac{l}{\sqrt{l^2+x^2}}=2\lambda l \frac{1}{4\pi\epsilon_0} \int_{0}^{\frac{a}{2}}\frac{dx}{(l^2+x^2)^{3/2}}\eqno(6.1)$$
+	Which equal to:
+	$$2\lambda l \frac{1}{4\pi\epsilon_0} \frac{x}{l^2\sqrt{l^2+x^2}}|_{0}^{a/2} = 2\lambda l \frac{1}{4\pi\epsilon_0} \frac{\frac{a}{2}}{l^2\sqrt{l^2+\frac{a^2}{4}}} \eqno(6.2)$$
+	Then, back to the finite square sheet with surface charge $\sigma$, for a very thin line in the plane with width dy, we can treat this line as a line charge with density $\lambda = \sigma dy$,Then we can calculate the point above the center of the sheet with height z.\\
+	And we have:
+	$$l = \sqrt{y^2 + z^2} \eqno(6.3)$$
+	Then:
+	$$E = \int_{0}^{\frac{a}{2}} 4 \sigma dy \sqrt{y^2+z^2} \frac{1}{4\pi\epsilon_0} \frac{a/2}{(y^2+z^2)\sqrt{y^2+z^2+\frac{a^2}{4}}}\frac{z}{\sqrt{y^2+z^2}}$$
+	$$=2 \sigma a z \frac{1}{4\pi\epsilon_0} \int_{0}^{\frac{a}{2}}\frac{dy}{(y^2+z^2)\sqrt{y^2+z^2+\frac{a^2}{4}}}$$
+	$$=2 \sigma a z \frac{1}{4\pi\epsilon_0} \frac{2 \tan ^{-1}\left(\frac{a y}{2 z \sqrt{\frac{a^2}{4}+y^2+z^2}}\right)}{a z}|_{0}^{\frac{a}{2}}$$
+	$$=4\sigma \frac{1}{4\pi\epsilon_0} tan^{-1}(\frac{\frac{a^2}{2}}{2z\sqrt{\frac{a^2}{2}+z^2}})$$
+	$$= 4\sigma \frac{1}{4\pi\epsilon_0} tan^{-1}(\frac{\frac{a^2}{z^2}}{4\sqrt{1+\frac{a^2}{2z^2}}}) \eqno(6.4)$$
+	So, define:
+	$$\eta = \frac{a^2}{z^2} \eqno(6.5)$$
+	Then, (6.4) can  be transform to:
+	$$E = 4\sigma \frac{1}{4\pi\epsilon_0} tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}}) \eqno(6.6)$$
+	Let's now consider two approximation, one is $a \to \infty$($\eta \to \infty$), which should be approximate to the infinite charged plane:
+	$$E = \lim_{\eta \to \infty}4\sigma \frac{1}{4\pi\epsilon_0} tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}}) = 4\sigma \frac{1}{4\pi\epsilon_0}\lim_{\eta \to \infty}tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}})$$
+	$$=4\sigma \frac{1}{4\pi\epsilon_0} \frac{\pi}{2} = \frac{\sigma}{2\epsilon_0} \eqno(6.7)$$
+	(6.7) satisfied the result of infinite plane from Gauss' law.\\
+	Then, the second limit: $z >> a$($\eta \to 0$), which should be approximation to the point charge:\\
+	$$E = \lim_{\eta \to 0}4\sigma \frac{1}{4\pi\epsilon_0} tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}}) = 4\sigma \frac{1}{4\pi\epsilon_0}\lim_{\eta \to 0}tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}}) \eqno(6.8)$$
+	For the limit $\lim_{\eta \to 0}tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}})$ , use L'Hopital's rule, we can find that:
+	$$\lim_{\eta \to 0}\frac{tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}})}{\frac{1}{4}\eta} = \lim_{\eta \to 0}\frac{\frac{\sqrt{2}}{\sqrt{\eta+2} (\eta+4)}}{\frac{1}{4}} = 1 \eqno(6.9)$$
+	So, replace the infinitesimals $tan^{-1} (\frac{\eta}{4\sqrt{1+\frac{\eta}{2}}})$ with $\frac{1}{4}\eta$ in (6.8):
+	$$E = 4\sigma \frac{1}{4\pi\epsilon_0} \frac{1}{4} \eta = \frac{1}{4\pi\epsilon_0} \frac{\sigma a^2}{z^2} \eqno(6.10)$$
+	(6.10) satisfied the reuslt of point charge from Colummb's law.
+\end{document}
