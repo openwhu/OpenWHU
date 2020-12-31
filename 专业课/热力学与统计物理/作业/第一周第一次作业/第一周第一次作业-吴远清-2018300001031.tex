@@ -1,0 +1,74 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ctex}
+\usepackage{amsmath}
+\title{热力学与统计物理-第一周第一次作业}
+\author{吴远清-2018300001031}
+\begin{document}
+	\maketitle
+	1.一个粒子做随机行走，步长为l，走N步后，其距离出发点距离$r^2$与步数N关系如何，试推导。\\
+	解：\\
+	1).一维情况：\\
+	记粒子沿X正向行走为$X=l$,沿X负向行走为$X=-l$，显然的，粒子的自由行走符合二项分布,且：
+	$$P(X=l)\,=\,P(X=-l)\,=\,0.5\eqno(1.1)$$
+	设在N次行走中，沿$X=l$发生了n次，则行走距离为:
+	$$r\,=\,l\times n+(-l)\times (N-n)\,=\,l\times (2n-N)\eqno(1.2)$$
+	此情况发生的概率为:
+	$$P(n) = \frac{N!}{2^N n! (N-n)!}\eqno(1.3)$$
+	则：
+	$$\overline{r^2}\,=\,\sum_{n=0}^{N}l^2\times (2n-N)^2 \frac{N!}{2^N n! (N-n)!}\,=\,l^2\frac{N!}{2^N} \sum_{n=0}^{N}\frac{(2n-N)^2}{n!(N-n)!}\eqno(1.4)$$
+	其中:
+	$$\sum_{n=0}^{N}\frac{(2n-N)^2}{n!(N-n)!}\,=\,\frac{2^N}{(N-1)!}\eqno(1.5)$$
+	将(1.5)式代入(1.4)式中：
+	$$\overline{r^2}\,=\,N\times l^2\eqno(1.6)$$
+	2).二维情况： \\
+	2.1) On Lattice:\\
+	与一维情况相似的，我们独立考虑X方向与Y方向的行走:\\
+	假设在N次行走中，有$N_1$次发生在X方向上，有$N-N_1$次发生在Y方向上，由(1.6)式可知:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+		&\overline{r_x^2}\,=\,N_1 \times l^2\\
+		&\overline{r_y^2}\,=\,(N-N_1) \times l^2
+		\end{aligned}
+		\right.\eqno(1.7)
+	\end{equation*}
+	并且:
+	$$\overline{r^2}\,=\,\overline{r_x^2}+\overline{r_y^2}\eqno(1.8)$$
+	将(1.7)代入式(1.8)中得:
+	$$\overline{r^2}\,=\,N \times l^2\eqno(1.9)$$	
+	2).Off Lattice:\\
+	对于每一次行走，总具有固定的长度l以及随机的方向$\theta,\, \theta$取为与X正向的夹角,对于N次行走，则有:
+	$$\{\theta_1,\theta_2....\theta_N\}\eqno(1.10)$$
+	分别有:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+		&\overline{r_x^2}\,=\,l^2 \times (Cos^2\theta_1 + Cos^2\theta_2 + ... + Cos^2\theta_N) \,=\, l^2 \times \overline{Cos^2\theta}\\
+		&\overline{r_y^2}\,=\,l^2 \times (Sin^2\theta_1 + Sin^2\theta_2 + ... + Sin^2\theta_N) \,=\, l^2 \times \overline{Sin^2\theta}
+		\end{aligned}
+		\right.\eqno(1.11)
+	\end{equation*}
+	由三角函数的周期性可得:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+		&\overline{Cos^2\theta} \,=\, \int_{0}^{2\pi}Cos^2\theta d\theta \,=\, \frac{1}{2} + \frac{1}{2}\int_{0}^{2\pi}Cos(2\theta)d\theta \,=\, \frac{1}{2}\\
+		&\overline{Sin^2\theta} \,=\, \int_{0}^{2\pi}Sin^2\theta d\theta \,=\, \frac{1}{2} - \frac{1}{2}\int_{0}^{2\pi}Cos(2\theta)d\theta \,=\, \frac{1}{2}
+		\end{aligned}
+		\right.\eqno(1.12)
+	\end{equation*}
+	即:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+		&\overline{r_x^2} \,=\, \frac{N}{2}l^2\\
+		&\overline{r_y^2} \,=\, \frac{N}{2}l^2
+		\end{aligned}
+		\right.\eqno(1.13)
+	\end{equation*}
+	最终得到:
+	$$\overline{r^2}\,=\,\overline{r_x^2}+\overline{r_y^2} = N \times l^2$$
+	3).三维情况:
+	对于三维情况下，有无网格均与二维解法相似，不再重复证明(Off Lattice情况下取两个角来确定方向，即可相似的证明)
+\end{document}
+	
