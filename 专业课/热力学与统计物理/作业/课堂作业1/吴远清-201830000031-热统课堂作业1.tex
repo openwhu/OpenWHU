@@ -1,0 +1,61 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{热力学与统计物理-课堂作业1}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	一.概念题\\
+	1.什么是孤立系统?\\
+	Answer:\\
+	Isolated system means that a system doesn't have any energy of materials exchange with outside.\\
+	2.什么是平衡态?\\
+	Answer:\\
+	Equilibrium state is the state that a isolated system's macroscopic properties doesn't change.\\
+	3.什么是相空间?\\
+	Answer:\\
+	Phase space descripe all the possible state of system. Every state of system has a coreesponding point in the phase space\\
+	4.什么是弛豫时间?\\
+	Answer:\\
+	Relaxation time means that the time  a non-equilibrium system take to achieve the thermal equilibrium\\
+	5.试述等概率原理及你对其的理解。\\
+	Answer:\\
+	等概率原理:对于一个处于平衡态的热力学系统,其能量E,体积V,粒子数N确定,其处于各微观态的概率相等.\\
+	理解:等概率原理是热力学的基本假设. 所有物理性质的变化都受力学定律制约, 但对于处于平衡态的体系, 没有定律能指出系统更容易从某个微观态转化向另一个微观态, 也就是说, 如果不对微观态进行直接测量, 而是只通过力学定律和对于系统在微观态之间转化的行为进行观测, 我们将完全无法区分各微观态. 因此,我们也没有理由认为某一微观态出现的概率比其他微观态更高.\\
+	6.试述热力学第一定律及其物理意义。\\
+	Answer:\\
+	The first law of thermaldynamics said: The change of a system's inner energy, equal to the sum of the heat absorbed by the system and the work done on it.
+	$$\Delta U = Q + W$$
+	Indeed, the first law of thermaldynamics is the energy conservation law.\\
+	7.试述热力学第零定律及其物理意义。\\
+	Answer:\\
+	The zeroth law of thermaldynamics said: If system A and system B is in thermal equilibrium,  A and C are also in thermal equilibrium, then B and C must be in thermal equilbrium too.\\
+	The zeroth law of thermaldynamics provided the fundamental theory for temperature.\\
+	二.推导题\\
+	8.对于1维格子上的随机行走，格子步长为l，向右的概率为p，向左的概率为q，N步随机行走后，试推导距离原点为x的概率P（x）dx。这里p+q=1，$N>>1$，且$0<p \sim q<1$。\\
+	Answer:\\
+	Since $N>>1$, we can use the Gaussian approximation:
+	$$W(n_1) = (2 \pi N p q)^{-\frac{1}{2}} exp[-\frac{(n_1-N p)^2}{2 N p q}] \eqno(1.1)$$
+	and we have:
+	$$x = |n_1 - n_2| = |2n_1 - N| \eqno(1.2)$$
+	Then for a specific x, we have:
+	$$P(x) = W(\frac{N + x}{2}) + W(\frac{N - x}{2})$$
+	$$= (2 \pi N p q)^{-\frac{1}{2}}\{exp[-\frac{(\frac{N+x}{2} - Np)^2}{2 N p q}] + exp[-\frac{(\frac{N-x}{2} - Np)^2}{2 N p q}]\} \eqno(1.3)$$
+	Finally:
+	$$P(x)dx \approx (2 \pi N p q)^{-\frac{1}{2}}\{exp[-\frac{(\frac{N+x}{2} - Np)^2}{2 N p q}] + exp[-\frac{(\frac{N-x}{2} - Np)^2}{2 N p q}]\}dx \eqno(1.4)$$
+	9.试推导一平衡态单原子理想气体孤立系统状态数Ω与体系体积V和内能E的关系表达式。 \\
+	Answer:\\
+	For a phase space denote by particles' coordinates and momentum, we have:
+	$$\Omega \propto \int_{E}^{E+\delta E}d^3r_1....d^2r_Nd^3p_1...d^3p_N \eqno(2.1)$$
+	And obviously:
+	$$\int d^3r_i = V \eqno(2.2)$$
+	Then:
+	$$\Omega \propto V^N \int_{E}^{E+\delta E}d^3p_1...d^3p_N\eqno(2.3)$$
+	Let's dim $\chi(E)$:
+	$$\chi(E) \propto \int_{E}^{E+\delta E}d^3p_1...d^3p_N \eqno(2.4)$$
+	Finally:
+	$$\Omega \propto V^N \chi(E) \eqno(2.5)$$
+\end{document}
