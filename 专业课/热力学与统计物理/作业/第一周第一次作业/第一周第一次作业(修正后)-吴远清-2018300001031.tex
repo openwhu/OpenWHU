@@ -1,0 +1,73 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ctex}
+\usepackage{amsmath}
+\title{热力学与统计物理-第一周第一次作业}
+\author{吴远清-2018300001031}
+\begin{document}
+	\maketitle
+	1.三维空间中一个粒子做随机行走，步长为l，走N步后，其距离出发点距离$r^2$与步数N关系如何，试推导。\\
+	解：\\
+	1).On Lattice:\\
+	先考虑粒子沿X,Y,Z方向中某一个方向行走的情况,此处以X方向为例。
+	记粒子沿X正向行走为$X=l$,沿X负向行走为$X=-l$，显然的，粒子的自由行走符合二项分布,且：
+	$$P(X=l)\,=\,P(X=-l)\,=\,0.5\eqno(1.1)$$
+	设在N次行走中，沿$X=l$发生了n次，则行走距离为:
+	$$r\,=\,l\times n+(-l)\times (N-n)\,=\,l\times (2n-N)\eqno(1.2)$$
+	此情况发生的概率为:
+	$$P(n) = \frac{N!}{2^N n! (N-n)!}\eqno(1.3)$$
+	则：
+	$$\overline{r^2}\,=\,\sum_{n=0}^{N}l^2\times (2n-N)^2 \frac{N!}{2^N n! (N-n)!}\,=\,l^2\frac{N!}{2^N} \sum_{n=0}^{N}\frac{(2n-N)^2}{n!(N-n)!}\eqno(1.4)$$
+	其中:
+	$$\sum_{n=0}^{N}\frac{(2n-N)^2}{n!(N-n)!}\,=\,\frac{2^N}{(N-1)!}\eqno(1.5)$$
+	将(1.5)式代入(1.4)式中：
+	$$\overline{r^2}\,=\,N\times l^2\eqno(1.6)$$
+	由于粒子做随机行走,因此粒子在X,Y,Z方向的行走相互独立
+	$$\overline{r^2} \,=\, \overline{r_x^2 + r_y^2 + r_z^2} \,=\, \overline{r_x^2} + \overline{r_y^2} + \overline{r_z^2}\eqno(1.7)$$
+	假设在N次行走中，粒子在X方向上行走$N_1$次，在Y方向行走$N_2$次，在Z方向上行走$N-N_1-N_2$次，利用(1.6),(1.7)式结果，可得:
+	$$\overline{r^2} \,=\, \overline{r_x^2} + \overline{r_y^2} + \overline{r_z^2} \,=\, N_1 \times l^2 + N_2 \times l^2 + (N-N_1-N_2) \times l^2\eqno(1.8)$$
+	$$\overline{r^2} = N \times l^2\eqno(1.9)$$
+	2).Off Latice:\\
+	对于每次行走，总有固定的长度l以及随机的方向$\theta,\phi,\, \theta$取为方向矢量在XY平面内的投影与X正向的夹角,$\phi$取为方向矢量与XY平面的夹角。对于N次行走，有:
+	$$\{\theta_1,\theta_2,...,\theta_N,\phi_1,\phi_2,...,\phi_N\}\eqno(1.10)$$
+	分别有:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&\overline{r_x^2} = \overline{l^2 \times \sum_{i=1}^{N}(cos^2\phi_i cos^2\theta_i)} = l^2 \times N \times \overline{cos^2\phi cos^2\theta}\\
+			&\overline{r_x^2} = \overline{l^2 \times \sum_{i=1}^{N}(cos^2\phi_i sin^2\theta_i)} = l^2 \times N \times \overline{cos^2\phi sin^2\theta}\\
+			&\overline{r_z^2} = \overline{l^2 \times \sum_{i=1}^{N}(sin^2\phi_i)} = l^2 \times N \times \overline{sin^2\phi}
+		\end{aligned}
+		\right.\eqno(1.11)
+	\end{equation*}
+	由三角函数的周期性可得:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&\overline{cos^2\theta} \,=\, \int_{0}^{2\pi}cos^2\theta d\theta \,=\, \frac{1}{2} + 	\frac{1}{2}\int_{0}^{2\pi}cos(2\theta)d\theta \,=\, \frac{1}{2}\\
+			&\overline{sin^2\theta} \,=\, \int_{0}^{2\pi}sin^2\theta d\theta \,=\, \frac{1}{2} - \frac{1}{2}\int_{0}^{2\pi}cos(2\theta)d\theta \,=\, \frac{1}{2}
+		\end{aligned}
+		\right.\eqno(1.12)
+	\end{equation*}
+	 $\phi$同理，又因为$\phi$与$\theta$是独立变量，因此
+	 \begin{equation*}
+	 	\left\{
+	 	\begin{aligned}
+	 		&\overline{cos^2\phi cos^2\theta} = \overline{cos^2\phi} \times \overline{cos^2\theta}\\
+	 		&\overline{cos^2\phi sin^2\theta} = \overline{cos^2\phi} \times \overline{sin^2\theta}
+	 	\end{aligned}
+	 	\right.\eqno(1.13)
+	 \end{equation*}
+	 将式 (1.13),(1.12)代入(1.11)中
+	 \begin{equation*}
+	 	\left\{
+	 	\begin{aligned}
+	 		&\overline{r_x^2} = \frac{N}{4} l^2\\
+	 		&\overline{r_y^2} = \frac{N}{4} l^2\\
+	 		&\overline{r_z^2} = \frac{N}{2} l^2
+	 	\end{aligned}
+	  	\right.\eqno(1.14)
+	 \end{equation*}
+	 最终得到
+	 $$\overline{r^2}\,=\,\overline{r_x^2}+\overline{r_y^2} + \overline{r_z^2}= N \times l^2\eqno(1.15)$$
+	 将(1.15)与式(1.6)比较可发现，有无网格情况下结果均相同
+\end{document}

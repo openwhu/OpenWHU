@@ -1,0 +1,128 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{热力学与统计物理-第六次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+\maketitle
+
+Problem 5.1\\
+Answer:\\
+(a):\\
+$$pV^\gamma = constant \eqno(1.1)$$
+And:
+$$pV = \mu  R T \eqno(1.2)$$
+Then:
+$$\frac{\mu R T_i V_i^\gamma}{V_i} = \frac{\mu R T_f V_f^\gamma}{V_f} \eqno(1.3)$$
+So:
+$$T_f = T_i(\frac{V_f}{V_i})^{1-\gamma} \eqno(1.4)$$
+(b):\\
+As mentioned before, the entropy change of an ideal gas can be written as:
+$$\Delta S = \mu C_V ln\frac{T_f}{T_i} + \mu R ln\frac{V_f}{V_i} \eqno(1.5)$$
+And the ehtropy change is 0:
+$$ln\frac{T_f}{T_i}(\frac{V_f}{V_i})^{\frac{R}{C_V}}=0 \eqno(1.6)$$
+So:
+$$T_f = T_i(\frac{V_f}{V_i})^{1-\gamma} \eqno(1.7)$$
+
+Problem 5.2\\
+Answer:\\
+(a):\\
+$$W = \int P dV = 100\pi \approx 314J \eqno(2.1)$$
+(b):\\
+We have:
+$$PV = RT \eqno(2.2)$$
+So:
+$$\Delta E = C_V \Delta T = \frac{3}{2} R (\frac{P_C V_C}{R} - \frac{P_A V_A}{R}) = 600J \eqno(2.3)$$
+(c):\\
+$$Q = \Delta E + W \eqno(2.4)$$
+$$Q = 600 + (400 + \frac{100 \pi}{2}) \approx 1157J \eqno(2.5)$$
+
+Problem 5.3\\
+Answer:\\
+(a):\\
+$$C_V = \frac{\partial E}{\partial T} = \frac{5}{2}R \eqno(3.1)$$
+(b):\\
+$$W = \int P dV = 1300 J \eqno(3.2)$$
+(c):\\
+$$\Delta E = C_V \Delta T = \frac{5}{2}R(T_C - T_A) = \frac{5}{2}(P_C V_C - P_A V_A) = 1500J \eqno(3.3)$$
+We have:
+$$Q = \Delta E + W = 1500 + 1300 = 2800 J \eqno(3.4)$$
+(d):\\
+Same as (5.2):
+$$\Delta S = C_V ln \frac{T_C}{T_A} + E ln \frac{V_C}{V_A} \approx 23.6 J/K \eqno(3.5)$$
+
+Problem 5.5\\
+(a):\\
+The temperature decreases. Beacause the gas does work which makes its internal energy decreases.\\
+(b):\\
+The entropy increases. Because this process is irreversible.\\
+(c):\\
+The system is isolated, so $Q = 0$, Then from the first law:
+$$\Delta E = -W = - \frac{mg}{A}(V_f - V_o) \eqno(4.1)$$
+And:
+$$\Delta = \mu C_V (T_f - T_o) \eqno(4.2)$$
+So:
+$$- \frac{mg}{A}(V_f - V_o) = \mu C_V (T_f - T_o) \eqno(4.3)$$
+Then let's determine $V_f$.\\
+We have:
+$$p = \frac{mg}{A} \eqno(4.4)$$
+$$p V_f = \mu R T_f \eqno(4.5)$$
+So:
+$$V_f = \frac{\mu A R T_f}{mg} \eqno(4.6)$$
+So:
+$$T_f = \frac{1}{1 + \frac{R}{C_V}}(T_o + \frac{mg V_o}{\mu C_V A}) \eqno(4.7)$$
+
+Problem 5.6\\
+Answer:\\
+From Newton second law:
+$$m \ddot{x} = pA - mg - p_o A \eqno(5.1)$$
+And:
+$$p V^\gamma = constant = (p_o + \frac{mg}{A})V_o^\gamma \eqno(5.2)$$
+So:
+$$m\ddot{x} = (p_o + \frac{mg}{A})\frac{AV_o^\gamma}{(Ax)^\gamma} - mg - p_oA \eqno(5.3)$$
+The displacement from the equilibrium position is $\frac{V_o}{A}$, Let's $x = \frac{V_o}{A} + \eta$, and expand about $\frac{V_o}{A}$:
+$$\frac{1}{x^gamma} = \frac{1}{(\frac{V_o}{A} + \eta)^\gamma} = (\frac{A}{V_o})^gamma (1 - \frac{\gamma A \eta}{V_o} + ...) \eqno(5.4)$$
+We only keep the first and second terms in (5.4):
+$$m\ddot{\eta} = -(p_o + \frac{mg}{A})\frac{A^2\gamma}{V_o} \eta \eqno(5.5)$$
+We can find that (5.5) is the motion equation for harmonic motion.\\
+The frequency is:
+$$\mu = \frac{1}{2\pi}[(p_o + \frac{mg}{A})\frac{A^2\gamma}{V_o m}]^{\frac{1}{2}} \eqno(5.6)$$
+So:
+$$\gamma = \frac{4\pi^2\mu^2mV_o}{p_oA^2 + mgA} \eqno(5.7)$$
+
+partial 5.7\\
+(a):\\
+Let's consider a thin unit of atmosphere at height z to z+dz
+$$p(z + dz)A - p(z)A = -n(Adz)mg \eqno(6.1)$$
+Where n is the number of particles per unit volume, m is the mass of each particle.
+$$\frac{dp}{dz} = -nmg = -\frac{n\mu g}{N_A} \eqno(6.2)$$
+Since $p = nkT$:
+$$\frac{dp}{p} = -\frac{\mu g}{RT}dz \eqno(6.3)$$
+(b):\\
+Since it's adiabatic:
+$$pV^\gamma = constant \eqno(6.4)$$
+With $pV = \mu RT$:
+$$T^\gamma p^{1-\gamma} = constant \eqno(6.5)$$
+Then:
+$$\gamma T^{\gamma-1} p^{1-\gamma}dT + (1-\gamma)T^\gamma p^{-\gamma}dp = 0 \eqno(6.6)$$
+So:
+$$\frac{dp}{p} = \frac{\gamma}{\gamma -1}\frac{dT}{T} \eqno(6.7)$$
+(c):\\
+From (6.3) and (6.7):
+$$\frac{dT}{dz} = \frac{1-\gamma}{\gamma R} \mu g \eqno(6.8)$$
+For $N_2$, $\mu = 28$ and $\gamma = 1.4$, Then:
+$$\frac{dT}{dz} = -9.4 \eqno(6.9)$$
+(d):\\
+Integrating (6.3):
+$$p = p_o e^{-\mu g z / R T} \eqno(6.10)$$
+(e):\\
+From (6.8):
+$$T = T_o - \frac{\gamma - 1}{\gamma R}\mu g z\eqno(6.11)$$
+Then:
+$$\int_{p_o}^{p}\frac{dp'}{p'} = \int_o^z \frac{-\mu g dz'}{R(T_o - \frac{\gamma- 1}{\gamma}\frac{\mu g z'}{R})} \eqno(6.12)$$
+So:
+$$p = p_o (1 - \frac{(\gamma-1)\mu g z}{\gamma R T_o})^{\frac{\gamma}{\gamma-1}} \eqno(6.13)$$
+\end{document}

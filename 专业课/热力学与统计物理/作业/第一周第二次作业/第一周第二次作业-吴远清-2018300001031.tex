@@ -1,0 +1,139 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{ctex}
+\usepackage{amsmath, amssymb, graphics, setspace}
+
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+
+\newcounter{mathematicapage}
+\title{热力学与统计物理-第一周第二次作业}
+\author{吴远清-2018300001031}
+\begin{document}
+	\maketitle
+	1.1 What is the probability of throwing a total of 6 points or less with three dice?\\
+	Answer:The total condition of throw three dice is:
+	$$N \,=\, 6^3 \,=\, 216 \eqno(1.1)$$
+	The least points throw three dice is 3. Let's $P(x = n)$ be the probability to get n points in total\\
+	To get 3 points, three dice must be: 1,1,1\\
+	To get 4 points, three dice must be: 1,1,2\\
+	To get 5 points, three dice could be: 1,2,2 or 1,1,3\\
+	To get 6 points, three dice could be: 2,2,2 or 1,2,3 or 1,1,4\\
+	So, we have:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&P_{unit} = \frac{1}{6} \times \frac{1}{6} \times \frac{1}{6} \,=\, \frac{1}{216}\\
+			&P(x = 3) \,=\, P_{unit}\\
+			&P(x = 4) \,=\, P_{unit} \times 3\\
+			&P(x = 5) \,=\, P_{unit} \times 3 + P_{unit} \times 3\\
+			&N(x = 6) \,=\, P_{unit} + P_{unit} \times 6 + P_{unit} \times 3
+		\end{aligned}
+		\right.\eqno(1.2)
+	\end{equation*}
+	So, we can caculate the probability of total points not larger than 6:
+	$$P(x \le 6) \,=\, P_{unit} \times 20 \,=\, \frac{20}{216} \approx 9.26\% $$
+	This result satisfied the simulation using mathematica:\\
+	\begin{doublespace}
+		\noindent\(\pmb{f[\text{x$\_$}]\text{:=} \text{If}[x\leq 6,1,0]}\)
+	\end{doublespace}
+	\begin{doublespace}
+		\noindent\(\pmb{\text{Num} = 10000000}\)
+	\end{doublespace}
+	\begin{doublespace}
+		\noindent\(10000000\)
+	\end{doublespace}
+	\begin{doublespace}
+		\noindent\(\pmb{P =N[(\text{Total}[f\text{/@}(\text{RandomInteger}[\{1,6\},\text{Num}] + \text{RandomInteger}[\{1,6\},\text{Num}] + \text{RandomInteger}[\{1,6\},\text{Num}])]/\text{Num})]}\)
+	\end{doublespace}
+	\begin{doublespace}
+		\noindent\(0.0926981\)
+	\end{doublespace}
+	1.6 Consider the random walk  problem with $p=q$ and let $m \,=\, n_1 - n_2$ denote the net displacement to the right After a total of N steps, calculate the following mean values:$\overline{m}$,$\overline{m^2}$, $\overline{m^3}$, and $\overline{m^4}$\\
+	Answer:Consider the probability of the particle move $n_1$ step to right:
+	$$P(n_1) \,=\, \frac{N!}{n_1!(N-n_1)!}(\frac{1}{2})^N \eqno(2.1)$$
+	Then $\overline{m}$,$\overline{m^2}$, $\overline{m^3}$, and $\overline{m^4}$ could be reprensent by:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&\overline{m} \,=\, \sum_{n_1 = 0}^N (2n_1-N) \frac{N!}{n_1!(N-n_1)!}(\frac{1}{2})^N\\
+			&\overline{m^2} \,=\, \sum_{n_1 = 0}^N (2n_1-N)^2 \frac{N!}{n_1!(N-n_1)!}(\frac{1}{2})^N\\
+			&\overline{m^3} \,=\, \sum_{n_1 = 0}^N (2n_1-N)^3 \frac{N!}{n_1!(N-n_1)!}(\frac{1}{2})^N\\
+			&\overline{m^4} \,=\, \sum_{n_1 = 0}^N (2n_1-N)^4 \frac{N!}{n_1!(N-n_1)!}(\frac{1}{2})^N\\
+		\end{aligned}
+		\right.\eqno(2.3)
+	\end{equation*}
+	So we can get the answer:
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&\overline{m} \,=\, 0\\
+			&\overline{m^2} \,=\, N\\
+			&\overline{m^3} \,=\, 0\\
+			&\overline{m^4} \,=\, 3N^2 - 2N
+		\end{aligned}
+		\right.\eqno(2.4)
+	\end{equation*}
+	
+	1.8 Two drunks start out together at the origin, each having equal probability of making a  step to the left or right along the x axis. Find the probability that they meet again after N steps. It is to be understood that the men make their steps simultaneously.(It may be helpful to consider their relative motion)\\
+	Answer: Use $x_1$ to denote the first drunk's motion, and $x_2$ for the second one. And use $\Delta X$ to represent their ralative motion(respect to the second drunk man)\\
+	\begin{equation*}
+		\left\{
+		\begin{aligned}
+			&P(\Delta X = 0) \,=\, P(x_1 = 1) P(x_2 = 1) + P(x_1 = -1) P(x_2 = -1) = \frac{1}{2}\\
+			&P(\Delta X = 2) \,=\, P(x_1 = 1) P(x_2 = -1) = \frac{1}{4}\\
+			&P(\Delta X = -2) \,=\, P(x_1 = -1) P(x_2 = +1) = \frac{1}{4}
+		\end{aligned}
+		\right.\eqno(3.1)
+	\end{equation*}
+	So, if we ignore the second one, only care about the first one's relative motion respecto to the second, the situation is similar to the random walk in one dimension, the only difference is here we have the probability of don't move($\Delta X = 0$). So we introduce the effective steps $\widetilde{N}$:The steps that first man does move relatively respect to the second one.\\
+	Obviously, $\widetilde{N}$ is determined by:
+	$$\widetilde{N} \,=\, (1-P(\Delta X = 0)) N \,=\, \frac{1}{2} N\eqno(3.2)$$
+	And now, since we have remove all the conditions that $\Delta X = 0$, then:$P(\Delta X = 2) = \frac{1}{2}$,$P(\Delta X = -2) = \frac{1}{2}$\\
+	Now, this problem has transform to tradition one dimension random walk problem where p=q.\\
+	So, the two drunks meet again after N steps, means the displacement of random walk after $\widetilde{N}$ steps is 0\\
+	So, the probability is:
+	$$P(n_1 = \frac{\widetilde{N}}{2}) \,=\, \frac{\widetilde{N}!}{\frac{\widetilde{N}}{2}! \frac{\widetilde{N}}{2}!}(\frac{1}{2})^{\widetilde{N}} \,=\, \frac{\frac{N}{2}!}{(\frac{N}{4}!\frac{N}{4}!)}(\frac{1}{2})^{\frac{N}{2}}\eqno(3.3)$$
+	1.9 The probability W(n) that an event characterized by a probability $p$ occurs $n$ times in$N$ trials was Shown to be given by the binomial distribution
+	$$W(n) \,=\, \frac{N!}{n!(N-n)!}p^n(1-p)^{N-n} \eqno(1)$$
+	Consider a situation where the probability p is small ($p \ll 1$) and where one is interested in the case $n \ll N$.(Note thea if N is large, W(n) becomes very samll if $n \to N$ because of the smallness of the factor $p^n$ when $p \ll 1$. Hence W(n) is indeed only appreciable when $n \ll N$.) Several approximations can then be made to reduce (1) to simpler form.\\
+	(a) Using the result $ln(1-p) \approx -p$, show that $(1-p)^{N-n} \approx e^{-Np}$\\
+	(b)	Show that $N!/(N-n)! \approx N^n$\\
+	(c) Hence show that (1) reduces to
+	$$W(n) = \frac{\lambda ^ n}{n!}e^{-\lambda} \eqno(2)$$
+	where $\lambda \equiv Np$is the mean number of events. The distribution (2) is called the "Poisson distribution."\\
+	Answer:(a): 
+	$$ln(1-p) \approx -p \eqno(4.1.1)$$
+	$$1-p\approx e^{-p} \eqno(4.1.2)$$
+	$$(1-p)^{N-n} \approx e^{-Np + np} \eqno(4.1.3)$$
+	Since $n \ll N, p \ll 1$:
+	$$e^{np} \approx 1 \eqno(4.1.4)$$
+	$$(1-p)^{N-n} \approx e^{-Np} \eqno(4.1.5)$$
+	Q.E.D\\
+	(b):
+	$$\frac{N!}{(N-n)!} = N(N-1)...(N-n+1) \eqno(4.2.1)$$
+	Since $n \ll N$:
+	$$N-n+1 \approx N \eqno (4.2.2)$$
+	So:
+	$$\frac{N!}{(N-n)!} \approx N^n \eqno(4.2.3)$$
+	Q.E.D\\
+	(c):\\
+	Using approximation (4.1.5) and (4.2.3), (1) could transform to:
+	$$W(n) \,=\, \frac{N^n}{n!}p^n e^{-Np} \,=\, \frac{(Np)^n}{n!}e^{-Np} \eqno(4.3.1)$$
+	And let $\lambda$ be:
+	$$\lambda \,=\, Np \eqno(4.3.2)$$
+	Then:
+	$$W(n) \,=\, \frac{\lambda^n}{n!}e^{-\lambda} \eqno(4.3.3)$$
+	Q.E.D\\
+	1.14 A penny is tossed 400 times. Find the probability of getting 215 heads. (Suggestion: use the Gaussian approximation)\\
+	Answer:In this problem $p=q=\frac{1}{2}$\\
+	So, using Gaussian approximation, we have:
+	$$W(n_1) = (2 \pi N p q)^{-\frac{1}{2}} exp[-\frac{(n_1-N p)^2}{2 N p q}] \approx 1.295\%$$
+	Compare to the binomial distribution:
+	$$W(n_1) = \frac{N!}{n_1!(N-n_1)!}p^{n_1} q^{N-n_1} = 1.297$$
+	It's show that 400 times is large enough that Guassian approximation very close to the binomial distribution.
+
+	
+	
+	
+	
+\end{document}

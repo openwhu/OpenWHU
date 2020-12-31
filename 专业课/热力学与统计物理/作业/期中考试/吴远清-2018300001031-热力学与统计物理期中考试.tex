@@ -1,0 +1,138 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{热力学与统计物理 期中考试}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    一.概念题\\
+    1.试述等概率原理及你对等概率原理的理解.\\
+    Answer:\\
+    For an isolated system, if it's in equilibrium, it will be equally likely to be in any of its accessible states.\\
+    等概率原理是统计物理的基础假设. 从力学角度出发,如果各态历经假说/准各态历经假说成立,则刘维尔定理可以演化为等概率原理,但事实上这两个假说均不成立,各态历经是通过统计系统特有的物理性质而实现的,这就使得等概率原理成为统计物理最基础的原理.\\
+    2.试述热力学第零、第一、第二、第三定律并简述其物理意义\\
+    Answer:\\
+    Zeroth law: There are three system A,B,C, if A and B are in equilibrium, B and C are also in equilibrium, then A and C are in equilibrium\\
+    第零定律是温度的定义与测量,温标的建立的基础\\
+    First law:$\Delta \bar{E} = -W + Q$\\
+    第一定律反应了统计系统最重要的几个热力学量之间的关系,并且是能量守恒在统计系统中的表现.\\
+    Second law: For any process done in a isolated system: $\Delta S \geq 0$\\
+    For a quasi-static process:$dS = \frac{dQ}{T}$\\
+    第二定律说明了孤立系统总是趋向于无序,否决了第二类永动机的可能,准静态过程的表达式使得我们可以将不完全微分$dQ$转换为完全微分$TdS$(不用考虑过程量,只考虑有势函数,使得热力学态与态之间的计算大大简化).\\
+    Third law: The entropy of a system has the limiting property:$T\to 0_{+}\quad \text{or} \quad E \to E_0,\qquad S \to S_0$.\\
+    第三定律描述了熵的极限行为,并且注意到了核自旋导致的绝对零度下熵取一有限值\\
+    3.试述相空间及其物理意义\\
+    Answer:\\
+    相空间就是可以完全描述一个系统的微观态的物理量所构成的空间.\\
+    相空间依赖于广义坐标和独立热力学量的选取,使得我们可以任意的选取想要研究的物理量,并使得每个微观态都对应于相空间内一个点.\\
+    4.试述什么是平衡态、孤立系统、弛豫时间\\
+    Answer:\\
+    平衡态:系统处于各微观态的概率不随时间变化,系统的各宏观热力学量也保持不变.\\
+    孤立系统:与外界既没有物质交换,也没有能量交换的系统.\\
+    弛豫时间:系统从非平衡态转变为平衡态所需的时间.\\
+    5.试述什么是熵？并写出熵的几种计算式并说明其物理意义.\\
+    Answer:\\
+    Definition: $$S = k\,ln\Omega$$
+    $$dS = \frac{dQ}{T}$$
+    物理意义:代替系统的状态数,描述了统计系统的无序程度.\\
+    二.推导题、计算题\\
+    6.对于1维格子上的随机行走，格子步长为l，向右的概率为p，向左的概率为q，N步随机行走后，试推导距离原点为m的概率P(m)。这里p+q=1，N>>1，且0<p~q<1。\\
+    Answer:\\
+    Since $N>>1$, we can use the Gaussian approximation:
+	$$W(n_1) = (2 \pi N p q)^{-\frac{1}{2}} exp[-\frac{(n_1-N p)^2}{2 N p q}] \eqno(1.1)$$
+	and we have:
+	$$m = |n_1 - n_2| = |2n_1 - N| \eqno(1.2)$$
+	Then for a specific m, we have:
+	$$P(m) = W(\frac{N + m}{2}) + W(\frac{N - m}{2})$$
+	$$= (2 \pi N p q)^{-\frac{1}{2}}\{exp[-\frac{(\frac{N+m}{2} - Np)^2}{2 N p q}] + exp[-\frac{(\frac{N-m}{2} - Np)^2}{2 N p q}]\} \eqno(1.3)$$
+	Finally:
+    $$P(m)dm \approx (2 \pi N p q)^{-\frac{1}{2}}\{exp[-\frac{(\frac{N+m}{2} - Np)^2}{2 N p q}] + exp[-\frac{(\frac{N-m}{2} - Np)^2}{2 N p q}]\}dm \eqno(1.4)$$
+    
+    7.\\
+    (1)试推导平衡态单原子理想气体系统状态数Ω与体系体积V和内能E的关系表达式\\
+    (2)进一步推导单原子理想气体状态方程\\
+    (3)并导出单原子理想气体内能E与温度T的关系\\
+    Answer:\\
+    (1)\\
+    Generally:
+    $$\Omega(E) \propto \int_{E}^{E+\delta E}\ldots\int d^3 r_1 \ldots d^3 r_N d^3p_1 \ldots d^3 p_N dQ_1 \ldots dQ_M dP_1 \ldots dP_M \eqno(2.1)$$
+    Which equal to:
+    $$\Omega(E) \propto V^N \chi (E) \eqno(2.2)$$
+    For ideal gas:
+    $$\Phi \propto R^f = (2mE)^{f/2} \eqno(2.3)$$
+    Then:
+    $$\Omega(E) \propto E^{(f/2)-1} \eqno(2.4)$$
+    For monatomic molecule:
+    $$f = 3N \eqno(2.5)$$
+    So:
+    $$\Omega(E) \propto E ^{(3 N / 2)-1} \eqno(2.6)$$
+    From (2.2):
+    $$\Omega = B V^{\mathrm{N}} E^{3 N / 2} \eqno(2.7)$$
+    (2)\\
+    From (2.7):
+    $$ln \Omega = N lnV + \frac{3}{2}N ln E + ln B \eqno(2.8)$$
+    The general force of volume is:
+    $$\bar{P} = \frac{\partial E}{\partial V} = \frac{\partial ln \Omega}{\partial V}kT = \frac{N}{V}kT \eqno(2.9)$$
+    So:
+    $$PV = NkT \eqno(2.10)$$
+    (3)\\
+    $$\beta = \frac{\partial ln \Omega}{\partial E} = \frac{3}{2}N\frac{1}{E} = \frac{1}{kT} \eqno(2.11)$$
+    So:
+    $$E = \frac{3}{2}N k T \eqno(2.12)$$
+
+    8.一系统A与一温度为T的热库A’处于热平衡(A' >> A)\\
+    (1). 试问系统A处于微观状态r的概率Pr？这里微观状态r的内能为Er\\
+    (2). 试基于等概率原理推导此概率Pr\\
+    Answer:\\
+    (1)\\
+    $$P_{r}=\frac{e^{-\beta E_{r}}}{\sum_{r} e^{-\beta E_{r}}} \eqno(3.1)$$
+    (2)\\
+    $$E_r + E' = E^{(0)} \eqno(3.2)$$
+    So, the probability to find A in state r is:
+    $$P_{r}=C^{\prime} \Omega^{\prime}\left(E^{(0)}-E_{r}\right) \eqno(3.3)$$
+    Since $A << A'$, expand $\Omega$ at $E' = E$:
+    $$\ln \Omega^{\prime}\left(E^{(0)}-E_{r}\right)=\ln \Omega^{\prime}\left(E^{(0)}\right)-\left[\frac{\partial \ln \Omega^{\prime}}{\partial E^{\prime}}\right]_{0} E_{r} \ldots \eqno(3.4)$$
+    Neglect terms of higher order:
+    $$\Omega^{\prime}\left(E^{(0)}-E_{r}\right)=\Omega^{\prime}\left(E^{(0)}\right) e^{-\beta E} \eqno(3.5)$$
+    So:
+    $$P_{r}=C e^{-\beta E_{r}} \eqno(3.6)$$
+    Since C is a integration factor:
+    $$P_{r}=\frac{e^{-\beta E_{r}}}{\sum_{r} e^{-\beta E_{r}}} \eqno(3.7)$$
+
+    9.以系统温度和体积（T，V）作为独立自变量\\
+    (1)试写出Helmholtz自由能F的微元表达式dF\\
+    (2)试推导Maxwell关系式：$(\partial S/\partial V)_T=(\partial p/\partial T)_V$\\
+    Answer:\\
+    (1)\\
+    Definition:
+    $$F = E - TS \eqno(4.1)$$
+    So:
+    $$dF = -S dT - p dV \eqno(4.2)$$
+    (2)\\
+    Mathematically:
+    $$d F=\left(\frac{\partial F}{\partial T}\right)_{V} d T+\left(\frac{\partial F}{\partial V}\right)_{T} d V \eqno(4.3)$$
+    Compare with (4.2):
+    $$\left(\frac{\partial F}{\partial \bar{V}}\right)_{T}=-p \eqno(4.4)$$
+    $$\left(\frac{\partial F}{\partial T}\right)_{V}=-S \eqno(4.5)$$
+    And we have:
+    $$\frac{\partial^{2} F}{\partial V \partial T}=\frac{\partial^{2} F}{\partial T \partial V} \eqno(4.6)$$
+    So:
+    $$\left(\frac{\partial S}{\partial V}\right)_{T}=\left(\frac{\partial p}{\partial T}\right)_{v} \eqno(4.7)$$
+
+    10.\\
+    (1)什么是热机?\\
+    (2)一热机在高温热源吸热Q，在低温热源放热，并同时对外做功W，如果整个过程为准静态，试计算其效率$\eta$\\
+    Answer:\\
+    (1)\\
+    热机是将体系的内能转化为对外做功的机器\\
+    (2)\\
+    We have:
+    $$\eta = \frac{W}{Q} \leq 1 - \frac{T_2}{T_1} = \frac{T_1 - T_2}{T_1} \eqno(5.1)$$
+    (5.1) is a equation when $\Delta S = 0$, which means undergoes a quasi-static process.\\
+    So:
+    $$\eta = \frac{W}{Q} \eqno(5.2)$$
+
+\end{document}
