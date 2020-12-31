@@ -1,0 +1,187 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2019.12.2)  22 FEB 2020 15:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**草稿.tex
+(./草稿.tex
+LaTeX2e <2019-10-01> patch level 3
+(c:/texlive/2019/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/10/25 v1.4k Standard LaTeX document class
+(c:/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/10/25 v1.4k Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2019/11/16 v2.17d AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2858.
+LaTeX Info: Redefining \] on input line 2859.
+)
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/01 v1.3d Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(c:/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+(c:/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+\c@mathematicapage=\count100
+ (./草稿.aux)
+\openout1 = `草稿.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen112
+\scratchbox=\box29
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen113
+\MPnumerator=\count105
+\makeMPintoPDFobject=\count106
+\everyMPtoPDFconversion=\toks20
+) (c:/texlive/2019/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2019-11-30 v2.9 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+
+
+(c:/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (174.24014pt too wide) in paragraph at lines 25--26
+$[]$ 
+ []
+
+[1
+
+{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./草稿.aux) 
+) 
+Here is how much of TeX's memory you used:
+ 2070 strings out of 492164
+ 24407 string characters out of 6129088
+ 89369 words of memory out of 5000000
+ 6454 multiletter control sequences out of 15000+600000
+ 5339 words of font info for 22 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,13n,31p,218b,128s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on 草稿.pdf (1 page, 32917 bytes).
+PDF statistics:
+ 20 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
