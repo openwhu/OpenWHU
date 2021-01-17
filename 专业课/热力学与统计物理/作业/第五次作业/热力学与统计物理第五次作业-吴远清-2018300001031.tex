@@ -1,0 +1,61 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{amsmath}
+\title{热力学与统计物理-第五次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 4.1\\
+    Answer:\\
+    (a)\\
+    We can calculate the change in entropy of water directly:
+    $$\Delta S_1 = m C \int_{273}^{373} \frac{1}{T}dT \approx 1310 J/K \eqno(1.1)$$
+    With the thermal first law:
+    $$\Delta Q_{res} + \Delta Q_{water} = 0 \eqno(1.2)$$
+    Then:
+    $$\Delta S_2 = -\frac{Q_{water}}{T} = -\frac{m C}{T}(373-273) \approx -1120 J/K \eqno(1.3)$$
+    The total change in entropy is:
+    $$\Delta S = \Delta S_1 \Delta S_2 = 190 J/K \eqno(1.4)$$
+    (b)\\
+    The change in entropy of water still be the same as (a):
+    $$\Delta S = \Delta S_1 - \frac{mC\Delta T}{323} - \frac{mC\Delta T_2}{373} = 102J/K \eqno(1.5)$$
+    (c)\\
+    Through a quasi-static process.\\
+    In detail, the system brought to its final  temperature by interaction with a succession of heat reserviors differing infinitesimally in temperature.\\
+    
+    Problem 4.3\\
+    Answer:\\
+    $$dQ = c\,dT + \bar{p}\,dV = c\,dT + \frac{RT}{V}\,dV \eqno(2.1)$$
+    So:
+    $$\Delta S = \int_{i}^{f}\frac{dQ}{T}=\int_{T_i}^{T_f}\frac{c}{T}\,dT + \int_{V_i}^{V_f}\frac{R}{V}\,dv \eqno(2.2)$$
+    Result:
+    $$\Delta S = c\,ln\frac{T_f}{T_i} + R\,ln\frac{V_f}{V_i} \eqno(2.3)$$
+    This result is independent of process.
+
+    Problem 4.4\\
+    Answer:\\
+    Since the spins of atoms is completely random at high temperature:
+    $$\lim_{T \to \infty}S(T) = k\,ln\,\Omega = k \, ln \, 2^N = Nk\,ln2\eqno(3.1)$$
+    The change in entropy of this system from 0K to T:
+    $$\Delta S = \int_{0}^{T}\frac{C(T)}{T}dT \eqno(3.2)$$
+    Since $C(T) = 0$ while $T \notin (\frac{1}{2}T_1,T_1)$:
+    $$\Delta S = \int_{\frac{1}{2}T_1}^{T_1}C_1(2\frac{1}{T_1} - \frac{1}{T})dT = C_1(1-ln2)\eqno(3.3)$$
+    With the third law, we set $S(0) = 0$,Then, from (3.1) and (3.3):
+    $$Nk\,ln2 = C_1(1-ln2)\eqno(3.4)$$
+    Then:
+    $$C_1 = \frac{Nk\,ln2}{1-ln2} \eqno(3.5)$$
+
+    Problem 4.5\\
+    Answer:\\
+    Let's u denote the undiluted system, and d denote the diluted syste.\\
+    Similarly with Problem 4.4:
+    $$S_u(T_1) - S_u(0) = \int_{\frac{1}{2}T_1}^{T_1}C_1(2\frac{1}{T_1}-\frac{1}{T_1})dT = C_1(1-ln2)\eqno(4.1)$$
+    $$S_d(T_1) - S_d(0) = \int_{\frac{1}{2}T_1}^{T_2}C_2\frac{1}{T_2}dT = C_2 \eqno(4.2)$$
+    By the third law, let's $S_u(0) = S_d(0) = 0$.\\
+    Obviously:
+    $$S_d(T_1) = \frac{7}{10}S_u(T_1)    \eqno(4.3)$$
+    So:
+    $$\frac{C_2}{C_1} = \frac{7}{10}(1-ln2) \eqno(4.4)$$
+\end{document}

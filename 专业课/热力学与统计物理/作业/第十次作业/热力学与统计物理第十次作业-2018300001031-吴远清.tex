@@ -1,0 +1,124 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\title{热力学与统计物理-第十次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 7.14\\
+    Answer:\\
+    The energy of the megnetic moment in the field $\mathrm{H}$ is:
+    $$E=-\mu \cdot H=-\mu H \cos \theta \eqno(1.1)$$
+    where $\theta$ is the angle betwen the magnetic moment and the direction of the field or z-axis. Then the probability that the magnetic moment lies in the range $\theta$ to $\theta+d \theta$ is proportional to the Boltzmann factor and the solid angle $2 \pi \sin \theta d \theta$\\
+    Thus:
+    $$P(\theta) d \theta \propto e^{\beta \mu H \cos \theta} \sin \theta d \theta \eqno(1.2)$$
+    And:
+    $$\overline{\mathrm{M}}_{\mathrm{Z}}=\mathrm{N}_{\mathrm{O}} \bar{\mu}_{\mathrm{Z}}=\frac{\mathrm{N}_{\mathrm{O}} \int_{0}^{\pi} \mathrm{e}^{\beta \mu \mathrm{E}} \cos \theta sin\theta d\theta(\mu cos\theta)}{\int_{0}^{\pi} \mathrm{e}^{\beta \mu \mathrm{H} \cos \theta} \sin \theta \mathrm{d} \theta} \eqno(1.3)$$
+    $$\begin{aligned}
+        \overline{M}_{Z} &=\frac{N_0}{H} \frac{\partial}{\partial \beta} \ln \int_{0}^{\pi} e^{\beta \mu H \cos \theta} \sin \theta d \theta=\frac{N_0}{H} \frac{\partial}{\partial \beta} \ln \frac{e^{\beta \mu H}-e^{-\beta \mu H}}{\beta \mu H}\\
+        &=\frac{N_0}{H} \frac{\partial}{\partial \beta} \ln \frac{2 \sinh \beta \mu H}{\beta \mu H}=\frac{N_{0}}{H \beta \sinh \beta \mu H}\left[\mu H \beta \cosh \beta \mu H-\sinh \beta \mu H\right]\\
+    \end{aligned}\eqno(1.4)$$
+    So:
+    $$\overline{M}_{Z}=N_{0} \mu\left[\operatorname{coth} \beta \mu H-\frac{1}{\beta \mu H}\right] \eqno(1.5)$$
+
+    Problem 7.15\\
+    Answer:\\
+    We have:
+    $$\overline{M}_{Z}=N_{0} g \mu_{0} J B_{J}(\eta) \eqno(2.1)$$
+    Then:
+    $$B_{J}(\eta)=\frac{1}{J}\left[\left(J+\frac{1}{2}\right) \operatorname{coth}\left(J+\frac{1}{2}\right) \eta-\frac{1}{2} \operatorname{coth} \frac{1}{2} \eta\right] \eqno(2.2)$$
+    If $\eta \ll 1$ and $J \gg 1$ in such a way that $J \eta \gg 1, B_{J}(\eta)$ becomes:
+    $$B_{J}(\eta)=\frac{1}{J} \quad\left[J \operatorname{coth} J \eta-\frac{1}{2}\left(\frac{2}{\eta}\right)\right]=\operatorname{coth} J \eta-\frac{1}{J \eta} \eqno(2.3)$$
+    $\text { Let } \mu \mathrm{H} \beta=J \eta=J g \mu_{\mathrm{0}} \mathrm{H} \beta \quad \text { where } \mu=\mathrm{g} \mu_{\mathrm{O}} \mathrm{J} \text { is by }(7.8 .2) \text { the classical magnetic moment. }$, then (2.1) becomes:
+    $$\overline{M}_{Z}=N_{0} \mu\left[\operatorname{coth} \beta \mu H-\frac{1}{\beta \mu H}\right] \eqno(2.4)$$
+
+    Problem 7.17\\
+    Answer:\\
+    To find the fraction, $\xi$, of molecules with $x$ component of velocity between - $\tilde{v}$ and $\tilde{v}$, we must integrate the distribution between these limits, i.e.:
+    $$\xi=\frac{1}{n} \int_{-\tilde{v}}^{\tilde{v}} g\left(v_{x}\right) d v_{x}=\int_{-\sqrt{\frac{2 k T}{m}}}^{\sqrt{\frac{2kT}{m}}}\left(\frac{m}{2 \pi k T}\right)^{\frac{1}{2}} e^{-\left(m v_{x}^{2} / 2 k T\right)} d v_{x} \eqno(3.1)$$
+    Making the change of variable, $y=\sqrt{\frac{m}{k T}} v_{x}$, we have:
+    $$\xi=\frac{1}{\sqrt{2 \pi}} \int_{-\sqrt{2}}^{\sqrt{2}} \mathrm{e}^{-\left(y^{2} / 2\right)} \mathrm{dy}=\frac{2}{\sqrt{2 \pi}} \int_{0}^{2} \mathrm{e}^{-\left(\mathrm{y}^{2} / 2\right)}=2 \text { erf } \sqrt{2} \eqno(3.2)$$
+
+    Problem 7.18\\
+    Answer:\\
+    In problem 5.9 we found that the velocity of sound is:
+    $$u=\left(\frac{\gamma R T}{\mu}\right)^{\frac{1}{2}} \eqno(4.1)$$
+    where $\gamma=\mathrm{C}_{\mathrm{p}} / \mathrm{C}_{\mathrm{V}}$ and $\mu$ is the atomic weight. Since $\mu=\mathrm{N}_{\mathrm{A}} \mathrm{m}$, we have:
+    $$u=\left(\frac{\gamma R T}{N_{A} m}\right)^{\frac{1}{2}}=\left(\frac{\gamma K T}{m}\right)^{\frac{1}{2}} \eqno(4.2)$$
+    The most probable speed is $\tilde{v}=(2 k T / m)^{\frac{1}{2}}$. Thus:
+    $$u=\left(\frac{\gamma}{2}\right)^{\frac{1}{2}} \tilde{v} \eqno(4.3)$$
+    For helium, $\gamma=1.66$ so that $u=0.91 \tilde{v},$ and the fraction of molecules with speeds less than $u$ is:
+    $$\xi=\frac{1}{n} \int_{0}^{0.91 \tilde{v}} F(v) d v=4 \pi \int_{0}^{0.91(2 k T / m)^{\frac{1}{2}}}\left(\frac{m}{2 \pi k \pi}\right)^{\frac{3}{2}} v^{2} e^{-\frac{m v^{2}}{2 k T}} d v \eqno(4.4)$$
+    Making the change of variable $y=(m / k T)^{\frac{1}{2}} v,$ we have:
+    $$4\xi=\frac{4 \pi}{(2 \pi)^{\frac{3}{2}}} \int_{0}^{0.91 \sqrt{2}} \mathrm{y}^{2} \mathrm{e}^{-\mathrm{y}^{2} / 2} \mathrm{dy} \eqno(4.5)$$
+    This integral may be evaluated by noticing that integration by parts of $\int_{0}^{\mathrm{a}} \mathrm{e}^{-\mathrm{y}^{2} / 2}$ dy yields:
+    $$\int_{0}^{a} e^{-y^{2} / 2} d y=\left.y e^{-y^{2} / 2}\right|_{0} ^{a}+\int_{0}^{a} y^{2} e^{-y^{2} / 2} d y \eqno(5.6)$$
+    Then we find:
+    $$\xi=4 \pi^{-\frac{1}{2}}(2)^{-\frac{3}{2}} \int_{0}^{0.91 \sqrt{2}} y^{2} \mathrm{e}^{-y^{2} / 2} d y=4 \pi^{-\frac{1}{2}}(2)^{-\frac{3}{2}} \int_{0}^{0.91 \sqrt{2}} \mathrm{e}^{-y^{2} / 2} d y-0.91 \sqrt{2} \exp \left[-(0.912)^{2} / 2\right] \approx 0.37 \eqno(5.7)$$
+
+    Problem 7.19\\
+    Answer:\\
+    $$\begin{aligned}
+        &(a) \bar{v}_{x}=0\\
+        &(b) \overline{v_{x}^{2}}=\frac{\mathrm{kT}}{\mathrm{m}}\\
+        &(c) \overline{\left(v^{2} v_{x}\right)}=\left(\overline{v_{x}^{3}}+\overline{v_{y}^{2}} \bar{v}_{x}+\overline{v_{z}^{2}} \bar{v}_{x}\right)=0 \\
+        &(d) \overline{\left(v_{x}^{3} v_{y}\right)}=\overline{v_{x}^{3}} \bar{v}_{y}=0\\
+        &(e) \overline{\left(v_{x}+b v_{y}\right)^{2}}=\overline{v_{x}^{2}}+2 b \bar{v}_{x} \bar{v}_{y}+b^{2} \overline{v_{y}^{2}} = (1+b)^2\frac{kT}{m}\\
+        &(f) \overline{v_{x}^{2} v_{y}^{2}}=\left(\frac{k T}{m}\right)^{2}\\
+    \end{aligned}$$
+
+    Problem 7.21\\
+    Answer:\\
+    The most probable energy is given by the condition $\frac{d F(\epsilon)}{d \epsilon}=0$:
+    $$\frac{1}{2} \epsilon^{-\frac{1}{2}} e^{-\frac{\epsilon}{k T}}-\frac{\epsilon^{\frac{1}{2}}}{\mathrm{kT}} e^{-\frac{\epsilon}{\mathrm{kT}}}=0 \eqno(7.1)$$
+    Then:
+    $$\tilde{\epsilon}=\frac{1}{2} \mathrm{kT} \eqno(7.2)$$
+    The most probable speed is:
+    $$\tilde{v}=(2 k T / m)^{\frac{1}{2}} \eqno(7.3)$$
+    So:
+    $$\frac{1}{2} m v^{2}=\mathrm{kT} \eqno(7.4)$$
+
+    Problem 7.23\\
+    Answer:\\
+    (a)\\
+    The number of molecules which leave the source slit per second is:
+    $$\Phi_{0} A=\frac{1}{4} n \bar{v} A=\frac{\bar{p}_{s} A}{\sqrt{2 \pi m k T}}=1.1 \times 10^{18} \text { molecules/sec } \eqno(8.1)$$
+    where A is the area of slit.\\
+    (b)\\
+    Approximating the slit as a point source, we have by $(7.11 .7),$ the number of molecules with speed in the range between v and v + dv which emerge into solid angle $d\Omega$ is:
+    $$A \Phi(v) d^{3} v=A[f(v) v \cos \theta]\left[v^{2} d v d \Omega\right] \eqno(8.2)$$
+    $\cos \theta \approx 1$ for molecules arriving at the detector slit; hence the total number which reach the detector is
+    $$A \int_{\Omega_{d}} d \Omega \int_{0}^{\infty} n\left(\frac{m}{2 \pi k T}\right)^{\frac{3}{2}} v^{3} e^{-\frac{\beta m v^{2}}{2}} d v=\frac{A \Omega_{a} \bar{p}_{s}}{\pi \sqrt{2 \pi m k T}} \eqno(8.2)$$
+    From (8.2), we have:
+    $$\frac{A^{2} \overline{p}_{S}}{\pi L^{2} \sqrt{2 \pi m k T}}=\phi_{d} A=\frac{A \bar{p}_{d}}{\sqrt{2 \pi m k T}} \eqno(8.3)$$
+    Or:
+    $$\bar{p}_{d}=\bar{p}_{S} \frac{A}{\pi L^{2}}=2.4 \times 10^{-8} \mathrm{mm} \text { of Hg. } \eqno(8.4)$$
+
+    Problem 7.27\\
+    Answer:\\
+    The rate of change of the mumber of perticles inside the container is
+    $$\frac{d \mathrm{N}}{\mathrm{d} t}=-\frac{1}{4} \mathrm{n} \overline{\mathrm{v}} \mathrm{A}=-\frac{\mathrm{NA}}{4 \mathrm{V}} \sqrt{\frac{\mathrm{8}}{\mathrm{T}} \frac{\mathrm{kT}}{\mathrm{m}}}=-\frac{\lambda \mathrm{N}}{\sqrt{\mathrm{m}}} \eqno(9.1)$$
+    thus defining $\lambda$. since pressure is proportional to the number of particles, we find after integrating:
+    $$\mathrm{p} / \mathrm{p}_{0}=\exp \left[-\frac{\lambda t}{\sqrt{\mathrm{m}}}\right] \eqno(9.2)$$
+    For Helium gas $\mathrm{p} / \mathrm{p}_{\mathrm{o}}=1 / 2 \text{  at  } \mathrm{t}=1$ hour. Substituting we have:
+    $$\lambda=\sqrt{\frac{m}{\mathrm{He}}} \ln 2 \eqno(9.3)$$
+    So:
+    $$\mathrm{n}_{\mathrm{Ne}} / \mathrm{n}_{\mathrm{He}}=2^{(1-\sqrt{\mathrm{m}_{\mathrm{He}} / \mathrm{m}_{\mathrm{Ne}}})}=2^{(1-\sqrt{\mu_{\mathrm{He}} / \mu_{\mathrm{Ne}}})} \eqno(9.4)$$
+
+    Problem 7.29\\
+    Answer:\\
+    (a)\\
+    Inside the container $\bar{v}_{z}=0$ by symmetry.\\
+    (b)\\
+    The velocity distribution, $\phi(\overline{v}),$ of the molecules which bave effused into the vacuum is:
+    $$\Phi(\overline{v}) \mathrm{d}^{3} \overline{v}=f(\tilde{v}) \mathrm{v}_{\mathrm{z}} \mathrm{d}^{3} \overline{\mathrm{v}} \eqno(10.1)$$
+    where $f(\tilde{v})$ is Maxwell distribution.\\
+    So:
+    $$\bar{v}_{z}=\frac{\frac{\sqrt{\pi}}{4}\left(\frac{2 k \pi}{m}\right)^{\frac{3}{2}}}{\frac{1}{2}\left(\frac{2 k \pi}{m}\right)}=\sqrt{\frac{\pi}{2} \frac{k T}{m}} \eqno(10.2)$$
+
+    
+\end{document}

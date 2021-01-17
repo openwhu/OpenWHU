@@ -1,0 +1,110 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第十次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+	\maketitle
+	Problem 10.16\\
+	Answer:
+	The potential of the particle is equal to:
+	$$V(\vec{r}, t)=\frac{1}{4 \pi \epsilon_{0}} \frac{q c}{\sqrt{\left(c^{2} t-\vec{r} \cdot \vec{v}\right)^{2}+\left(c^{2}-v^{2}\right)\left(r^{2}-c^{2} t^{2}\right)}} $$
+	We need to somehow "pull out" the factor of $R c$ from the denominator. The expression under the root is:
+	$$\begin{aligned}
+		&\left(c^{2} t-\vec{r} \cdot \vec{v}\right)^{2}+\left(c^{2}-v^{2}\right)\left(r^{2}-c^{2} t^{2}\right)=\\
+		=&c^{4} t^{2}-2 c^{2} t \vec{r} \cdot \vec{v}+(\vec{r} \cdot \vec{v})^{2}+c^{2} r^{2}-c^{4} t^{2}-v^{2} r^{2}+v^{2} c^{2} t^{2} \\
+		=&-2 c^{2} t \vec{r} \cdot \vec{v}+(\vec{r} \cdot \vec{v})^{2}+c^{2} r^{2}-v^{2} r^{2}+v^{2} c^{2} t^{2}
+	\end{aligned}$$
+	$$\vec{R}=\vec{r}-\vec{v} t \Longrightarrow R^{2}=r^{2}+v^{2} t^{2}-2 t \vec{v} \cdot \vec{r}$$
+	$$\begin{aligned}
+	&\left(c^{2} t-\vec{r} \cdot \vec{v}\right)^{2}+\left(c^{2}-v^{2}\right)\left(r^{2}-c^{2} t^{2}\right)=\\
+	=& c^{2}\left(r^{2}+v^{2} t^{2}-2 t \vec{v} \cdot \vec{r}\right)+(\vec{r} \cdot \vec{v})^{2}-v^{2} r^{2} \\
+	=& c^{2} R^{2}+(\vec{r} \cdot \vec{v})^{2}-v^{2} r^{2}
+	\end{aligned}$$
+	Now, the two other two terms are equal to:
+	$$\begin{aligned}
+	(\vec{r} \cdot \vec{v})^{2}-v^{2} r^{2} &=((\vec{R}+\vec{v} t) \cdot \vec{v})^{2}-v^{2}\left(R^{2}+2 t \vec{r} \cdot \vec{v}-v^{2} t^{2}\right) \\
+	&=v^{2} R^{2} \cos ^{2} \theta+2(\vec{R} \cdot \vec{v}) v^{2} t+v^{4} t^{2}-v^{2} R^{2}+2 v^{2} t \vec{r} \cdot \vec{v}+v^{4} t^{2} \\
+	&=v^{2} R^{2}\left(\cos ^{2} \theta-1\right)+2((\vec{r}-\vec{v} t) \cdot \vec{v}) v^{2} t+2 v^{2} t \vec{r} \cdot \vec{v}+2 v^{4} t^{2} \\
+	&=-v^{2} R^{2} \sin ^{2} \theta+2 v^{2} t \vec{r} \cdot \vec{v}-2 v^{4} t^{2}-2 v^{2} t \vec{r} \cdot \vec{v}+2 v^{4} t^{2} \\
+	&=-v^{2} R^{2} \sin ^{2} \theta
+	\end{aligned}$$
+	where $\theta$ is the angle the velocity makes with the vector $\vec{R}$. The expression under the root is then:
+	$$\begin{aligned}
+		\left(c^{2} t-\vec{r} \cdot \vec{v}\right)^{2}+\left(c^{2}-v^{2}\right)\left(r^{2}-c^{2} t^{2}\right) &=c^{2} R^{2}-v^{2} R^{2} \sin ^{2} \theta \\
+		&=c^{2} R^{2}\left(1-\beta^{2} \sin ^{2} \theta\right)
+	\end{aligned}$$
+	So,the potential is:
+	$$\begin{aligned}
+	V &=\frac{1}{4 \pi \epsilon_{0}} \frac{q c}{\sqrt{\left(c^{2} t-\vec{r} \cdot \vec{v}\right)^{2}+\left(c^{2}-v^{2}\right)\left(r^{2}-c^{2} t^{2}\right)}} \\
+	&=\frac{1}{4 \pi \epsilon_{0}} \frac{q c}{R c \sqrt{1-\beta^{2} \sin ^{2} \theta}}=\sqrt{\frac{1}{4 \pi \epsilon_{0}}} \frac{q}{R \sqrt{1-\beta^{2} \sin ^{2} \theta}}
+	\end{aligned}$$
+	Q.E.D\\
+	
+	Problem	10.19\\
+	Answer:\\
+	Due to the limitations of this site I will be using letter $l$ as the distance from the charge to the point of interest.\\
+	The Lienard-Wiechert vector potential of the charge in motion is:\\
+	$$\vec{A}=\frac{\mu_{0}}{4 \pi} \frac{q c \vec{v}}{l_{c}-\vec{l} \cdot \vec{v}}=\frac{\mu_{0}}{4 \pi} \frac{q c \vec{v}}{\vec{l} \cdot \vec{u}}$$
+	all quantities evaluated at retarded time. We want the partial time derivative of this, but first:
+	$$\begin{aligned}
+	l &=c\left(t-t_{r}\right) \\
+	l^{2} &=c^{2}\left(t-t_{r}\right)^{2}
+	\end{aligned}$$
+	$$2 \vec{l} \cdot \frac{\partial \vec{l}}{\partial t}=2 c^{2}\left(t-t_{r}\right)\left(1-\frac{\partial t_{r}}{\partial t}\right) \Rightarrow \frac{\partial t_{r}}{\partial t}=1-\frac{\hat{l}}{c} \cdot \frac{\partial \vec{l}}{\partial t}$$
+	But:
+	$$\vec{l}=\vec{r}-\vec{w}\left(t_{r}\right)$$
+	$$\frac{\partial \vec{l}}{\partial t}=-\frac{\partial \vec{w}}{\partial t_{r}} \frac{\partial t_{r}}{\partial t}=-\vec{v}\left(t_{r}\right) \frac{\partial t_{r}}{\partial t}$$
+	$$\frac{\partial t_{r}}{\partial t}=1+\frac{\hat{l}}{c} \cdot \vec{v}\left(t_{r}\right) \frac{\partial t_{r}}{\partial t}$$
+	So, as we need to prove first:
+	$$\frac{\partial t_{r}}{\partial t}=\frac{c l}{\vec{l} \cdot(c \hat{l}-\vec{v})}=\frac{c l}{\vec{l} \cdot \vec{u}}$$
+	With this we can get the partial time derivative of the vector potential:
+	$$\frac{\partial \vec{A}}{\partial t}=\frac{\mu_{0} q c}{4 \pi}\left[\frac{1}{\vec{l} \cdot \vec{u}} \frac{\partial \vec{v}}{\partial t}-\frac{\vec{v}}{(\vec{l} \cdot \vec{u})^{2}} \frac{\partial}{\partial t}(\vec{l} \cdot \vec{u})\right]$$
+	$$\frac{\partial \vec{v}}{\partial t}=\frac{\partial \vec{v}}{\partial t_{r}} \frac{\partial t_{r}}{\partial t}=\vec{a} \frac{c l}{\vec{l} \cdot \vec{u}}$$
+	$$\frac{\partial}{\partial t}(\vec{l} \cdot \vec{u})=c \frac{\partial l}{\partial t}-\frac{\partial \vec{l}}{\partial t} \cdot \vec{v}-\frac{\partial \vec{v}}{\partial t} \cdot \vec{l}=c \frac{\partial l}{\partial t}+v^{2} \frac{c l}{\vec{l} \cdot \vec{u}}-(\vec{a} \cdot \vec{l}) \frac{c l}{\vec{l} \cdot \vec{u}}$$
+	Hence:
+	$$\begin{aligned}
+	\frac{\partial \vec{A}}{\partial t} &=\frac{\mu_{0} q c}{4 \pi} \frac{1}{(\vec{l} \cdot \vec{u})^{3}}\left[l c \vec{a}(\vec{l} \cdot \vec{u})+\vec{v}\left(c l\left(c^{2}-v^{2}+\vec{l} \cdot \vec{a}\right)+c^{2}(\vec{l} \cdot \vec{u})\right)\right] \\
+	&=\frac{q c}{4 \pi \epsilon_{0}}\left[(\vec{l} \cdot \vec{u})\left(\frac{l}{c} \vec{a}-\vec{v}\right)+\frac{l}{c} \vec{v}\left(c^{2}-v^{2}+\vec{r} \cdot \vec{a}\right)\right]
+	\end{aligned}$$
+	Q.E.D\\
+	
+	Problem 10.22\\
+	Answer:\\
+	The electric field due to the leght of the wire of lenght $d x$ is the field of the uniformly moving point charge:
+	$$d \vec{E}=\frac{\lambda d x}{4 \pi \epsilon_{0}} \frac{1-\beta^{2}}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}} \frac{\hat{R}}{R^{2}}$$
+	Only the vertical component of the field will survive the integration, so:
+	$$\begin{aligned}
+	d E=& \frac{\lambda d x}{4 \pi \epsilon_{0}} \frac{1-\beta^{2}}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}} \frac{\sin \theta}{R^{2}} \\
+	& R=\frac{d}{\sin \theta} \quad-x=R \cos \theta=d \cot \theta \quad d x=d \frac{d \theta}{\sin ^{2} \theta} \\
+	=& \frac{\lambda d}{4 \pi \epsilon_{0}} \frac{1-\beta^{2}}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}} \frac{\sin ^{3} \theta}{d^{2}} \frac{d \theta}{\sin ^{2} \theta} \\
+	=& \frac{\lambda}{4 \pi \epsilon_{0} d}\left(1-\beta^{2}\right) \frac{\sin \theta d \theta}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}}
+	\end{aligned}$$
+	The total electric field is then the integral:
+	$$\begin{aligned}
+	E &=\frac{\lambda}{4 \pi \epsilon_{0} d}\left(1-\beta^{2}\right) \int_{0}^{\pi} \frac{\sin \theta d \theta}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}} \\
+	&=\frac{\lambda}{2 \pi \epsilon_{0} d}\left(1-\beta^{2}\right) \int_{0}^{\pi / 2} \frac{\sin \theta d \theta}{\left(1-\beta^{2} \sin ^{2} \theta\right)^{3 / 2}}
+	\end{aligned}$$
+	since the integrand is symmetrical about $\theta=\pi / 2 .$ Make the substitution:
+	$$\begin{array}{c}
+	u=\cos \theta \quad d u=-\sin \theta d \theta \\
+	E=\frac{\lambda}{2 \pi \epsilon_{0} d}\left(1-\beta^{2}\right) \int_{0}^{1} \frac{d u}{\left(1-\beta^{2}\left(1-u^{2}\right)\right)^{3 / 2}}
+	\end{array}$$
+	The integral is of the table variety:
+	$$\begin{aligned}
+	\int_{0}^{1} \frac{d u}{\left(1-\beta^{2}\left(1-u^{2}\right)\right)^{3 / 2}} &=\frac{1}{\beta^{3}} \int_{0}^{1} \frac{d u}{\left.\left(\beta^{-2}-1+u^{2}\right)\right)^{3 / 2}} \\
+	&=\frac{1}{\beta^{3}} \int_{0}^{1} \frac{d u}{\left(A^{2}+u^{2}\right)^{3 / 2}}
+	\end{aligned}$$
+	$$A^{2}=\beta^{-2}-1$$
+	$$\begin{aligned}
+	\frac{1}{\beta^{3}} \int_{0}^{1} \frac{d u}{\left.\left(A^{2}+u^{2}\right)\right)^{3 / 2}} &=\left.\frac{1}{\beta^{3}} \frac{u}{A^{2} \sqrt{A^{2}+u^{2}}}\right|_{0} ^{1} \\
+	&=\frac{1}{\beta^{3}} \frac{1}{A^{2} \sqrt{A^{2}+1}}=\frac{1}{\beta^{3}} \frac{1}{\left(\beta^{-2}-1\right) \beta-1}=\frac{1}{1-\beta^{2}}
+	\end{aligned}$$
+	The electric field is thus:
+	$$E=\frac{\lambda}{2 \pi \epsilon_{n} d}\left(1-\beta^{2}\right) \frac{1}{1-\beta^{2}}=\frac{\lambda}{2 \pi \epsilon_{0} d}$$
+	$$\vec{E}=\frac{\lambda}{2 \pi \epsilon_{0} d} \hat{s}$$
+	
+\end{document}

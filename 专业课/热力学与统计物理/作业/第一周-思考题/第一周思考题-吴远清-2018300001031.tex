@@ -1,0 +1,26 @@
+ \documentclass[UTF8]{ctexart}
+ \usepackage{ctex}
+ \usepackage{amsmath}
+ \title{热力学与统计物理-第一周思考题}
+ \author{吴远清-2018300001031}
+ \begin{document}
+ 	\maketitle
+ 	考虑步数为偶数2n的情况,`设最后一次回到O点之后又行走了2m步,则之前2n-2m步起始点均为o点.明显的,最多回到o点(n-m)次\\
+ 	进行整数拆分
+ 	\clearpage
+ 	对于N步行走,假设其在$2n_1$次行走后最后一次回到O点,并最后停在x处,记$P_1(2n_1,x)$为最后一次回到O点是在$2n_1$($0 \leq n_1 \leq\frac{N-x}{2}$)次行走之后的概率,记$P_2(n,x)$为不过原点的n次行走最终停在x处的概率,明显有:
+ 	$$P(x) = \sum_{n_1 =0}^{\frac{N-x}{2}} P_1(2n_1,x) P_2(N-2n_1,x) \eqno(1)$$
+ 	对于$P_1(2n_1,x)$,有:
+ 	\begin{equation*}
+ 		\left\{
+ 		\begin{aligned}
+ 			&P_1(2n_1,x) = \frac{(2n_1 - 1)!}{n_1!(n_1-1)!}p^{n_1 - 1}q^{n_1}\qquad(n_1 = 1,2,...,\frac{N-x}{2})\\
+ 			&P_1(0,x) = 1 - \sum_{n_1 = 1}^{\frac{N-x}{2}}P_1(2n_1,x)
+ 		\end{aligned}
+ 		\right. \eqno(2)
+ 	\end{equation*}
+ 	对于$P_2(n,x)$:
+ 	$$P_2(n,x) = \frac{(n-2)!}{(\frac{n+x}{2}-2)!(\frac{n-x}{2})!}p^{\frac{n+x}{2}-2}q^{\frac{n-x}{2}} \eqno(3)$$
+ 	先将(2)代入(1):
+ 	$$P(x) = P_2(N,x)+\sum_{n_1=1}^{\frac{N-x}{2}}P_1(2n_1,x)(P_2(N-2n_1,x)-P_2(N,x)) \eqno(4)$$
+\end{document}
