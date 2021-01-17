@@ -1,0 +1,129 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第六次作业}
+\author{吴远清-2018300001031}
+
+
+\begin{document}
+    \maketitle
+    Problem 7.8\\
+    Answer:\\
+    (a)\\
+    The field of long wired is:
+    $$\mathbf{B}=\frac{\mu_{0} I}{2 \pi s} \hat{\phi} \eqno(1.1)$$
+    so:
+    $$\Phi=\int \mathbf{B} \cdot d \mathbf{a}=\frac{\mu_{0} I}{2 \pi} \int_{\mathbf{s}}^{s+a} \frac{1}{s}(a d s)=\frac{\mu_{0} I a}{2 \pi} \ln \left(\frac{s+a}{s}\right) \eqno(1.2)$$
+    (b)\\
+    $$\mathcal{E}=-\frac{d \Phi}{d t}=-\frac{\mu_{0} I a}{2 \pi} \frac{d}{d t} \ln \left(\frac{s+a}{s}\right) \eqno(1.3)$$
+    Since:
+    $$\frac{d s}{d t}=v \eqno(1.4)$$
+    So:
+    $$-\frac{\mu_{0} I a}{2 \pi}\left(\frac{1}{s+a} \frac{d s}{d t}-\frac{1}{s} \frac{d s}{d t}\right)=\frac{\mu_{0} I a^{2} v}{2 \pi s(s+a)} \eqno(1.5)$$
+    The field points out of the page, so the force on a charge in the nearby side of the square is to the right. In the far side it's also to the right, but here the field is weaker, so the current flows counterclockwise.\\
+    (c)\\
+    This time, the flux is constant, so:
+    $$\epsilon = 0 \eqno(1.6)$$
+
+    Problem 7.22\\
+    Answer:\\
+    (a)\\
+    From Eq. $5.38,$ the field (on the axis) is:
+    $$\mathbf{B}=\frac{\mu_{0} I}{2} \frac{b^{2}}{\left(b^{2}+z^{2}\right)^{3 / 2}} \hat{\mathbf{z}} \eqno(2.1)$$
+    So the flux is:
+    $$\Phi=\frac{\mu_{0} \pi I a^{2} b^{2}}{2\left(b^{2}+z^{2}\right)^{3 / 2}} \eqno(2.2)$$
+    (b)\\
+    The field is:
+    $$\mathbf{B}=\frac{\mu_{0}}{4 \pi} \frac{m}{r^{3}}(2 \cos \theta \hat{\mathbf{r}}+\sin \theta \hat{\boldsymbol{\theta}}) \eqno(2.3)$$
+    And:
+    $$m = I \pi a^2 \eqno(2.4)$$
+    Integrating over the spherical cap:
+    $$\Phi=\int \mathbf{B} \cdot d \mathbf{a}=\frac{\mu_{0}}{4 \pi} \frac{I \pi a^{2}}{r^{3}} \int(2 \cos \theta)\left(r^{2} \sin \theta d \theta d \phi\right)=\frac{\mu_{0} I a^{2}}{2 r} 2 \pi \int_{0}^{\bar{\theta}} \cos \theta \sin \theta d \theta \eqno(2.5)$$
+    We have:
+    \begin{equation*}
+        \left\{
+        \begin{aligned}
+            &r=\sqrt{b^{2}+z^{2}}\\
+            &\sin \bar{\theta}= \frac{b}{r}
+        \end{aligned}
+        \right.\eqno(2.6)
+    \end{equation*}
+    So:
+    $$\Phi = \frac{\mu_{0} \pi I a^{2} b^{2}}{2\left(b^{2}+z^{2}\right)^{3 / 2}} \eqno(2.7)$$
+    This result is same as (a).\\
+    (c)\\
+    \begin{equation*}
+        \left\{
+        \begin{aligned}
+            &\Phi_{1}=M_{12} I_{2}\\
+            &\Phi_{2}=M_{21} I_{1}
+        \end{aligned}
+        \right.\eqno(2.8)
+    \end{equation*}
+    So:
+    $$M_{12}=M_{21}=\frac{\mu_{0} \pi a^{2} b^{2}}{2\left(b^{2}+z^{2}\right)^{3 / 2}} \eqno(2.9)$$
+
+    Problem 7.40\\
+    Answer:\\
+    We have:
+    $$E=\frac{V}{d} \eqno(3.1)$$
+    Then:
+    \begin{equation*}
+        \left\{
+        \begin{aligned}
+            &J_c = \sigma E = \frac{V}{\rho d}\\
+            &J_d = \frac{\partial D}{\partial t} = \frac{\epsilon V_{0}}{d}[-2 \pi \nu \sin (2 \pi \nu t)]
+        \end{aligned}
+        \right.\eqno(3.2)
+    \end{equation*}
+    So:
+    $$\frac{J_{c}}{J_{d}}=\frac{V_{0}}{\rho d} \frac{d}{2 \pi \nu \epsilon V_{0}}=\frac{1}{2 \pi \nu \epsilon \rho} \approx 2.41 \eqno(3.3)$$
+
+    Problem 7.44\\
+    Answer:\\
+    (a)\\
+    From Faraday's law:
+    $$\nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t} \eqno(4.1)$$
+    So:
+    $$\frac{\partial B}{\partial t}=0 \eqno(4.2)$$
+    Which show that $\mathbf{B(r)}$ is independent of t.\\
+    (b)\\
+    We have:
+    $$\oint \mathbf{E} \cdot d \mathbf{l}=-\frac{d \Phi}{dt} \eqno(4.3)$$
+    Here $\mathbf{E} = 0$, so $\Phi$ is constant.\\
+    (c)\\
+    $$\nabla \times \mathbf{B}=\mu_{0} \mathbf{J}+\mu_{0} \epsilon_{0} \frac{\partial \mathbf{E}}{\partial t} \eqno(4.4)$$
+    Since $\mathbf{E} = 0 \text{ and } \mathbf{B} = 0$:
+    $$\mathbf{J} = 0 \eqno(4.5)$$
+    So, any current must be at the surface.\\
+    (d)\\
+    From Eq.5.68:
+    $$\mathbf{B}=\frac{2}{3} \mu_{0} \sigma \omega a \hat{\mathbf{z}} \eqno(4.6)$$
+    So to cancel such a field:
+    $$\sigma \omega a=-\frac{3}{2} \frac{B_{0}}{\mu_{0}} \eqno(4.7)$$
+    And since:
+    $$\mathbf{K}=\sigma \mathbf{v}=\sigma \omega a \sin \theta \hat{\boldsymbol{\phi}} \eqno(4.8)$$
+    So:
+    $$\mathbf{K}=-\frac{3 B_{0}}{2 \mu_{0}} \sin \theta \hat{\boldsymbol{\phi}} \eqno(4.9)$$
+
+    Problem 7.50\\
+    Answer:\\
+    Form Eq. 5.3:
+    $$qBr = mv \eqno(5.1)$$
+    If R stay fixed:
+    $$q R \frac{d B}{d t} = qE \eqno(5.2)$$
+    We have:
+    $$\oint \mathbf{E} \cdot d \mathbf{l}=-\frac{d \Phi}{d t} \eqno(5.3)$$
+    Compare (5.2) with (5.3):
+    $$-\frac{1}{2 \pi R} \frac{d \Phi}{d t}=R \frac{d B}{d t} \eqno(5.4)$$
+    Then:
+    $$B=-\frac{1}{2}\left(\frac{1}{\pi R^{2}} \Phi\right) + C \eqno(5.5)$$
+    Here C is a constant.\\
+    At $t = 0$, the field is off, so $C = 0$, Then:
+    $$|B(R)|=\frac{1}{2}\left(\frac{1}{\pi R^{2}} \Phi\right) \eqno(5.6)$$
+    So the field at R must be half the average field over the cross-section of the orbit.\\
+    Q.E.D
+
+\end{document}

@@ -1,0 +1,128 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\title{热力学与统计物理-第八次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 7.1\\
+    Answer:\\
+    (a)\\
+    We label the positions and momenta such that $r_{ij}$ and $p_{ij}$ refer to the $\mathbf{j}th$ molecule of type i. There are $N_i$ molecules of species i. Then the classical partition function for the mixture of ideal gas is:
+    $$z^{\prime}=\int \exp \left[-\frac{\beta}{2 m_{1}}\left(p_{11}^{2}+\ldots+p_{1 N_{1}}^{2}\right) \ldots-\frac{\beta}{2 m_{k}}\left(p_{k 1}^{2}+\ldots+p_{kN_k}^2\right)\right]\frac{d^3r_{11}\ldots d^3r_{kN_k}d^3p_{11}\ldots d^3p_{kN_k}}{h_0^{3N_1}\ldots h_0^{3N_k}}\eqno(1.1)$$
+    This integration over $r$ yield the volume, $V$, while the $p$ integrals are identical. Since there are $N_1+N_2+\ldots+N_k$ integration, we have:
+    $$z^{\prime}=V^{\left(N_{1}+\ldots+N_{k}\right)}\left[\int e^{-\frac{\beta p^{2}}{2 m}} \frac{d^{3} p}{h_{0}^{3}}\right]^{\left(N_{1}+\ldots+N_{k}\right)} \eqno(1.2)$$
+    The term in brackets is independent of volume, consequently:
+    $$\ln z^{\prime}=\left(N_{1}+\ldots+N_{\mathrm{K}}\right) \ln V+\ln (\text { constant }) \eqno(1.3)$$
+    And:
+    $$\bar{p}=\frac{1}{\beta} \frac{\partial}{\partial V} \ln z^{\prime}=\left(N_{1}+\ldots+N_{k}\right) \frac{1}{\beta V} \eqno(1.4)$$
+    $$\overline{\mathrm{p}}V=\left(\mathrm{N}_{1}+\ldots+\mathrm{N}_{\mathrm{k}}\right) \mathrm{kT}=\left(\nu_{1}+\ldots+\nu_{\mathrm{k}}\right) \mathrm{RT} \eqno(1.5)$$
+    (b)\\
+    For the $i^{th}$ gas, $\mathrm{p}_{i} \mathrm{V}=\nu_{i} \mathrm{RT}$, from (1.5):
+    $$\bar{p}=\sum_{i} \bar{p}_{i} \eqno(1.6)$$
+
+    Problem 7.3\\
+    Answer:\\
+    Before the partition is removed, we have on the left, pV $=\nu \mathrm{RT}$. After removal the pressure is:
+    $$p_{f}=\frac{2 \nu}{(1+b) V}=\frac{2 p}{1+b} \eqno(2.1)$$
+    (b)\\
+    The initial and final entropies of the system for different gases are:
+    $$\mathrm{S}_{\mathrm{i}}=\nu \mathrm{R}\left[\ln \frac{\mathrm{V}}{\mathrm{N}_{\mathrm{A}} \nu}+\frac{3}{2} \ln \mathrm{T}+\sigma_{\mathrm{l}}\right]+\nu \mathrm{R}\left[\ln \frac{\mathrm{b} \mathrm{V}}{\mathrm{N}_{\mathrm{A}} \nu}+\frac{3}{2} \ln \mathrm{T}+\sigma_{2}\right] \eqno(2.2)$$
+    $$S_{f}=\nu R\left[\ln \frac{(1+b) V}{N_{A} \nu}+\frac{3}{2} \ln T+\sigma_{1}\right]+\nu R\left[\ln \frac{(1+b) V}{N_{A} \nu}+\frac{3}{2} \ln T+\sigma_{2}\right] \eqno(2.3)$$
+    Here one adds the entropies of the gases in the left and right compartments for $\mathrm{S}_{\mathrm{i}}$ while $\mathrm{S}_{\mathrm{f}}$ is the entropy of two different gases in volume $(1+b)V$.
+    Then:
+    $$\Delta S=S_{f}-S_{i}=\nu R\left[2 \ln \frac{V(1+b)}{N_{A} \nu}-\ln \frac{V}{N_{A} \nu}-\ln \frac{b V}{N_{A} \nu}\right]=\nu R \ln \frac{(1+b)^{2}}{b} \eqno(2.4)$$
+    (c)\\
+    In the case of identical gases, $\mathrm{S}_{\mathrm{i}}$ is again the sum of the entropies of the left and right compartments. $\mathrm{S}_{\mathrm{f}}$ is the entropy of $2 \nu$ moles in a volume $(1+\mathrm{b}) \mathrm{V}$
+    $$S_{i}=\nu R\left[\ln \frac{V}{N_{A} \nu}+\frac{3}{2} \ln T+\sigma_{0}\right]+\nu R\left[\ln \frac{b V}{N_{A} \nu}+\frac{3}{2} \ln T+\sigma_{0}\right] \eqno(2.5)$$
+    $$S_{f}=2 \nu R\left[\ln \frac{(1+b) V}{2 N_{A} \nu}+\frac{3}{2} \ln T+\sigma_{0}\right] \eqno(2.6)$$
+    Thus:
+    $$\Delta S=\nu R\left[\ln \frac{(1+b) V}{2 N_{A} \nu}-\ln \frac{V}{N_{A} \nu}-\ln \frac{b V}{N_{A} \nu}\right]=\nu R \ln \frac{(1+b)^{2}}{4 b} \eqno(2.7)$$
+
+    Problem 7.4\\
+    Answer:\\
+    (a)\\
+    The system is isolated so its total energy is constant, and since the energy of an ideal gas depends only on temperature, we have
+    $$\Delta E_{1}+\Delta E_{2}=C_{V}\left(T_{f}-I_{1}\right)+C_{V}\left(T_{f}-T_{2}\right)=0 \eqno(3.1)$$
+    Or
+    $$T_{f}=\frac{T_{1}+T_{2}}{2} \eqno(3.2)$$
+    The total volume is found fram the equation of state
+    $$V=\frac{\nu_{1} R T_{1}}{p_{1}}+\frac{\nu_{2} R T_{2}}{p_{2}} \eqno(3.3)$$
+    Thus the final pressure is
+    $$p_{f}=\frac{\left(\nu_{1}+\nu_{2}\right) \mathrm{R}T_{\mathrm{f}}}{\mathrm{V}}=\frac{\left(\nu_{1}+\nu_{2}\right)}{2}\left(\frac{\mathrm{T}_{1}+\mathrm{T}_{2}}{\left(\nu_{1} \mathrm{T}_{1} / \mathrm{p}_{1}\right)+\left(\nu_{2} \mathrm{T}_{2} / \mathrm{p}_{2}\right)}\right) \eqno(3.4)$$
+    (b)\\
+    Using $\frac{V}{N}=\frac{k T}{p},$ we have for the initial and final entropies of different gases
+    $$S_{i}=\nu_{1} R\left[\ln \frac{k T_{1}}{p_{1}}+\frac{3}{2} \ln T_{1}+\sigma_{1}\right]+\nu_{2} R\left[\ln \frac{k T_{2}}{p_{2}}+\ln T_{2}+\sigma_{2}\right] \eqno(3.5)$$
+    $$\begin{aligned}
+        \mathrm{S}_{\mathrm{f}}&=\nu_{1} \mathrm{R}\left[\ln \frac{\mathrm{k}}{\nu_{1}}\left(\frac{\nu_{1} \mathrm{T}_{1}}{\mathrm{p}_{1}}+\frac{\nu_{2} \mathrm{T}_{2}}{\mathrm{p}_{2}}\right)+\frac{3}{2} \ln \frac{\mathrm{T}_{1}+\mathrm{T}_{2}}{2}+\sigma_{1}\right]\\
+        &+\nu_{2} \mathrm{R}\left[\ln \frac{\mathrm{k}}{\nu_{2}}\left(\frac{\nu_{1} \mathrm{T}_{1}}{\mathrm{p}_{1}}+\frac{\nu_{2} \mathrm{T}_{2}}{\mathrm{z}_{2}}\right)+\frac{3}{2} \ln \frac{\mathrm{T}_{1}+\mathrm{T}_{2}}{2}+\sigma_{2}\right]
+    \end{aligned}\eqno(3.6)$$
+    So:
+    $$\begin{aligned}
+        \Delta S&=S_{f}-S_{i}=\nu_{1} R\left[\ln \left(1+\frac{\nu_{2} T_{2} p_{1}}{\nu_{1} T_{1} p_{2}}\right)+\frac{3}{2} \ln \frac{T_{1}+T_{2}}{2 T_{1}}\right]\\
+        &+\nu_{2} R\left[\ln \left(1+\frac{v_{1} T_{1} p_{2}}{v_{2} T_{2} p_{1}}\right)+\frac{3}{2} \ln \frac{T_{1}+T_{2}}{2 T_{2}}\right]
+    \end{aligned}\eqno(3.7)$$
+    (c)\\
+    For identical gases:
+    $$S_{i}=\nu_{1} R\left[\ln \frac{k T_{1}}{p_{1}}+\frac{3}{2} \ln T_{1}+\sigma_{0}\right]+\nu_{2} R\left[\ln \frac{kT_2}{p_{2}}+\frac{3}{2} \ln T_{2}+\sigma_{0}\right] \eqno(3.8)$$
+    $$S_{f}=\left(\nu_{1}+\nu_{2}\right) R\left[\ln \frac{k}{\left(\nu_{1}+\nu_{2}\right)}\left(\frac{\nu_{1}{T}_1}{p_{1}}+\frac{\nu_{2}{T}_2}{p_{2}}\right)+\frac{3}{2} \ln \frac{T_{1}+T_{2}}{2}+\sigma_{0}\right] \eqno(3.9)$$
+    So:
+    $$\begin{aligned}
+        \Delta S&=v_{1} R\left[\ln \frac{1}{\left(v_{1}+v_{2}\right)}\left(v_{1}+\frac{v_{2} T_{2} p_{1}}{T_{1} p_{2}}\right)+\frac{3}{2} \ln \frac{T_{1}+T_{2}}{2 T_{1}}\right]\\
+        &+v_{2} R\left[\ln \frac{1}{\left(v_{1}+v_{2}\right)}\left(v_{2}+\frac{v_{1}{\mathrm{T}}_1{\mathrm{p}}_{2}}{\mathrm{T}_{2} \mathrm{p}_{1}}\right)+\frac{3}{2} \ln \frac{\mathrm{T}_{1}+\mathrm{T}_{2}}{\mathrm{2T}_{2}}\right]
+    \end{aligned}\eqno(3.9)$$
+
+    Problem 7.5\\
+    Answer:\\
+    We take the zero of potential energy so that if a segment is oriented parallel to the vertical it contributes energy $Wa$ and if antiparallel it contributes $-Wa$ to the total energy of the rubber band (Thus if the rubber band were fully extended, the total energy would be $-NWa$). Since the segments are non-interacting,
+    $$\bar{l}=N \frac{\mathrm{ae}^{-\mathrm{Wa} \beta}-\mathrm{ae}^{\mathrm{Wa} \beta}}{\mathrm{e}^{-\mathrm{Wa} \beta}+\mathrm{e}^{\mathrm{Wa} \beta}}=\mathrm{Na} \tanh \frac{\mathrm{Wa}}{\mathrm{kT}} \eqno(4.1)$$
+
+    Problem 7.6\\
+    Answer:\\
+    Since the total energy is additive:
+    $$E_{i}=\epsilon_{i}\left(p_{i}\right)+U\left(q_{1} \cdots q_{n}\right)=\frac{p^{2}}{2 m}+U\left(q_{1} \cdots q_{n}\right) \eqno(5.1)$$
+    where U is the energy of interaction, the equipartition theorem still applies and
+    $$\bar{\epsilon}=\frac{3}{2} \mathrm{kT} \eqno(5.2)$$
+
+    Problem 7.7\\
+    Answer:\\
+    If the gas is ideal, its mean energy per particle is
+    $$\bar{\epsilon}=\frac{\overline{p_{x}^{2}}}{2 m}+\frac{\overline{p_{y}^{2}}}{2 m}=k T \eqno(6.1)$$
+    and the mean energy per mole becomes $\bar{E}=N_{A} k T$:
+    $$C=\frac{\partial \bar{E}}{\partial T}=N_{A} k=R \eqno(6.2)$$
+
+    Problem 7.10\\
+    Answer:\\
+    (a)\\ 
+    Let the restoring force be - $\alpha x$. Then the mean energy of $\mathrm{N}$ particles is
+    $$\overline{\mathrm{E}}=\mathrm{N}\left(\frac{1}{2} \mathrm{m} \overline{\mathrm{\dot{x}^{2}}}+\frac{1}{2} \alpha \overline{\mathrm{x}^{2}}\right) \eqno(7.1)$$
+    Then:
+    $$\overline{\mathrm{E}}=\mathrm{N}\left(\frac{\mathrm{l}}{2} \mathrm{kT}+\frac{1}{2} \mathrm{kT}\right)=\mathrm{N} \mathrm{kT} \eqno(7.2)$$
+    So:
+    $$c=\frac{\partial \bar{E}}{\partial T}=N k \eqno(7.3)$$
+    (b)\\
+    If the restoring force is $-\alpha x^{3},$ the mean energy per particle is
+    $$\bar{\epsilon}=\frac{1}{2} m \bar{\dot{x}^2}+\frac{1}{4} \alpha \bar{x} \eqno(7.4)$$
+    So, similarly with (a), we can get:
+    $$C=\frac{\partial \bar{E}}{\partial T}=\frac{3}{4} N k \eqno(7.5)$$
+
+    Problem 7.12\\
+    Answer:\\
+    (a)\\
+    Consider a cube of side a. The force necessary to decrease the length of a side by $\Delta$ a is $\kappa_{0} \mathrm{Ae}$ and therefore the pressure is $\Delta \mathrm{p}=\kappa_{0} \Delta \mathrm{a} / \mathrm{a}^{2}$. The change in volume is $\Delta \mathrm{V}=-\mathrm{a}^{2} \Delta \mathrm{a}$
+    $$\kappa=-\frac{1}{V}\left(\frac{\Delta V}{\Delta p}\right)=-\frac{1}{a^{3}}\left(-\frac{a^{2} \Delta a}{\kappa_{0} \Delta a / a^{2}}\right)=\frac{a}{\kappa_{0}} \eqno(8.1)$$
+    (b)\\
+    The Einstein temperature is $\theta_{\mathrm{E}}=\hbar \omega / \mathrm{k}$. Since $\omega=\sqrt{\mathrm{\kappa}_{\mathrm{O}} / \mathrm{m}}$ where $\mathrm{m}$ is mass, we have from (8.1)
+    $$\theta_{E}=\frac{\hbar}{\mathrm{k}} \sqrt{\frac{\kappa}{\mathrm{m}}}=\frac{\hbar}{\mathrm{k}} \sqrt{\frac{\mathrm{a}}{\mathrm{m}_{\kappa}}} \eqno(8.2)$$
+    So:
+    $$a=\left(\frac{\mu}{\rho N_{A}}\right)^{1 / 3}=\left(\frac{63 \cdot 5}{(8.9)\left(6 \times 10^{23}\right)}\right)^{1 / 3}=2.3 \times 10^{-8} \mathrm{cm} \eqno(8.3)$$
+    So:
+    $$\theta_{E} \approx 150^{\circ} \mathrm{K} \eqno(8.4)$$
+
+\end{document}
+
+

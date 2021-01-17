@@ -1,0 +1,90 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第六次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 5.10\\
+    Answer:\\
+    (a)\\
+    The forces cancel each other on the two sides.\\
+    At the bottom:
+    $$B=\frac{\mu_{0} I}{2 \pi s} \Rightarrow F=\left(\frac{\mu_{0} I}{2 \pi s}\right) I a=\frac{\mu_{0} I^{2} a}{2 \pi s} \eqno(1.1)$$
+    At the top:
+    $$B=\frac{\mu_{0} I}{2 \pi(s+a)} \Rightarrow F=\frac{\mu_{0} I^{2} a}{2 \pi(s+a)} \eqno(1.2)$$
+    The net force is:
+    $$F_{net} = \frac{\mu_{0} I^{2} a^{2}}{2 \pi s(s+a)} \eqno(1.3)$$
+    (b)\\
+    The force on the bottom is the same as (a),$\frac{\mu_{0} I^{2} a}{2 \pi s}$.\\
+    On the left side:
+    $$\mathbf{B}=\frac{\mu_{0} I}{2 \pi y} \hat{\mathbf{z}} \eqno(1.4)$$
+    $$d \mathbf{F}=I(d \mathbf{l} \times \mathbf{B})=I(d x \hat{\mathbf{x}}+d y \hat{\mathbf{y}}+d z \hat{\mathbf{z}}) \times\left(\frac{\mu_{0} I}{2 \pi y} \hat{\mathbf{z}}\right)=\frac{\mu_{0} I^{2}}{2 \pi y}(-d x \hat{\mathbf{y}}+d y \hat{\mathbf{x}}) \eqno(1.5)$$
+    But the x component cancels the corresponding term from the right side.\\
+    And:
+    $$F_{y}=-\frac{\mu_{0} I^{2}}{2 \pi} \int_{s / \sqrt{3}}^{(s / \sqrt{3}+a / 2)} \frac{1}{y} d x \eqno(1.6)$$
+    So:
+    $$F_{y}=-\frac{\mu_{0} I^{2}}{2 \sqrt{3} \pi} \ln \left(\frac{s / \sqrt{3}+a / 2}{s / \sqrt{3}}\right)=-\frac{\mu_{0} I^{2}}{2 \sqrt{3} \pi} \ln \left(1+\frac{\sqrt{3} a}{2 s}\right) \eqno(1.7)$$
+    The force on the right side is the same, so the net force on the rectangle is:
+    $$F = \frac{\mu_{0} I^{2}}{2 \pi}\left[1-\frac{2}{\sqrt{3}} \ln \left(1+\frac{\sqrt{3} a}{2 s}\right)\right] \eqno(1.8)$$
+
+    Problem 5.11\\
+    Answer:\\
+    By Eq. 5.38, for a ring of width dz, with $T \to nIdz$:
+    $$B=\frac{\mu_{0} n I}{2} \int \frac{a^{2}}{\left(a^{2}+z^{2}\right)^{3 / 2}} d z \eqno(2.1)$$
+    And
+    $$z=a \cot \theta \eqno(2.2)$$
+    So:
+    $$dz=-\frac{a}{\sin ^{2} \theta} d \theta \eqno(2.3)$$
+    And
+    $$\frac{1}{\left(a^{2}+z^{2}\right)^{3 / 2}}=\frac{\sin ^{3} \theta}{a^{3}} \eqno(2.4)$$
+    So:
+    $$B=\frac{\mu_{0} n I}{2} \int \frac{a^{2} \sin ^{3} \theta}{a^{3} \sin ^{2} \theta}(-a d \theta) = \frac{\mu_{0} n I}{2}\left(\cos \theta_{2}-\cos \theta_{1}\right) \eqno(2.5)$$
+    For and infinite solenoid, $\theta_2 = 0, \theta_1 = \pi$, so $(cos\theta_2 - cos\theta_1) = 2$,and:
+    $$B = \mu_0 n I \eqno(2.6)$$
+
+    Problem 5.30\\
+    Answer\\
+    From Eq. 5.68:
+    $$\mathbf{A}(\mathbf{r})=\left\{\begin{array}{ll}
+        \frac{\mu_{0} R \sigma}{3}(\omega \times \mathbf{r}), & \text { for points inside the sphere } \\
+        \frac{\mu_{0} R^{4} \sigma}{3 r^{3}}(\omega \times \mathbf{r}), & \text { for points outside the sphere }
+        \end{array}\right. \eqno(3.1)$$
+    Here, we have $R \ to \bar{r}$ and $\sigma \to \rho d \bar{r}$:
+    \begin{equation*}
+        \begin{aligned}
+            \mathbf{A}&=\frac{\mu_{0} \omega \rho}{3} \frac{\sin \theta}{r^{2}} \hat{\phi} \int_{0}^{r} r^{-4} d \vec{r}+\frac{\mu_{0} \omega \rho}{3} r \sin \theta \hat{\phi} \int_{r}^{R} \bar{r} d \bar{r}\\
+            &=\left(\frac{\mu_{0} \omega \rho}{3}\right) \sin \theta\left[\frac{1}{r^{2}}\left(\frac{r^{5}}{5}\right)+\frac{r}{2}\left(R^{2}-r^{2}\right)\right] \hat{\phi}=\frac{\mu_{0} \omega \rho}{2} r \sin \theta\left(\frac{R^{2}}{3}-\frac{r^{2}}{5}\right) \hat{\phi}
+        \end{aligned}
+        \eqno(3.2)
+    \end{equation*}
+    And:
+    \begin{equation*}
+        \begin{aligned}
+            \mathbf{B}&=\nabla \times \mathbf{A}=\frac{\mu_{0} \omega \rho}{2}\left\{\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left[\sin \theta r \sin \theta\left(\frac{R^{2}}{3}-\frac{r^{2}}{5}\right)\right] \hat{\mathbf{r}}-\frac{1}{r} \frac{\partial}{\partial r}\left[r^{2} \sin \theta\left(\frac{R^{2}}{3}-\frac{r^{2}}{5}\right)\right] \hat{\boldsymbol{\theta}}\right\}\\
+            &=\mu_{0} \omega \rho\left[\left(\frac{R^{2}}{3}-\frac{r^{2}}{5}\right) \cos \theta \hat{\mathbf{r}}-\left(\frac{R^{2}}{3}-\frac{2 r^{2}}{5}\right) \sin \theta \hat{\boldsymbol{\theta}}\right]
+        \end{aligned}
+        \eqno(3.3)
+    \end{equation*}
+    And:
+    $$\rho=\frac{Q}{(4 / 3) \pi R^{3}} \eqno(3.4)$$
+    So:
+    $$\mathbf{B} = \frac{\mu_{0} \omega Q}{4 \pi R}\left[\left(1-\frac{3 r^{2}}{5 R^{2}}\right) \cos \theta \hat{\mathbf{r}}-\left(1-\frac{6 r^{2}}{5 R^{2}}\right) \sin \theta \hat{\theta}\right] \eqno(3.5)$$
+
+    Problem 6.12\\
+    Answer:\\
+    (a)\\
+    $$\mathbf{M}=k s \hat{\mathbf{z}} \eqno(4.1)$$
+    $$\mathbf{J}_{b}=\boldsymbol{\nabla} \times \mathbf{M}=-k \hat{\phi} \eqno(4.2)$$
+    $$\mathbf{K}_{b}=\mathbf{M} \times \hat{\mathbf{n}}=k R \hat{\boldsymbol{\phi}} \eqno(4.3)$$
+    $\mathbf{B}$ is in the z direction. So $\mathbf{B} = 0$ outside.\\
+    Consider a amperian loop with a inner radius s:
+    $$\oint \mathbf{B} \cdot d \mathbf{l}=B l=\mu_{0} I_{\mathrm{enc}}=\mu_{0}\left[\int J_{b} d a+K_{b} l\right]=\mu_{0}[-k l(R-s)+k R l]=\mu_{0} k l s \eqno(4.4)$$
+    So:
+    $$\mathbf{B}=\mu_{0} k s \hat{\mathbf{z}} \text { inside. } \eqno(4.5)$$
+
+
+\end{document}

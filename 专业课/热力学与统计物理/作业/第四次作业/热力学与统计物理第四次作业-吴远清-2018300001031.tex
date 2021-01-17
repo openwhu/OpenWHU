@@ -1,0 +1,60 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{热力学与统计物理-第四次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 3.1\\
+    Answer:\\
+    (a)\\
+    While in equilibrium state, the densities of the mixed gas on both sides of the box should be the same.\\
+    For the larger side:
+    $$\overline{N_1(Ne)} = 750,\,\overline{N_1(He)} = 75\eqno(1.1)$$
+    And for the smaller side:
+    $$\overline{N_2(Ne)} = 250,\,\overline{N_2(He)} = 25\eqno(1.2)$$\
+    (b)\\
+    $$P = (\frac{3}{4})^{1000}(\frac{1}{4})^{100} \approx 7.16 \times 10^{-176} \eqno(1.3)$$
+    Problem 3.2\\
+    Answer:\\
+    (a)\\
+    From problem 2.4 (b):
+    $$ln\,\Omega(E) = -\frac{1}{2}(N-\frac{E}{\mu H})\,ln\frac{1}{2}(1 - \frac{E}{N \mu H}) - \frac{1}{2}(N + \frac{E}{\mu H})ln\frac{1}{2}(1 + \frac{E}{N \mu H}) \eqno(2.1)$$
+    Then:
+    $$\beta = \frac{\partial}{\partial E}ln\, \Omega(E) = \frac{1}{2\mu H}ln\frac{\frac{1}{2}(1-\frac{E}{N\mu H})}{1 - \frac{1}{2}(1 - \frac{E}{N \mu H})} \eqno(2.2)$$
+    So:
+    $$E = -N\mu H \, tanh\frac{\mu H}{kT} \eqno(2.3)$$
+    (b)\\
+    From equation (2.3), we can find that, while $E>0$, then $T<0$\\
+    (c)\\
+    We have:
+    $$M = \mu (n_1 - n_2) = \mu (2n_1 - N) \eqno(2.4)$$
+    $n_1$ is the number of spins aligned parallel to H.\\
+    Then:
+    $$n_1 = \frac{1}{2}(N - \frac{E}{\mu H}) \eqno(2.5)$$
+    Replace $n_1$ in equation (2.4) with equation (2.5):
+    $$M = \mu (N - \frac{E}{\mu H} - N) = -\frac{E}{H} \eqno(2.6)$$
+    So:
+    $$M = N \mu \, tanh\frac{\mu H}{k T} \eqno(2.7)$$
+    Problem3.4\\
+    Answer:\\
+    For the heat reservoir, the change of entropy is:
+    $$\Delta S' = -\frac{Q}{T'} \eqno(3.1)$$
+    For the whole system, the change of entropy is:
+    $$\Delta S + \Delta S' = \Delta S - \frac{Q}{T'} \geq 0\eqno(3.2)$$
+    So:
+    $$\Delta S \geq \frac{Q}{T'} \eqno(3.3)$$
+
+    Problem 3.5\\
+    Answer:\\
+    (a)\\
+    For gas 1 and gas 2, we have:
+    $$\Omega(E) \propto V^N\chi (E)\eqno(4.1)$$
+    Since gas 1 and gas 2 are noninteracting:
+    $$\Omega(E) = C \Omega_1(E)\Omega_2(E_0-E) = C V^{N_1+N_2}\chi_1(E)\chi_2(E) \eqno(4.2)$$
+    (b)\\
+    $$\overline{P}V = N k T = (N_1 + N_2)k T \eqno(4.3)$$
+\end{document}

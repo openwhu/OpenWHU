@@ -1,0 +1,139 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第八次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 8.4\\
+    Answer:\\
+    (a)\\
+    $$(\stackrel{\leftrightarrow}{\mathbf{T}} \cdot d \mathbf{a})_{z}=T_{z x} d a_{x}+T_{z y} d a_{y}+T_{z z} d a_{z} \eqno(1.1)$$
+    For x-y plane:
+    $$(\stackrel{\leftrightarrow}{\mathbf{T}} \cdot d \mathbf{a})_{z}=\epsilon_{0}\left(E_{z} E_{z}-\frac{1}{2} E^{2}\right)(-r d r d \phi) \eqno(1.2)$$
+    Now:
+    \begin{equation*}
+        \left\{
+            \begin{aligned}
+                &\mathbf{E}=\frac{1}{4 \pi \epsilon_{n}} 2 \frac{q}{r^{2}} \cos \theta \hat{\mathbf{r}}\\
+                &\cos \theta=\frac{r}{s}
+            \end{aligned}
+        \right.\eqno(1.3)
+    \end{equation*}
+    So:
+    $$E_z = 0 \eqno(1.4)$$
+    $$E^2 = \left(\frac{q}{2 \pi \epsilon_{0}}\right)^{2} \frac{r^{2}}{\left(r^{2}+a^{2}\right)^{3}} \eqno(1.5)$$
+    Then:
+    $$F_{z}=\frac{1}{2} \epsilon_{0}\left(\frac{q}{2 \pi \epsilon_{0}}\right)^{2} 2 \pi \int_{0}^{\epsilon f t y} \frac{r^{3} d r}{\left(r^{2}+a^{2}\right)^{3}} = \frac{q^{2}}{4 \pi \epsilon_{0}} \frac{1}{(2 a)^{2}} \eqno(1.6)$$
+    (b)\\
+    In this case:
+    \begin{equation*}
+        \left\{
+            \begin{aligned}
+                &\mathbf{E}=-\frac{1}{4 \pi \epsilon_{0}} 2 \frac{q}{s^{2}} \sin \theta \hat{\mathbf{z}}\\
+                &\sin \theta=\frac{a}{s}
+            \end{aligned}
+        \right.\eqno(1.7)
+    \end{equation*}
+    So:
+    $$E^{2}=E_{z}^{2}=\left(\frac{q a}{2 \pi \epsilon_{0}}\right)^{2} \frac{1}{\left(r^{2}+a^{2}\right)^{3}} \eqno(1.8)$$
+    So:
+    $$F_{z}=-\frac{\epsilon_{0}}{2}\left(\frac{q a}{2 \pi \epsilon_{0}}\right)^{2} 2 \pi \int_{0}^{\infty} \frac{r d r}{\left(r^{2}+a^{2}\right)^{3}} = -\frac{q^{2}}{4 \pi \epsilon_{0}} \frac{1}{(2 a)^{2}}\eqno(1.9)$$
+
+    Problem 8.7\\
+    Answer:\\
+    (a)\\
+    $E_{x}=E_{y}=0, E_{z}=-\sigma / \epsilon_{0}$,Then:
+    \begin{equation*}
+        \left\{
+            \begin{aligned}
+                &T_{x y}=T_{x z}=T_{y z}=\cdots=0\\
+                &T_{x x}=T_{y y}=-\frac{\epsilon_{0}}{2} E^{2}=-\frac{\sigma^{2}}{2 \epsilon_{0}}\\
+                T_{z z}=\epsilon_{0}\left(E_{z}^{2}-\frac{1}{2} E^{2}\right)=\frac{\epsilon_{0}}{2} E^{2}=\frac{\sigma^{2}}{2 \epsilon_{0}}
+            \end{aligned}
+        \right. \eqno(2.1)
+    \end{equation*}
+    So:
+    $$\stackrel{\leftrightarrow}{\mathbf{T}}=\frac{\sigma^{2}}{2 \epsilon_{0}}\left(\begin{array}{ccc}
+        -1 & 0 & 0 \\
+        0 & -1 & 0 \\
+        0 & 0 & +1
+        \end{array}\right) \eqno(2.2)$$
+    (b)\\
+    $$\mathbf{F}=\oint \stackrel{\leftrightarrow}{\mathbf{T}} \cdot d \mathbf{a} \eqno(2.3)$$
+    Do integrata over the xy plane;
+    $$F_{z}=\int T_{z z} d a_{z}=-\frac{\sigma^{2}}{2 \epsilon_{0}} A \eqno(2.4)$$
+    So, the force per unit area is:
+    $$f=\frac{\mathbf{F}}{A}=-\frac{\sigma^{2}}{2 \epsilon_{0}} \hat{\mathbf{z}} \eqno(2.5)$$
+    (c)\\
+    $$-T_{z z}=\frac{\sigma^{2}}{2 \epsilon_{0}} \eqno(2.6)$$
+    (d)\\
+    The recoil force is the momentum delivered per unit time, so the force per unit area on the top plate is:
+    $$f=-\frac{\sigma^{2}}{2 \epsilon_{0}} \hat{\mathbf{z}} \eqno(2.7)$$
+    This result is same as (b)\\
+
+    Problem 8.9\\
+    Answer:\\
+    (a)\\
+    The angular momentum stored in the fields is:
+    $$\vec{l}=\vec{r} \times \epsilon_{0} \vec{E} \times \vec{B}=\frac{Q B_{0}}{4 \pi r} \hat{r} \times(\hat{r} \times \hat{z}) \eqno(3.1)$$
+    We have:
+    $$\hat{r} \times(\hat{r} \times \hat{z})=\hat{r}(\hat{r} \cdot \hat{z})-\hat{z}(\hat{r} \cdot \hat{r})=\hat{r} \cos \theta-\hat{z} \eqno(3.2)$$
+    Over the sphere, only the z-component of the angular momentum will survive the integration so:
+    $$(\hat{r} \times(\hat{r} \times \hat{z}))_{z}=(\hat{r} \cos \theta-\hat{z}) \cdot \hat{z}=\cos ^{2} \theta-1=-\sin ^{2} \theta \eqno(3.3)$$
+    Then:
+    $$L_{z}=\int_{V} l_{z} d V=\int_{a}^{b} \int_{0}^{\pi} \int_{0}^{2 \pi} \frac{Q B_{0}}{4 \pi r}\left(-\sin ^{2} \theta\right) r^{2} d r \sin \theta d \theta d \phi =-\frac{Q B_{0}}{4 \pi} 2 \pi \int_{a}^{b} r d r \int_{0}^{\pi} \sin ^{3} \theta d \theta\eqno(3.4)$$
+    We have:
+    $$x=\cos \theta \quad d x=-\sin \theta d \theta \eqno(3.5)$$
+    Then:
+    $$L_{z}=-\frac{\pi Q B_{0}}{2} \frac{1}{2}\left(b^{2}-a^{2}\right) \int_{1}^{-1} \sin ^{3} \theta \frac{d x}{-\sin \theta} =-\frac{\pi Q B_{0}}{3}\left(b^{2}-a^{2}\right)\eqno(3.6)$$
+    So:
+    $$\vec{L}=-\frac{\pi Q B_{0}}{3}\left(b^{2}-a^{2}\right) \hat{z} \eqno(3.7)$$
+    (b)\\
+    When the magnetic field is turning off an electric field is induced. By Faraday's law:
+    $$2 E \pi s=-s^{2} \pi \dot{B} \Longrightarrow \vec{E}=-\frac{s}{2} \dot{B} \hat{\phi} \eqno(3.8)$$
+    Torque on the patch of surface on a sphere is with (on the sphere) $s=a \sin \theta$:
+    $$d \vec{N}=\vec{a} \times d \vec{F}=\vec{a} \times \sigma d S \vec{E}=-\vec{a} \times \sigma d S \frac{a \sin \theta}{2} \dot{B} \hat{\phi} = =-\sigma a^{2} \sin ^{2} \theta d \theta d \phi \vec{a} \times \frac{a}{2} \dot{B} \hat{\phi} \eqno(3.9)$$
+    Now, again only the z-component will survive, so the projection of vector $\vec{a} \times \hat{\phi}$ on the z-axis is:
+    $$(\vec{a} \times \hat{\phi})_{z}=(\vec{a} \times \hat{\phi}) \cdot \hat{z}=a \cos \left(\pi-\frac{\pi}{2}-\theta\right)=a \sin \theta \eqno(3.10)$$
+    With this:
+    $$d N_{z}=-\sigma a^{4} \frac{1}{2} \dot{B} \sin ^{3} \theta d \theta d \phi \eqno(3.11)$$
+    $$N_{z}=-\frac{1}{2} \dot{B} \sigma a^{4} \int_{0}^{\pi} \sin ^{3} \theta d \theta \int_{0}^{2 \pi} d \phi=-\pi \dot{B} \sigma a^{4} \frac{4}{3} \eqno(3.12)$$
+    where we solved the same integral $\left(\sin ^{3} \theta\right)$ in the (a) part of the problem. Now this is valid for both spheres, so for the bigger sphere just replace $a$ with $b .$ Using $\sigma=Q / 4 \pi a^{2}(\text { small sphere })$ and $\sigma=-Q / 4 \pi b^{2}$ the torques are:
+    $$N_{z, a}=-\frac{\pi}{3} \dot{B} Q a^{2} \quad N_{z, b}=\frac{\pi}{3} \dot{B} Q b^{2} \eqno(3.13)$$
+    The total angular momentum of the system is then:
+    $$\begin{aligned}
+        L_{z} &=\int_{0}^{t_{f}}\left(N_{z, a}+N_{z, b}\right) d t=\frac{\pi}{3} Q\left(b^{2}-a^{2}\right) \int_{0}^{t_{f}} \dot{B} d t=\frac{\pi}{3} Q\left(b^{2}-a^{2}\right) \int_{B_{0}}^{0} d B \\
+        &=-\frac{\pi}{3} Q B_{0}\left(b^{2}-a^{2}\right)
+    \end{aligned} \eqno(3.14)$$
+    So:
+    $$\vec{L}=-\frac{\pi}{3} Q B_{0}\left(b^{2}-a^{2}\right) \hat{z} \eqno(3.15)$$
+
+    Problem 8.14\\
+    Answer:\\
+    (a)\\
+    $$\begin{aligned}
+        \frac{U}{l} &=\int_{0}^{2 \pi} \int_{a}^{b} u s d s d \phi \\
+        &=\int_{0}^{2 \pi} \int_{a}^{b}\left[\frac{\epsilon_{0}}{2}\left(\frac{\lambda}{2 \pi \epsilon_{0} s}\right)^{2}+\frac{1}{2 \mu_{0}}\left(\frac{\mu_{0} \lambda v}{2 \pi s}\right)^{2}\right] s d s d \phi \\
+        &=2 \pi \frac{1}{2 \epsilon_{0}}\left(\frac{\lambda}{2 \pi}\right)^{2} \int_{a}^{b}\left(\frac{1}{s^{2}}+\frac{1}{s^{2}} \frac{v^{2}}{c^{2}}\right) s d s \\
+        &=\frac{\lambda^{2}}{4 \pi \epsilon_{0}}\left(1+\beta^{2}\right) \int_{a}^{b} \frac{d s}{s}=\frac{\lambda^{2}}{4 \pi \epsilon_{0}}\left(1+\beta^{2}\right) \ln \frac{b}{a}
+        \end{aligned} \eqno(4.1)$$
+    (b)\\
+    Now, for the momentum per unit lenght stored in the fields just integrate the momentum density over a unit lenght of the system:
+    $$\begin{aligned}
+        \frac{\vec{p}}{l} &=\int_{0}^{2 \pi} \int_{a}^{b} \vec{g} s d s d \phi=\int_{0}^{2 \pi} \int_{a}^{b} \epsilon_{0} \vec{E} \times \vec{B} s d s d \phi \\
+        &=\int_{0}^{2 \pi} \int_{a}^{b} \epsilon_{0} \frac{\lambda}{2 \pi \epsilon_{0} s} \hat{s} \times \frac{\mu_{0} \lambda v}{2 \pi s} \hat{\phi} s d s d \phi \\
+        &=\frac{\mu_{0} \lambda^{2} v}{4 \pi^{2}} \int_{a}^{b} \frac{d s}{s} \int_{0}^{2 \pi} d \phi \hat{s} \times \hat{\phi}=\frac{\mu_{0} \lambda^{2} v}{2 \pi} \ln \frac{b}{a} \hat{z}
+        \end{aligned}\eqno(4.2)$$
+    (c)\\
+    For the power transported down the wires integrate the Poynting vector over the annular surface in between the cyllinders, with the positive orientation in the z-direction:
+    $$\begin{aligned}
+        P=\int_{a}^{b} \int_{0}^{2 \pi} \vec{S} \cdot d \vec{A} &=\frac{1}{\mu_{0}} \int_{a}^{b} \int_{0}^{2 \pi}(\vec{E} \times \vec{B}) \cdot s d s d \phi \hat{z} \\
+        &=\frac{1}{\mu_{0}} \int_{a}^{b} \int_{0}^{2 \pi}\left(\frac{\lambda}{2 \pi \epsilon_{0} s} \hat{s} \times \frac{\mu_{0} \lambda v}{2 \pi s} \hat{\phi}\right) \cdot s d s d \phi \\
+        &=\frac{\lambda^{2} v}{4 \pi^{2} \epsilon_{0}} \int_{a}^{b} \frac{d s}{s} \int_{0}^{2 \pi} d \phi \\
+        &=\frac{\lambda^{2} v}{2 \pi \epsilon_{0}} \ln \frac{b}{a}
+        \end{aligned}\eqno(4.3)$$
+\end{document}

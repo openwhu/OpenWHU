@@ -1,0 +1,105 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amsmath}
+\title{电动力学-第九次作业}
+\author{吴远清-2018300001031}
+
+\begin{document}
+    \maketitle
+    Problem 9.19\\
+    Answer:\\
+    (a)\\
+    For glass:
+    $$\epsilon=4.7 \epsilon_{0} \quad \sigma=1 \cdot 10^{-13} \eqno(1.1)$$
+    With this the relaxation time $\tau$ is:
+    $$\tau=\frac{\epsilon}{\sigma} \approx 416.138 \mathrm{s} \eqno(1.2)$$
+    (b)\\
+    The skin depth $d$ is given by:
+    $$d=\frac{1}{\kappa}=\sqrt{\frac{2}{\epsilon \mu}}[\sqrt{1+\left(\frac{\sigma}{\epsilon \omega}\right)^{2}}-1]^{-1 / 2} \eqno(1.3)$$
+    Using the values of the constants for the silver (again, in SI units), and the provided angular frequncy:
+    $$\epsilon \approx \epsilon_{0} \quad \mu \approx \mu_{0} \quad \sigma=6.29 \cdot 10^{7} \eqno(1.4)$$
+    The skin depth has the value:
+    $$d \approx 6.35 \cdot 10^{-7} \mathrm{m}=0.64 \mu \mathrm{m} \eqno(1.5)$$
+    (c)\\
+    The frequency is $1 \mathrm{MHz}=10^{6} \mathrm{Hz}$. To get the wave lenght we calculate the wave number $k$:
+    $$k=\sqrt{\frac{2}{\epsilon \mu}}[\sqrt{1+\left(\frac{\sigma}{\epsilon \omega}\right)^{2}}+1]^{1 / 2} \eqno(1.6)$$
+    Simliarly with (b), we can get:
+    $$k \approx 15299.807 \mathrm{m}^{-1} \eqno(1.7)$$
+    So:
+    $$\lambda=\frac{2 \pi}{k} \approx 4.107 \cdot 10^{-4} \mathrm{m} \eqno(1.8)$$
+    $$v=\frac{\omega}{k}=f \lambda \approx 410.7 \mathrm{m} / \mathrm{s} \eqno(1.9)$$
+
+    Problem 9.31\\
+    Answer:\\
+    For the $\mathrm{TM}$ mode $B_{z}=0,$ so:
+    $$\left[\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+(\omega / c)^{2}-k^{2}\right] E_{z}=0 \eqno(2.1)$$
+    with the boundary condition $\vec{E}_{\|}=0,$ meaning that $E_{z}=0$ at the boundary of the waveguide. This translates into:
+    $$E_{z}(x, b)=E_{z}(x, 0)=E_{z}(0, y)=E_{z}(a, y)=0 \eqno(2.2)$$
+    Now, let us assume that $E_{z}=X(x) Y(y),$ so:
+    $$\frac{X^{\prime \prime}}{X}+\frac{Y^{\prime \prime}}{Y}=-(\omega / c)^{2}+k^{2} \eqno(2.3)$$
+    $$-k_{x}^{2}-k_{y}^{2}=-(\omega / c)^{2}+k^{2} \eqno(2.4)$$
+    Then:
+    $$X(x)=A \cos \left(k_{x} x\right)+B \sin \left(k_{x} x\right) \eqno(2.5)$$
+    $$Y(y)=C \cos \left(k_{y} y\right)+D \sin \left(k_{y} y\right) \eqno(2.6)$$
+    Apply the boundary conditions, which yield:
+    $$\begin{aligned}
+        &E_{z}(x, 0) =0 \rightarrow C=0 \\
+        &E_{z}(0, y) =0 \rightarrow A=0 \\
+        &E_{z}(x, b)=0  \rightarrow k_{y}=\frac{m \pi}{b} \\
+        &E_{z}(a, y)=0  \rightarrow k_{x}=\frac{n \pi}{a}
+        \end{aligned}\eqno(2.7)$$
+    where $m$ and $n$ are integers larger than zero, otherwise the solution is trivial (zero).\\
+    Thus, the $z$ -component of the field is:
+    $$E_{z}=X Y=E_{0} \sin \frac{n \pi x}{a} \sin \frac{m \pi y}{b}\eqno(2.8)$$
+    The cutoff frequencies:
+    $$(\omega / c)^{2}-k^{2}-k_{x}^{2}-k_{y}^{2}=0 \eqno(2.9)$$
+    $$\omega=c \sqrt{k^{2}+\left(\frac{n \pi}{a}\right)^{2}+\left(\frac{m \pi}{b}\right)^{2}}=c \sqrt{k^{2}+\frac{\omega_{m n}^{2}}{c^{2}}} \eqno(2.10)$$
+    So:
+    $$\omega_{m n}=c \pi \sqrt{\frac{n^{2}}{a^{2}}+\frac{m^{2}}{b^{2}}} \eqno(2.11)$$
+    The lowest cutoff frequency is, as we mentioned, the (1,1) mode, so:
+    $$\omega_{11}=c \pi \sqrt{\frac{1}{a^{2}}+\frac{1}{b^{2}}} \eqno(2.12)$$
+    The wave velocity and the group velocity are as follows:
+    $$v=\frac{\omega}{k}=\frac{\omega}{\frac{1}{c} \sqrt{\omega^{2}-\omega_{m n}^{2}}}=\frac{c}{\sqrt{1-\left(\omega_{m n} / \omega\right)^{2}}} \eqno(2.13)$$
+    $$\begin{aligned}
+        v_{g} &=\frac{d \omega}{d k}=\frac{d}{d k} c \sqrt{k^{2}+\left(\omega_{m n} / c\right)^{2}}=\frac{c k}{\sqrt{k^{2}+\left(\omega_{m n} / c\right)^{2}}}=\frac{c k}{\omega / c} \\
+        &=\frac{c^{2}}{v}=c \sqrt{1-\left(\omega_{m n} / \omega\right)^{2}}
+        \end{aligned}\eqno(2.14)$$
+    Finally, the ratio of lowest TE cutoff frequency to the lowest TM cutoff frequency is:
+    $$\frac{\omega_{11}}{\omega_{10}}=\frac{c \pi \sqrt{\frac{1}{a^{2}}+\frac{1}{b^{2}}}}{\frac{c \pi}{a}}=\sqrt{1+(a / b)^{2}}\eqno(2.15)$$
+    
+
+    Problem 3.36\\
+    Answer:\\
+    Let the two planes be at $z=0$ and $z=d$, let the electric field travel along the $z$ -axis and be polarized along the $x$ -axis, then the fields are, in material 1:
+    $$\vec{E}_{I}=E_{0 I} e^{i\left(k_{1} z-\omega t\right)} \hat{x} \eqno(3.1)$$
+    $$\vec{B}_{I}=\frac{E_{0 I}}{v_{1}} e^{i\left(k_{1} z-\omega t\right)} \hat{z} \times \hat{x}=\frac{E_{0 I}}{v_{1}} e^{i\left(k_{1} z-\omega t\right)} \hat{y} \eqno(3.2)$$
+    $$\vec{E}_{R}=E_{0 R} e^{i\left(-k_{12}-\omega t\right)} \hat{x} \eqno(3.3)$$
+    $$\vec{B}_{R}=\frac{E_{0 R}}{v_{1}} e^{i\left(-k_{1} z-\omega t\right)}(-\hat{z}) \times \hat{x}=-\frac{E_{0 R}}{v_{1}} e^{i\left(-k_{1} z-\omega t\right)} \hat{y} \eqno(3.4)$$
+    For material 2:
+    $$\vec{E}_{r}=E_{0 r} e^{i\left(k_{2} z-\omega t\right)} \hat{x} \eqno(3.5)$$
+    $$\vec{B}_{r}=\frac{E_{0 r}}{v_{2}} e^{i\left(k_{2} z-\omega t\right)} \hat{y} \eqno(3.6)$$
+    $$\vec{E}_{l}=E_{0 l} e^{i\left(-k_{2} z-\omega t\right)} \hat{x} \eqno(3.7)$$
+    $$\vec{B}_{l}=-\frac{E_{0 l}}{v_{2}} e^{i\left(-k_{2 z}-\omega t\right)} \hat{y} \eqno(3.8)$$
+    where $r$ stands for wave going to the right, and $l$ for one going to the left. Material 3 only has the transmitted wave:
+    $$\vec{E}_{T}=E_{0 T} e^{i\left(k_{3} z-\omega t\right)} \hat{x} \eqno(3.9)$$
+    $$\vec{B}_{T}=\frac{E_{0 T}}{v_{3}} e^{i\left(k_{3} z-\omega t\right)} \hat{y} \eqno(3.10)$$
+    On both of the planes we impose boundary conditions. The first one, $\vec{E}_{\|, 1}=\vec{E}_{\|, 2},$ gives:
+    $$E_{0 I}+E_{0 R}=E_{0 r}+E_{0 l} \eqno(3.11)$$
+    $$E_{0 T} e^{i k_{3} d}=E_{0 r} e^{i k_{2} d}+E_{0 l} e^{-i k_{2} d} \eqno(3.12)$$
+    and the second one, $\vec{B}_{\|, 1} / \mu_{1}=\vec{B}_{\|, 2} / \mu_{2},$ gives:
+    $$\frac{1}{\mu_{1} v_{1}}\left(E_{0 I}-E_{0 R}\right)=\frac{1}{\mu_{2} v_{2}}\left(E_{0 r}-E_{0 l}\right) \eqno(3.13)$$
+    $$\frac{1}{\mu_{3} v_{3}} E_{0 T} e^{i k_{3} d}=\frac{1}{\mu_{2} v_{2}}\left(E_{0 r} e^{i k_{2} d}-E_{0 l} e^{-i k_{2} d}\right) \eqno(3.14)$$
+    Combine (3.11) (3.12) (3.13) (3.14) to solve simultaneous equations.\\
+    So:
+    $$\begin{aligned}
+        T &=\frac{n_{3}^{2}}{n_{1}^{2}} \frac{1}{\beta_{13}} \frac{4}{\left(1+\beta_{13}\right)^{2}+\sin ^{2}\left(k_{2} d\right)\left(\beta_{12}^{2}+\beta_{23}^{2}+2 \beta_{12} \beta_{23}-1-2 \beta_{13}-\beta_{13}^{2}\right)} \\
+        &=\frac{n_{3}}{n_{1}} \frac{4}{\left(1+n_{3} / n_{1}\right)^{2}+\sin ^{2} k_{2} d\left(\left(n_{3} / n_{2}\right)^{2}+\left(n_{2} / n_{1}\right)^{2}-\left(n_{3} / n_{1}\right)^{2}-1\right)} \\
+        &=\frac{4 n_{1} n_{3}}{\left(n_{1}+n_{3}\right)^{2}+\sin ^{2} k_{2} d\left(n_{1}^{2}\left(n_{3} / n_{2}\right)^{2}+n_{2}^{2}-n_{3}^{2}-n_{1}^{2}\right)} \\
+        &=\frac{4 n_{1} n_{3}}{\left(n_{1}+n_{3}\right)^{2}+\sin ^{2}\left(\frac{\omega n_{2} d}{c}\right) \frac{\left(n_{1}^{2}-n_{2}^{2}\right)\left(n_{3}^{2}-n_{2}^{2}\right)}{n_{2}^{2}}}
+        \end{aligned} \eqno(3.15)$$
+
+
+
+\end{document}

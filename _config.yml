@@ -1,3 +1,0 @@
-theme: jekyll-theme-cayman
-include: ["README.md", "OpenWHU.png"]
-exclude: ["专业课/","公共选修/","公共必修/"]
