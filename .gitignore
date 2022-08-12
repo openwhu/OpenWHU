@@ -2,3 +2,4 @@ node_modules
 package.json
 package-lock.json
 .sync/
+.DS_Store
