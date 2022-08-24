@@ -1,5 +1,9 @@
 # [WHU课代表计划 - 武汉大学课程资料整理](https://openwhu.github.io/)
 
+## 下载|Download
+
+试试这个全新的[下载站](https://download.openwhu.cn)吧
+
 ## 前言|Preface
 
 > （致谢： [QSCTech/zju-icicles](https://github.com/QSCTech/zju-icicles) ）
@@ -60,4 +64,4 @@
 
 See the website for more details: [https://openwhu.github.io](https://openwhu.github.io/)
 
-<img src="https://raw.githubusercontent.com/openwhu/OpenWHU/master/OpenWHU.png">
+<img src="https://raw.githubusercontent.com/openwhu/OpenWHU/master/img/OpenWHU.png">
