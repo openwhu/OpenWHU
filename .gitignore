@@ -3,3 +3,7 @@ package.json
 package-lock.json
 .sync/
 .DS_Store
+
+# MS Office 的临时文件
+~$*
+*.tmp
