@@ -1,3 +1,6 @@
 [submodule "专业课/操作系统实验/OS-BIGHOMEWORK"]
 	path = 专业课/操作系统实验/OS-BIGHOMEWORK
 	url = https://github.com/blue-vegetable/OS-BIGHOMEWORK.git
+[submodule "专业课/软件构造基础/DouTu"]
+	path = 专业课/软件构造基础/DouTu
+	url = https://github.com/Miles629/DouTu.git
