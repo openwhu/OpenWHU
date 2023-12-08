@@ -1,0 +1,126 @@
+--lpm_counter CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEVICE_FAMILY="Cyclone IV E" lpm_modulus=4096 lpm_port_updown="PORT_CONNECTIVITY" lpm_width=12 clk_en clock q sclr CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_compare 2013:06:12:18:03:43:SJ cbx_lpm_counter 2013:06:12:18:03:43:SJ cbx_lpm_decode 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cycloneive_lcell_comb (cin, dataa, datab, datac, datad)
+WITH ( DONT_TOUCH, LUT_MASK, SUM_LUTC_INPUT)
+RETURNS ( combout, cout);
+
+--synthesis_resources = lut 12 reg 12 
+SUBDESIGN cntr_m9j
+( 
+	clk_en	:	input;
+	clock	:	input;
+	q[11..0]	:	output;
+	sclr	:	input;
+) 
+VARIABLE 
+	counter_comb_bita0 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita1 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita2 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita3 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita4 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita5 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita6 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita7 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita8 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita9 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita10 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_comb_bita11 : cycloneive_lcell_comb
+		WITH (
+			LUT_MASK = "5A90",
+			SUM_LUTC_INPUT = "cin"
+		);
+	counter_reg_bit[11..0] : dffeas;
+	aclr_actual	: WIRE;
+	cnt_en	: NODE;
+	data[11..0]	: NODE;
+	external_cin	: WIRE;
+	s_val[11..0]	: WIRE;
+	safe_q[11..0]	: WIRE;
+	sload	: NODE;
+	sset	: NODE;
+	updown_dir	: WIRE;
+
+BEGIN 
+	counter_comb_bita[11..0].cin = ( counter_comb_bita[10..0].cout, external_cin);
+	counter_comb_bita[11..0].dataa = ( counter_reg_bit[11..0].q);
+	counter_comb_bita[11..0].datab = ( updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir, updown_dir);
+	counter_comb_bita[11..0].datad = ( B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1", B"1");
+	counter_reg_bit[].asdata = ((! sclr) & ((sset & s_val[]) # ((! sset) & data[])));
+	counter_reg_bit[].clk = clock;
+	counter_reg_bit[].clrn = (! aclr_actual);
+	counter_reg_bit[].d = ( counter_comb_bita[11..0].combout);
+	counter_reg_bit[].ena = (clk_en & (((sclr # sset) # sload) # cnt_en));
+	counter_reg_bit[].sload = ((sclr # sset) # sload);
+	aclr_actual = B"0";
+	cnt_en = VCC;
+	data[] = GND;
+	external_cin = B"1";
+	q[] = safe_q[];
+	s_val[] = B"111111111111";
+	safe_q[] = counter_reg_bit[].q;
+	sload = GND;
+	sset = GND;
+	updown_dir = B"1";
+END;
+--VALID FILE

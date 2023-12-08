@@ -1,0 +1,46 @@
+--sign_div_unsign DEN_REPRESENTATION="UNSIGNED" DEN_WIDTH=7 LPM_PIPELINE=0 MAXIMIZE_SPEED=5 NUM_REPRESENTATION="UNSIGNED" NUM_WIDTH=32 SKIP_BITS=0 denominator numerator quotient remainder
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_abs 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_lpm_divide 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ cbx_util_mgl 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION alt_u_div_a7f (denominator[6..0], numerator[31..0])
+RETURNS ( quotient[31..0], remainder[6..0]);
+
+--synthesis_resources = lut 255 
+SUBDESIGN sign_div_unsign_rlh
+( 
+	denominator[6..0]	:	input;
+	numerator[31..0]	:	input;
+	quotient[31..0]	:	output;
+	remainder[6..0]	:	output;
+) 
+VARIABLE 
+	divider : alt_u_div_a7f;
+	norm_num[31..0]	: WIRE;
+	protect_quotient[31..0]	: WIRE;
+	protect_remainder[6..0]	: WIRE;
+
+BEGIN 
+	divider.denominator[] = denominator[];
+	divider.numerator[] = norm_num[];
+	norm_num[] = numerator[];
+	protect_quotient[] = divider.quotient[];
+	protect_remainder[] = divider.remainder[];
+	quotient[] = protect_quotient[];
+	remainder[] = protect_remainder[];
+END;
+--VALID FILE
