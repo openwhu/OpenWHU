@@ -1,0 +1,88 @@
+--altsyncram ADDRESS_ACLR_A="NONE" ADDRESS_ACLR_B="NONE" ADDRESS_REG_B="CLOCK1" BYTE_SIZE=8 BYTEENA_ACLR_A="NONE" BYTEENA_ACLR_B="NONE" BYTEENA_REG_B="CLOCK1" CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" CLOCK_ENABLE_CORE_A="USE_INPUT_CLKEN" CLOCK_ENABLE_CORE_B="USE_INPUT_CLKEN" CLOCK_ENABLE_INPUT_A="NORMAL" CLOCK_ENABLE_INPUT_B="NORMAL" CLOCK_ENABLE_OUTPUT_A="NORMAL" CLOCK_ENABLE_OUTPUT_B="NORMAL" CYCLONEII_M4K_COMPATIBILITY="ON" DEVICE_FAMILY="Cyclone IV E" ECC_PIPELINE_STAGE_ENABLED="FALSE" ENABLE_ECC="FALSE" IMPLEMENT_IN_LES="OFF" INDATA_ACLR_A="NONE" INDATA_ACLR_B="NONE" INDATA_REG_B="CLOCK1" INIT_FILE_LAYOUT="PORT_A" LOW_POWER_MODE="AUTO" MAXIMUM_DEPTH=0 NUMWORDS_A=0 NUMWORDS_B=0 OPERATION_MODE="DUAL_PORT" OUTDATA_ACLR_A="NONE" OUTDATA_ACLR_B="NONE" OUTDATA_REG_A="UNREGISTERED" OUTDATA_REG_B="UNREGISTERED" POWER_UP_UNINITIALIZED="FALSE" RAM_BLOCK_TYPE="AUTO" RDCONTROL_ACLR_B="NONE" RDCONTROL_REG_B="CLOCK1" READ_DURING_WRITE_MODE_MIXED_PORTS="DONT_CARE" read_during_write_mode_port_a="NEW_DATA_NO_NBE_READ" read_during_write_mode_port_b="NEW_DATA_NO_NBE_READ" stratixiv_m144k_allow_dual_clocks="ON" WIDTH_A=1 WIDTH_B=1 WIDTH_BYTEENA_A=1 WIDTH_BYTEENA_B=1 WIDTH_ECCSTATUS=3 WIDTHAD_A=7 WIDTHAD_B=7 WRCONTROL_ACLR_A="NONE" WRCONTROL_ACLR_B="NONE" WRCONTROL_WRADDRESS_REG_B="CLOCK1" address_a address_b clock0 clock1 clocken1 data_a q_b wren_a CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 14.1 cbx_altsyncram 2014:12:03:18:04:04:SJ cbx_cycloneii 2014:12:03:18:04:04:SJ cbx_lpm_add_sub 2014:12:03:18:04:04:SJ cbx_lpm_compare 2014:12:03:18:04:04:SJ cbx_lpm_decode 2014:12:03:18:04:04:SJ cbx_lpm_mux 2014:12:03:18:04:04:SJ cbx_mgl 2014:12:03:18:06:09:SJ cbx_stratix 2014:12:03:18:04:04:SJ cbx_stratixii 2014:12:03:18:04:04:SJ cbx_stratixiii 2014:12:03:18:04:04:SJ cbx_stratixv 2014:12:03:18:04:04:SJ cbx_util_mgl 2014:12:03:18:04:04:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, the Altera Quartus II License Agreement,
+--  the Altera MegaCore Function License Agreement, or other 
+--  applicable license agreement, including, without limitation, 
+--  that your use is for the sole purpose of programming logic 
+--  devices manufactured by Altera and sold by Altera or its 
+--  authorized distributors.  Please refer to the applicable 
+--  agreement for further details.
+
+
+FUNCTION cycloneive_ram_block (clk0, clk1, clr0, clr1, ena0, ena1, ena2, ena3, portaaddr[PORT_A_ADDRESS_WIDTH-1..0], portaaddrstall, portabyteenamasks[PORT_A_BYTE_ENABLE_MASK_WIDTH-1..0], portadatain[PORT_A_DATA_WIDTH-1..0], portare, portawe, portbaddr[PORT_B_ADDRESS_WIDTH-1..0], portbaddrstall, portbbyteenamasks[PORT_B_BYTE_ENABLE_MASK_WIDTH-1..0], portbdatain[PORT_B_DATA_WIDTH-1..0], portbre, portbwe)
+WITH ( CLK0_CORE_CLOCK_ENABLE, CLK0_INPUT_CLOCK_ENABLE, CLK0_OUTPUT_CLOCK_ENABLE, CLK1_CORE_CLOCK_ENABLE, CLK1_INPUT_CLOCK_ENABLE, CLK1_OUTPUT_CLOCK_ENABLE, CONNECTIVITY_CHECKING, DATA_INTERLEAVE_OFFSET_IN_BITS, DATA_INTERLEAVE_WIDTH_IN_BITS, DONT_POWER_OPTIMIZE, INIT_FILE, INIT_FILE_LAYOUT, init_file_restructured, LOGICAL_RAM_NAME, mem_init0, mem_init1, mem_init2, mem_init3, mem_init4, MIXED_PORT_FEED_THROUGH_MODE, OPERATION_MODE, PORT_A_ADDRESS_CLEAR, PORT_A_ADDRESS_WIDTH = 1, PORT_A_BYTE_ENABLE_MASK_WIDTH = 1, PORT_A_BYTE_SIZE, PORT_A_DATA_OUT_CLEAR, PORT_A_DATA_OUT_CLOCK, PORT_A_DATA_WIDTH = 1, PORT_A_FIRST_ADDRESS, PORT_A_FIRST_BIT_NUMBER, PORT_A_LAST_ADDRESS, PORT_A_LOGICAL_RAM_DEPTH, PORT_A_LOGICAL_RAM_WIDTH, PORT_A_READ_DURING_WRITE_MODE, PORT_B_ADDRESS_CLEAR, PORT_B_ADDRESS_CLOCK, PORT_B_ADDRESS_WIDTH = 1, PORT_B_BYTE_ENABLE_CLOCK, PORT_B_BYTE_ENABLE_MASK_WIDTH = 1, PORT_B_BYTE_SIZE, PORT_B_DATA_IN_CLOCK, PORT_B_DATA_OUT_CLEAR, PORT_B_DATA_OUT_CLOCK, PORT_B_DATA_WIDTH = 1, PORT_B_FIRST_ADDRESS, PORT_B_FIRST_BIT_NUMBER, PORT_B_LAST_ADDRESS, PORT_B_LOGICAL_RAM_DEPTH, PORT_B_LOGICAL_RAM_WIDTH, PORT_B_READ_DURING_WRITE_MODE, PORT_B_READ_ENABLE_CLOCK, PORT_B_WRITE_ENABLE_CLOCK, POWER_UP_UNINITIALIZED, RAM_BLOCK_TYPE, SAFE_WRITE, WIDTH_ECCSTATUS)
+RETURNS ( portadataout[PORT_A_DATA_WIDTH-1..0], portbdataout[PORT_B_DATA_WIDTH-1..0]);
+
+--synthesis_resources = M9K 1 
+OPTIONS ALTERA_INTERNAL_OPTION = "OPTIMIZE_POWER_DURING_SYNTHESIS=NORMAL_COMPILATION";
+
+SUBDESIGN altsyncram_2r14
+( 
+	address_a[6..0]	:	input;
+	address_b[6..0]	:	input;
+	clock0	:	input;
+	clock1	:	input;
+	clocken1	:	input;
+	data_a[0..0]	:	input;
+	q_b[0..0]	:	output;
+	wren_a	:	input;
+) 
+VARIABLE 
+	ram_block1a0 : cycloneive_ram_block
+		WITH (
+			CLK0_CORE_CLOCK_ENABLE = "ena0",
+			CLK0_INPUT_CLOCK_ENABLE = "none",
+			CLK1_CORE_CLOCK_ENABLE = "ena1",
+			CLK1_INPUT_CLOCK_ENABLE = "ena1",
+			CONNECTIVITY_CHECKING = "OFF",
+			LOGICAL_RAM_NAME = "ALTSYNCRAM",
+			MIXED_PORT_FEED_THROUGH_MODE = "dont_care",
+			OPERATION_MODE = "dual_port",
+			PORT_A_ADDRESS_WIDTH = 7,
+			PORT_A_DATA_WIDTH = 1,
+			PORT_A_FIRST_ADDRESS = 0,
+			PORT_A_FIRST_BIT_NUMBER = 0,
+			PORT_A_LAST_ADDRESS = 127,
+			PORT_A_LOGICAL_RAM_DEPTH = 128,
+			PORT_A_LOGICAL_RAM_WIDTH = 1,
+			PORT_B_ADDRESS_CLEAR = "none",
+			PORT_B_ADDRESS_CLOCK = "clock1",
+			PORT_B_ADDRESS_WIDTH = 7,
+			PORT_B_DATA_OUT_CLEAR = "none",
+			PORT_B_DATA_WIDTH = 1,
+			PORT_B_FIRST_ADDRESS = 0,
+			PORT_B_FIRST_BIT_NUMBER = 0,
+			PORT_B_LAST_ADDRESS = 127,
+			PORT_B_LOGICAL_RAM_DEPTH = 128,
+			PORT_B_LOGICAL_RAM_WIDTH = 1,
+			PORT_B_READ_ENABLE_CLOCK = "clock1",
+			POWER_UP_UNINITIALIZED = "false",
+			RAM_BLOCK_TYPE = "AUTO"
+		);
+	address_a_wire[6..0]	: WIRE;
+	address_b_wire[6..0]	: WIRE;
+
+BEGIN 
+	ram_block1a[0..0].clk0 = clock0;
+	ram_block1a[0..0].clk1 = clock1;
+	ram_block1a[0..0].ena0 = wren_a;
+	ram_block1a[0..0].ena1 = clocken1;
+	ram_block1a[0].portaaddr[] = ( address_a_wire[6..0]);
+	ram_block1a[0].portadatain[] = ( data_a[0..0]);
+	ram_block1a[0..0].portawe = wren_a;
+	ram_block1a[0].portbaddr[] = ( address_b_wire[6..0]);
+	ram_block1a[0..0].portbre = B"1";
+	address_a_wire[] = address_a[];
+	address_b_wire[] = address_b[];
+	q_b[] = ( ram_block1a[0].portbdataout[0..0]);
+END;
+--VALID FILE

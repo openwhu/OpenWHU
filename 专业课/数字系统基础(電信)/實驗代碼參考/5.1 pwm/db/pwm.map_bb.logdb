@@ -1,0 +1,3 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,PWM_Generate_module:U2|lpm_mult:Mult0|mult_mbt:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,PWM_Generate_module:U2|lpm_mult:Mult0|mult_mbt:auto_generated|mac_out4,
