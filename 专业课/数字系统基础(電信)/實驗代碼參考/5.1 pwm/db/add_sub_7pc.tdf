@@ -1,0 +1,43 @@
+--lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="Cyclone IV E" LPM_DIRECTION="SUB" LPM_WIDTH=1 cout dataa datab result
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:43:SJ cbx_lpm_add_sub 2013:06:12:18:03:43:SJ cbx_mgl 2013:06:12:18:05:10:SJ cbx_stratix 2013:06:12:18:03:43:SJ cbx_stratixii 2013:06:12:18:03:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = 
+SUBDESIGN add_sub_7pc
+( 
+	cout	:	output;
+	dataa[0..0]	:	input;
+	datab[0..0]	:	input;
+	result[0..0]	:	output;
+) 
+VARIABLE 
+	carry_eqn[0..0]	: WIRE;
+	cin_wire	: WIRE;
+	datab_node[0..0]	: WIRE;
+	sum_eqn[0..0]	: WIRE;
+
+BEGIN 
+	carry_eqn[] = ( ((dataa[0..0] & datab_node[0..0]) # ((dataa[0..0] # datab_node[0..0]) & cin_wire)));
+	cin_wire = B"1";
+	cout = carry_eqn[0..0];
+	datab_node[] = (! datab[]);
+	result[] = sum_eqn[];
+	sum_eqn[] = ( ((dataa[0..0] $ datab_node[0..0]) $ cin_wire));
+END;
+--VALID FILE
