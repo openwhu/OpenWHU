@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="check">
-		<CBX_INST_ENTRY INSTANCE_NAME="|check|Buzzer_module:U3|altsyncram:WideOr0_rtl_0" CBX_FILE_NAME="altsyncram_v5v.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

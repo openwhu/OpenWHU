@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="pwm">
-		<CBX_INST_ENTRY INSTANCE_NAME="|pwm|PWM_Generate_module:U2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3jm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|pwm|PWM_Generate_module:U2|lpm_mult:Mult0" CBX_FILE_NAME="mult_mbt.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

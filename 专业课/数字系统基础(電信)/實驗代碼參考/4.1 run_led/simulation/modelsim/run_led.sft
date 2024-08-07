@@ -1,6 +1,0 @@
-set tool_name "ModelSim-Altera (Verilog)"
-set corner_file_list {
-	{{"Slow -7 1.2V 125 Model"} {run_led_7_1200mv_125c_slow.vo run_led_7_1200mv_125c_v_slow.sdo}}
-	{{"Slow -7 1.2V -40 Model"} {run_led_7_1200mv_-40c_slow.vo run_led_7_1200mv_-40c_v_slow.sdo}}
-	{{"Fast -M 1.2V -40 Model"} {run_led_min_1200mv_-40c_fast.vo run_led_min_1200mv_-40c_v_fast.sdo}}
-}

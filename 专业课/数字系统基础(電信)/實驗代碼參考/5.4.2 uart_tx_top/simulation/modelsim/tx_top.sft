@@ -1,6 +1,0 @@
-set tool_name "ModelSim-Altera (Verilog)"
-set corner_file_list {
-	{{"Slow -8 1.2V 85 Model"} {tx_top_8_1200mv_85c_slow.vo tx_top_8_1200mv_85c_v_slow.sdo}}
-	{{"Slow -8 1.2V 0 Model"} {tx_top_8_1200mv_0c_slow.vo tx_top_8_1200mv_0c_v_slow.sdo}}
-	{{"Fast -M 1.2V 0 Model"} {tx_top_min_1200mv_0c_fast.vo tx_top_min_1200mv_0c_v_fast.sdo}}
-}

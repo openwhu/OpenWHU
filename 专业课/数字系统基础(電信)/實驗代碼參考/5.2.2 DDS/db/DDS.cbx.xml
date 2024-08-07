@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="DDS">
-		<CBX_INST_ENTRY INSTANCE_NAME="|DDS|choose_wave_module:U2|dds_sawtooth_rom:Sawtooth_Rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pu91.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|DDS|choose_wave_module:U2|dds_sin_rom:Sin_Rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ad91.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|DDS|choose_wave_module:U2|dds_square_rom:Square_Rom|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_hn91.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
