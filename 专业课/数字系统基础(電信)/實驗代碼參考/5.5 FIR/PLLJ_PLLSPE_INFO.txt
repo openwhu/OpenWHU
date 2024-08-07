@@ -1,5 +1,0 @@
-PLL_Name	pll_70K:U4|altpll:altpll_component|pll_70K_altpll:auto_generated|pll1
-PLLJITTER	45
-PLLSPEmax	84
-PLLSPEmin	-53
-

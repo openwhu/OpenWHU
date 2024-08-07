@@ -1,9 +1,0 @@
-module Accumulator_module
-(
-	CLK, RSTn, Result
-);
-
-	input CLK, RSTn;
-	output [23:0]Result;
-	
-endmodule
