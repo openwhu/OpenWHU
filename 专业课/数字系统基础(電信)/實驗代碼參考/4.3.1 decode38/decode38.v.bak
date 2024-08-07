@@ -1,8 +1,0 @@
-module decode38
-(
-	Sw_In, LED_Out
-);
-	input wire [2:0]Sw_In;
-	output wire [7:0]LED_Out;
-	
-endmodule
