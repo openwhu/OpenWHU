@@ -4,3 +4,6 @@
 [submodule "专业课/软件构造基础/DouTu"]
 	path = 专业课/软件构造基础/DouTu
 	url = https://github.com/Miles629/DouTu.git
+[submodule "专业课/操作系统实验/osfs_docker"]
+	path = 专业课/操作系统实验/osfs_docker
+	url = https://github.com/chenxiex/osfs_docker.git
