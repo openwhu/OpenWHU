@@ -7,3 +7,6 @@
 [submodule "专业课/操作系统实验/osfs_docker"]
 	path = 专业课/操作系统实验/osfs_docker
 	url = https://github.com/chenxiex/osfs_docker.git
+[submodule "专业课/软件构造基础/SoftwareConstruction"]
+	path = 专业课/软件构造基础/SoftwareConstruction
+	url = https://github.com/shenxianovo/SoftwareConstruction.git
