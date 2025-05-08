@@ -1,9 +1,5 @@
 # [WHU课代表计划 - 武汉大学课程资料整理](https://openwhu.github.io/)
 
-## 下载|Download
-
-试试这个全新的[下载站](https://download.openwhu.cn)吧
-
 ## 融合|Merge
 
 OpenWHU 致力于营造一个更加活跃，有更多贡献者参与的社区。OpenWHU 将会为 [WHUCAO](https://github.com/WHUCodingAndOpen) 提供资料储备，并与之进行融合，以创造一个更加积极活跃的社区。同时，这也意味着社区将会有更多交流、贡献和知识分享的空间，让同学们能够更快、更好的接触大学生活，接触每一门新的课程！
