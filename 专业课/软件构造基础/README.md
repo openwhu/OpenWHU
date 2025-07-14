@@ -19,11 +19,11 @@
   - 演示PPT，最后一节课演示。
   - 课程报告
 
-## 本目录内容：
+## 课程资料
 
-本目录下有两个课程资料，请通过下方仓库链接跳转。
+目前共有两个课程资料，请通过下方仓库链接跳转。  
+若您也想将自己的实现分享到OpenWHU，请在下面添加仓库链接。  
+如果您能留下对于这门课的感想与成绩以供后人参考那就更好了^_^。
 
-- `DouTu`: 武汉大学2018级软件构造基础C#大作业
-  - [仓库链接](https://github.com/Miles629/DouTu)
-- `SoftwareConstruction`：武汉大学-2025春季-软件构造基础-课程作业+大作业
-  - [仓库链接](https://github.com/shenxianovo/SoftwareConstruction)
+- [2025春季-软件构造基础-课程作业+大作业](https://github.com/shenxianovo/SoftwareConstruction)
+- [2018级软件构造基础大作业](https://github.com/Miles629/DouTu)
