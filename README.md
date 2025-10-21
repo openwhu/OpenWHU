@@ -136,6 +136,7 @@ https://github.com/openwhu/OpenWHU/issues/71
 
 **Together We Can Make WHU A Better Place**
 
+
 ## 官网|Website
 
 更多详情请见官网: [https://openwhu.github.io](https://openwhu.github.io/)
@@ -143,3 +144,7 @@ https://github.com/openwhu/OpenWHU/issues/71
 See the website for more details: [https://openwhu.github.io](https://openwhu.github.io/)
 
 <img src="https://raw.githubusercontent.com/openwhu/OpenWHU/master/img/OpenWHU.png">
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=openwhu/OpenWHU&type=date&legend=bottom-right)](https://www.star-history.com/#openwhu/OpenWHU&type=date&legend=bottom-right)
