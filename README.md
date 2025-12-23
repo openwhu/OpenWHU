@@ -2,7 +2,7 @@
 
 ## 融合|Merge
 
-OpenWHU 致力于营造一个更加活跃，有更多贡献者参与的社区。OpenWHU 将会为 [WHUCAO](https://github.com/WHUCodingAndOpen) 提供资料储备，并与之进行融合，以创造一个更加积极活跃的社区。同时，这也意味着社区将会有更多交流、贡献和知识分享的空间，让同学们能够更快、更好的接触大学生活，接触每一门新的课程！
+OpenWHU 致力于营造一个更加活跃，有更多贡献者参与的社区。OpenWHU 将会为 [WHUCAO](https://github.com/WHUCodingAndOpen) 提供资料储备，并与之进行融合，以创造一个更加积极活跃的社区。同时，这也意味着社区将会有更多交流、贡献和知识分享的空间，让同学们能够更快、更好地接触大学生活，接触每一门新的课程！
 
 ## 前言|Preface
 
@@ -136,6 +136,7 @@ https://github.com/openwhu/OpenWHU/issues/71
 
 **Together We Can Make WHU A Better Place**
 
+
 ## 官网|Website
 
 更多详情请见官网: [https://openwhu.github.io](https://openwhu.github.io/)
@@ -143,3 +144,7 @@ https://github.com/openwhu/OpenWHU/issues/71
 See the website for more details: [https://openwhu.github.io](https://openwhu.github.io/)
 
 <img src="https://raw.githubusercontent.com/openwhu/OpenWHU/master/img/OpenWHU.png">
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=openwhu/OpenWHU&type=date&legend=bottom-right)](https://www.star-history.com/#openwhu/OpenWHU&type=date&legend=bottom-right)
