@@ -1,0 +1,278 @@
+name: Release updated course archives
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "专业课/**"
+      - "公共必修/**"
+      - "公共必修课/**"
+      - "公共选修/**"
+      - "公共选修课/**"
+
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "是否全量重建所有课程压缩包"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-updated-courses
+  cancel-in-progress: false
+
+jobs:
+  package:
+    name: Package updated courses
+    runs-on: ubuntu-latest
+
+    env:
+      RELEASE_TAG: courses-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed courses
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p dist
+          : > changed_courses.txt
+
+          EVENT_NAME="${{ github.event_name }}"
+          FULL_INPUT="${{ github.event.inputs.full }}"
+
+          if [ -z "$FULL_INPUT" ]; then
+            FULL_INPUT="false"
+          fi
+
+          echo "event_name=$EVENT_NAME"
+          echo "full_input=$FULL_INPUT"
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$FULL_INPUT" = "true" ]; then
+            echo "Full rebuild mode."
+
+            python3 > changed_courses.txt <<'PY'
+          from pathlib import Path
+
+          categories = [
+              "专业课",
+              "公共必修",
+              "公共必修课",
+              "公共选修",
+              "公共选修课",
+          ]
+
+          courses = []
+
+          for category in categories:
+              category_path = Path(category)
+              if not category_path.is_dir():
+                  continue
+
+              for course_path in sorted(category_path.iterdir(), key=lambda p: p.name):
+                  if course_path.is_dir():
+                      courses.append(str(course_path))
+
+          for course in courses:
+              print(course)
+          PY
+
+          else
+            echo "Incremental rebuild mode."
+
+            BEFORE="${{ github.event.before }}"
+            HEAD="${{ github.sha }}"
+
+            if [ -z "$BEFORE" ] || [[ "$BEFORE" =~ ^0+$ ]] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+              BASE="$(git rev-parse "$HEAD^" 2>/dev/null || git rev-list --max-parents=0 "$HEAD")"
+            else
+              BASE="$BEFORE"
+            fi
+
+            echo "base=$BASE"
+            echo "head=$HEAD"
+
+            git diff --name-only --diff-filter=ACDMRT "$BASE" "$HEAD" > changed_files.txt
+
+            python3 > changed_courses.txt <<'PY'
+          from pathlib import Path
+
+          categories = {
+              "专业课",
+              "公共必修",
+              "公共必修课",
+              "公共选修",
+              "公共选修课",
+          }
+
+          courses = set()
+
+          with open("changed_files.txt", "r", encoding="utf-8") as f:
+              for line in f:
+                  path = line.strip()
+                  if not path:
+                      continue
+
+                  parts = Path(path).parts
+
+                  # 只处理：分类/课程名/...
+                  if len(parts) < 2:
+                      continue
+
+                  category = parts[0]
+                  course = parts[1]
+
+                  if category not in categories:
+                      continue
+
+                  courses.add(str(Path(category) / course))
+
+          for course in sorted(courses):
+              print(course)
+          PY
+
+          fi
+
+          echo "Changed courses:"
+          cat changed_courses.txt || true
+
+          if [ ! -s changed_courses.txt ]; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Package changed courses
+        if: steps.detect.outputs.has_changes == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 <<'PY'
+          from pathlib import Path
+          import zipfile
+          import re
+
+          dist = Path("dist")
+          dist.mkdir(exist_ok=True)
+
+          exclude_files = {
+              ".DS_Store",
+              "Thumbs.db",
+          }
+
+          exclude_dirs = {
+              ".git",
+              "__MACOSX",
+          }
+
+          def safe_name(name: str) -> str:
+              name = re.sub(r'[\\/:*?"<>|\s]+', "_", name)
+              return name.strip("._") or "unnamed"
+
+          courses = [
+              line.strip()
+              for line in Path("changed_courses.txt").read_text(encoding="utf-8").splitlines()
+              if line.strip()
+          ]
+
+          created = 0
+
+          for course in courses:
+              course_path = Path(course)
+
+              # 如果整门课目录已经被删除，则跳过。
+              # 删除 release 中的旧 asset 可以另写逻辑处理。
+              if not course_path.is_dir():
+                  print(f"skip deleted course: {course}")
+                  continue
+
+              if len(course_path.parts) < 2:
+                  print(f"skip invalid course path: {course}")
+                  continue
+
+              category = course_path.parts[0]
+              course_name = course_path.parts[1]
+
+              zip_path = dist / f"{safe_name(category)}-{safe_name(course_name)}.zip"
+
+              if zip_path.exists():
+                  zip_path.unlink()
+
+              with zipfile.ZipFile(
+                  zip_path,
+                  "w",
+                  compression=zipfile.ZIP_DEFLATED,
+                  compresslevel=6,
+                  allowZip64=True,
+              ) as zf:
+                  for item in sorted(course_path.rglob("*")):
+                      if not item.is_file():
+                          continue
+
+                      if item.name in exclude_files:
+                          continue
+
+                      if any(part in exclude_dirs for part in item.parts):
+                          continue
+
+                      # zip 内部保留：分类/课程名/...
+                      arcname = item.relative_to(Path("."))
+                      zf.write(item, arcname)
+
+              print(f"created {zip_path}")
+              created += 1
+
+          print(f"created {created} archive(s)")
+          PY
+
+          echo "Archives:"
+          find dist -maxdepth 1 -name "*.zip" -print | sort
+
+      - name: Create release if missing
+        if: steps.detect.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Release already exists: $RELEASE_TAG"
+          else
+            gh release create "$RELEASE_TAG" \
+              --title "课程资料压缩包" \
+              --notes "自动生成课程压缩包。首次可全量生成，后续只更新发生变化的课程。"
+          fi
+
+      - name: Upload changed course archives
+        if: steps.detect.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s nullglob
+          files=(dist/*.zip)
+
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No archives to upload."
+            exit 0
+          fi
+
+          gh release upload "$RELEASE_TAG" "${files[@]}" --clobber
