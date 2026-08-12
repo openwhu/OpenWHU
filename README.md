@@ -164,4 +164,4 @@ https://github.com/openwhu/OpenWHU/issues/71
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=openwhu/OpenWHU&type=date&legend=bottom-right)](https://www.star-history.com/#openwhu/OpenWHU&type=date&legend=bottom-right)
+[![Star History Chart](https://star-history.dera.page/svg?repos=openwhu/OpenWHU&type=date&legend=bottom-right)](https://star-history.dera.page/#openwhu/OpenWHU&type=date&legend=bottom-right)
