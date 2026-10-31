@@ -4,9 +4,9 @@
 
 <ul>
 <li>
-<img src="https://www.whu.sb/favicon.ico" width="16">
-<a href="https://www.whu.sb/"><strong>WHU.sb</strong></a><br>
-<span>发现最好的课程，分享你的学习体验</span>
+<img src="https://www.whu.sb/favicon.svg" width="16">
+<a href="https://www.whu.sb/"><strong>Luotopia</strong></a><br>
+<span>整合校园服务，构建开放生态。</span>
 </li>
 
 <li>
@@ -164,4 +164,10 @@ https://github.com/openwhu/OpenWHU/issues/71
 
 ## Star History
 
-[![Star History Chart](https://star-history.dera.page/svg?repos=openwhu/OpenWHU&type=date&legend=bottom-right)](https://star-history.dera.page/#openwhu/OpenWHU&type=date&legend=bottom-right)
+<a href="https://star-history.dera.page/openwhu/OpenWHU?legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=openwhu/OpenWHU&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=openwhu/OpenWHU&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=openwhu/OpenWHU&legend=bottom-right" />
+ </picture>
+</a>
